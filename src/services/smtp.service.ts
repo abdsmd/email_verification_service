@@ -17,6 +17,7 @@ import { getSmtpRetryConfig } from "./retry-policy.service.js";
 import { recordSmtpNetworkFailure } from "./provider-cooldown.service.js";
 import { withProviderSmtpConcurrency } from "./provider-smtp-concurrency.service.js";
 import { getSmtpHeloName, getSmtpMailFromAddress } from "../config/env.js";
+import { canTryAnotherMxForTransient, isTransientRcptSuitableForNextMx } from "../utils/mx-transient-fallback.js";
 import type { BigProviderId } from "../types/provider.types.js";
 
 const log = getLogger();
@@ -203,21 +204,38 @@ async function runSmtpSession(a: SessionArgs): Promise<RcptResult> {
   }
 }
 
-export type RcptCheckOptions = { toAddress: string; provider?: BigProviderId };
+export type RcptCheckOptions = {
+  toAddress: string;
+  provider?: BigProviderId;
+  /**
+   * When set with env `MX_RCPT_TRANSIENT_FALLBACK_ENABLED`, a transient/greylist RCPT
+   * on an MX can fall through to the next host (capped) — not used for big freemail in verify.
+   */
+  allowTransientRcptMxFallback?: boolean;
+  /** Slower inter-retry delay for throttled big providers (env `SMTP_RETRY_BIG_PROVIDER_MULT`). */
+  useBigProviderRetryMult?: boolean;
+};
 
 async function probeRcptUnscoped(
   mxHosts: string[],
   check: RcptCheckOptions
 ): Promise<RcptResult> {
   const c = getConfig();
-  const { retries, baseDelayMs } = getSmtpRetryConfig();
+  const { retries, baseDelayMs } = getSmtpRetryConfig(
+    check.useBigProviderRetryMult === true
+  );
   const helo = getSmtpHeloName();
   const fromAddr = getSmtpMailFromAddress();
 
   let lastFail: RcptResult = { kind: "all_mx_failed" };
   let lastHostTried = "";
+  const allowTransientMx =
+    check.allowTransientRcptMxFallback === true &&
+    c.MX_RCPT_TRANSIENT_FALLBACK_ENABLED;
+  const maxExtra = c.MX_RCPT_TRANSIENT_FALLBACK_MAX_EXTRA;
+  let extraTransientHops = 0;
 
-  for (let mxi = 0; mxi < mxHosts.length; mxi++) {
+  mx: for (let mxi = 0; mxi < mxHosts.length; mxi++) {
     const host = mxHosts[mxi];
     lastHostTried = host;
     for (let attempt = 0; attempt <= retries; attempt++) {
@@ -232,6 +250,23 @@ async function probeRcptUnscoped(
           cmdMs: c.SMTP_COMMAND_TIMEOUT_MS,
         });
         if (r.kind === "rcpt") {
+          if (
+            allowTransientMx &&
+            isTransientRcptSuitableForNextMx(r) &&
+            canTryAnotherMxForTransient({
+              mxi,
+              mxCount: mxHosts.length,
+              extraTriesSoFar: extraTransientHops,
+              maxExtra,
+            })
+          ) {
+            extraTransientHops += 1;
+            log.debug(
+              { host, mxi, extraTransientHops, code: r.code, semantic: r.semantic },
+              "smtp: transient rcpt, trying next mx"
+            );
+            continue mx;
+          }
           return r;
         }
         lastFail = r;

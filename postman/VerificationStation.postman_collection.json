@@ -7,7 +7,8 @@
 	},
 	"variable": [
 		{ "key": "baseUrl", "value": "http://127.0.0.1:8090" },
-		{ "key": "bearerToken", "value": "" }
+		{ "key": "bearerToken", "value": "" },
+		{ "key": "jobId", "value": "" }
 	],
 	"item": [
 		{
@@ -85,6 +86,42 @@
 							"raw": "{\n  \"items\": [\n    { \"email\": \"a@example.com\" },\n    { \"email\": \"b@other.org\", \"options\": { \"skipSmtp\": true } }\n  ],\n  \"options\": { \"forceRefresh\": false }\n}"
 						},
 						"url": "{{baseUrl}}/v1/verify/batch"
+					}
+				},
+				{
+					"name": "GET Usage (tenant)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{baseUrl}}/v1/usage",
+						"description": "404 if METRICS_ENABLED=false. Returns postVerify, postBatch, batchRows for current tenant."
+					}
+				},
+				{
+					"name": "POST Verify job (async)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"user@example.com\",\n  \"options\": { \"skipSmtp\": false, \"skipCatchAll\": false, \"forceRefresh\": false }\n}"
+						},
+						"url": "{{baseUrl}}/v1/verify/jobs",
+						"description": "202 + jobId when ASYNC_VERIFY_JOBS_ENABLED. Copy jobId to collection variable for GET."
+					}
+				},
+				{
+					"name": "GET Verify job by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{baseUrl}}/v1/verify/jobs/{{jobId}}",
+						"description": "Poll until completed or failed."
 					}
 				},
 				{

@@ -1,5 +1,6 @@
 import { getConfig } from "../config/env.js";
 import { detectBigProvider, isFreeEmailProvider } from "./provider-classifier.service.js";
+import { attachExplainAndConfidence } from "./result-explain.service.js";
 import type { DeliverabilityClass, VerificationCode, VerificationResult } from "../types/verification.types.js";
 
 const BASE = {
@@ -173,13 +174,20 @@ export function scoreVerificationResult(
 export function addScoreToResult<T extends VerificationResult>(
   r: T,
   ctx?: ScoreContext
-): T & { score?: number; deliverability?: DeliverabilityClass } {
+): T & { score?: number; deliverability?: DeliverabilityClass; explain?: string; confidence?: number } {
   const out = scoreVerificationResult(r, ctx);
-  if (out.score === undefined && out.deliverability === undefined) {
-    const { score: _sc, deliverability: _dc, ...rest } = r;
-    return { ...rest } as T & { score?: number; deliverability?: DeliverabilityClass };
+  const merged: T & { score?: number; deliverability?: DeliverabilityClass } =
+    out.score === undefined && out.deliverability === undefined
+      ? (() => {
+          const { score: _sc, deliverability: _dc, ...rest } = r;
+          return { ...rest } as T & { score?: number; deliverability?: DeliverabilityClass };
+        })()
+      : ({ ...r, ...out } as T & { score?: number; deliverability?: DeliverabilityClass });
+  if (getConfig().VERIFICATION_EXPLAIN_ENABLED) {
+    const ec = attachExplainAndConfidence(merged as VerificationResult);
+    return { ...merged, ...ec };
   }
-  return { ...r, ...out };
+  return merged;
 }
 
 /**

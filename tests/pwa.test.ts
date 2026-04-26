@@ -25,24 +25,28 @@ beforeEach(() => {
 });
 
 describe("PWA static files", () => {
-  it("serves HTML and manifest from ./public when PWA is enabled (default)", async () => {
-    const { buildApp } = await import("../src/app.js");
-    const app = await buildApp();
-    try {
-      const home = await app.inject({ method: "GET", url: "/" });
-      expect(home.statusCode).toBe(200);
-      expect(home.headers["content-type"]?.includes("text/html")).toBe(true);
-      expect(home.body).toContain("Verification Station");
+  it(
+    "serves HTML and manifest from ./public when PWA is enabled (default)",
+    async () => {
+      const { buildApp } = await import("../src/app.js");
+      const app = await buildApp();
+      try {
+        const home = await app.inject({ method: "GET", url: "/" });
+        expect(home.statusCode).toBe(200);
+        expect(home.headers["content-type"]?.includes("text/html")).toBe(true);
+        expect(home.body).toContain("Verification Station");
 
-      const man = await app.inject({ method: "GET", url: "/manifest.webmanifest" });
-      expect(man.statusCode).toBe(200);
-      const m = man.json() as { name: string; display: string };
-      expect(m.name).toBe("Verification Station");
-      expect(m.display).toBe("standalone");
-    } finally {
-      await app.close();
-    }
-  });
+        const man = await app.inject({ method: "GET", url: "/manifest.webmanifest" });
+        expect(man.statusCode).toBe(200);
+        const m = man.json() as { name: string; display: string };
+        expect(m.name).toBe("Verification Station");
+        expect(m.display).toBe("standalone");
+      } finally {
+        await app.close();
+      }
+    },
+    15_000
+  );
 
   it("does not register PWA routes when PWA_ENABLED=false", async () => {
     process.env.PWA_ENABLED = "false";

@@ -5,6 +5,7 @@ registerProcessSafetyHandlers();
 import { getConfig } from "./config/env.js";
 import { getLogger } from "./utils/logger.js";
 import { buildApp } from "./app.js";
+import { startDisposableListScheduler, stopDisposableListScheduler } from "./jobs/disposable-list-scheduler.js";
 import type { FastifyInstance } from "fastify";
 import type { Server as HttpServer } from "node:http";
 
@@ -41,6 +42,8 @@ log.info(
   "VerificationStation listening"
 );
 
+startDisposableListScheduler(config);
+
 let shuttingDown = false;
 
 const shutdown = async (signal: string) => {
@@ -49,6 +52,7 @@ const shutdown = async (signal: string) => {
   }
   shuttingDown = true;
   log.info({ signal }, "shutdown");
+  stopDisposableListScheduler();
   const grace = getConfig().SHUTDOWN_GRACE_MS;
   const httpServer = app.server as HttpServer;
   const force = setTimeout(() => {

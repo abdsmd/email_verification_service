@@ -48,6 +48,8 @@ Thumbs.db
 *.sqlite
 *.sqlite-journal
 *.db
+*.db-shm
+*.db-wal
 
 # Docker / host bind mount at repo root (see docker-compose.yml)
 data/*

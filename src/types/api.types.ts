@@ -12,6 +12,12 @@ export const SingleVerifyRequestSchema = z.object({
   options: VerifyOptionsSchema,
 });
 
+/** `POST /v1/verify/jobs` — same as single verify plus optional async webhook. */
+export const AsyncVerifyJobRequestSchema = SingleVerifyRequestSchema.extend({
+  /** Called once when the job reaches a terminal state (HTTPS recommended). */
+  callbackUrl: z.string().url().max(2_000).optional(),
+});
+
 const BATCH_HARD_CAP = 10_000;
 
 export const BatchVerifyRequestSchema = z

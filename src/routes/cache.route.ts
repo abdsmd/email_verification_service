@@ -1,6 +1,8 @@
 import type { FastifyInstance, FastifyRequest } from "fastify";
 import { CacheClearRequestSchema } from "../types/api.types.js";
 import { clearCaches, getCacheStats } from "../services/cache.service.js";
+import { writeAuditIfConfigured } from "../utils/audit-log.js";
+import { requestPath } from "../utils/request-path.js";
 
 export function registerCacheRoutes(app: FastifyInstance): void {
   app.get("/v1/cache/stats", async () => getCacheStats());
@@ -12,6 +14,12 @@ export function registerCacheRoutes(app: FastifyInstance): void {
     }
     const t = parsed.data.type ?? "all";
     clearCaches(t);
+    await writeAuditIfConfigured({
+      action: "cache_clear",
+      path: requestPath(request.url),
+      tenantId: request.tenantId,
+      detail: { type: t },
+    });
     return { ok: true, cleared: t };
   });
 }

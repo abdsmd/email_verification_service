@@ -34,6 +34,8 @@ import { probeRcpt } from "./smtp.service.js";
 import { mapSmtpSocketErrno } from "./smtp-code-parser.service.js";
 import type { RcptResult, SmtpSocketErrorReason } from "../types/smtp.types.js";
 import { addScoreToResult } from "./scoring.service.js";
+import type { ScoreContext } from "./scoring.service.js";
+import { computeEmailSignals } from "./risk-signals.service.js";
 import { incError } from "./metrics.service.js";
 import { toErrorMessage } from "../utils/safe-error.js";
 import { getConfig } from "../config/env.js";
@@ -46,6 +48,22 @@ type Opts = {
   skipCatchAll?: boolean;
   forceRefresh?: boolean;
 };
+
+function mergeEmailSignals(
+  r: VerificationResult,
+  local: string,
+  domain: string,
+  enable: boolean
+): VerificationResult {
+  if (!enable) {
+    return r;
+  }
+  const s = computeEmailSignals(local, domain);
+  if (Object.keys(s).length === 0) {
+    return r;
+  }
+  return { ...r, signals: s };
+}
 
 function nowIso(until: number) {
   return new Date(until).toISOString();
@@ -312,7 +330,11 @@ export async function verifyOne(rawEmail: string, opts: Opts = {}): Promise<Veri
     const c = getCachedResult(key);
     if (c) {
       const withDur = { ...c, durationMs: Date.now() - t0 };
-      return addScoreToResult(withDur);
+      const s0 = parseEmail(rawEmail);
+      const withSig = s0.ok
+        ? mergeEmailSignals(withDur, s0.value.local, s0.value.domain, stationCfg.VERIFICATION_SIGNALS_ENABLED)
+        : withDur;
+      return addScoreToResult(withSig);
     }
   }
 
@@ -325,10 +347,15 @@ export async function verifyOne(rawEmail: string, opts: Opts = {}): Promise<Veri
   }
   const { local, domain, raw } = syn.value;
 
+  const finish = (r: VerificationResult, scoreCtx?: ScoreContext) => {
+    const d = { ...r, durationMs: Date.now() - t0 };
+    return addScoreToResult(mergeEmailSignals(d, local, domain, stationCfg.VERIFICATION_SIGNALS_ENABLED), scoreCtx);
+  };
+
   if (!opts.forceRefresh) {
     const pmc = getPersistentMxCache(domain);
     if (pmc) {
-      return addScoreToResult({
+      return finish({
         email: raw,
         code: "undeliverable",
         message: "Delivery path has repeatedly failed; treated as not routable at this time",
@@ -337,14 +364,13 @@ export async function verifyOne(rawEmail: string, opts: Opts = {}): Promise<Veri
     }
     const dead = getDeadDomainCache(domain);
     if (dead) {
-      const hit = { ...dead.result, email: raw, durationMs: Date.now() - t0 };
-      return addScoreToResult(hit);
+      return finish({ ...dead.result, email: raw });
     }
     if (getDisposableCache(domain)) {
-      return addScoreToResult({ email: raw, code: "disposable", message: "Disposable domain (cached)" });
+      return finish({ email: raw, code: "disposable", message: "Disposable domain (cached)" });
     }
     if (getRoleCache(local)) {
-      return addScoreToResult({ email: raw, code: "role_account", message: "Role or generic local part (cached)" });
+      return finish({ email: raw, code: "role_account", message: "Role or generic local part (cached)" });
     }
   }
 
@@ -352,13 +378,13 @@ export async function verifyOne(rawEmail: string, opts: Opts = {}): Promise<Veri
     if (!opts.forceRefresh) {
       setDisposableCache(domain, { v: true });
     }
-    return addScoreToResult({ email: raw, code: "disposable", message: "Disposable domain" });
+    return finish({ email: raw, code: "disposable", message: "Disposable domain" });
   }
   if (isRoleLocalPart(local)) {
     if (!opts.forceRefresh) {
       setRoleCache(local, { v: true });
     }
-    return addScoreToResult({ email: raw, code: "role_account", message: "Role or generic local part" });
+    return finish({ email: raw, code: "role_account", message: "Role or generic local part" });
   }
 
   const mxr = await lookupMx(domain, Boolean(opts.forceRefresh));
@@ -370,11 +396,11 @@ export async function verifyOne(rawEmail: string, opts: Opts = {}): Promise<Veri
       details: { reason: "domain_invalid" as const, layer: "dns" as const },
     };
     if (!opts.forceRefresh) {
-      const scored = addScoreToResult(o);
+      const scored = finish(o);
       setDeadDomainCache(domain, { result: scored, reason: "domain_invalid" });
       return scored;
     }
-    return addScoreToResult(o);
+    return finish(o);
   }
   if (mxr.kind === "no_mx" || (mxr.kind === "ok" && mxr.records.length === 0)) {
     const o = {
@@ -385,17 +411,17 @@ export async function verifyOne(rawEmail: string, opts: Opts = {}): Promise<Veri
     };
     if (!opts.forceRefresh) {
       setDomainExistsCache(domain, { exists: true, at: Date.now() });
-      const scored = addScoreToResult(o);
+      const scored = finish(o);
       setDeadDomainCache(domain, { result: scored, reason: "no_mx" });
       return scored;
     }
-    return addScoreToResult(o);
+    return finish(o);
   }
   if (mxr.kind === "ok" && mxr.records.length > 0 && !opts.forceRefresh) {
     setDomainExistsCache(domain, { exists: true, at: Date.now() });
   }
   if (mxr.kind === "error") {
-    return addScoreToResult(
+    return finish(
       mxr.transient
         ? {
             email: raw,
@@ -416,7 +442,7 @@ export async function verifyOne(rawEmail: string, opts: Opts = {}): Promise<Veri
   const addr = await checkMxExchangesAddressable(orderedExchanges);
   if (addr.kind === "all_failed") {
     if (addr.anyTransient) {
-      return addScoreToResult(
+      return finish(
         withMxPersistent(
           domain,
           {
@@ -429,7 +455,7 @@ export async function verifyOne(rawEmail: string, opts: Opts = {}): Promise<Veri
         )
       );
     }
-    return addScoreToResult({
+    return finish({
       email: raw,
       code: "undeliverable",
       message: "No MX hostnames resolve in DNS (A/AAAA)",
@@ -448,13 +474,12 @@ export async function verifyOne(rawEmail: string, opts: Opts = {}): Promise<Veri
       details: { mx: mxHosts[0] },
     };
     if (!opts.forceRefresh) setCachedResult(key, r);
-    const out = { ...r, durationMs: Date.now() - t0 };
-    return addScoreToResult(out);
+    return finish(r);
   }
 
   const block = isProviderSmtpBlocked(provider);
   if (block.blocked) {
-    return addScoreToResult({
+    return finish({
       email: raw,
       code: "retry_later",
       message: "Provider SMTP cooling down on this station; retry after cooldown",
@@ -481,22 +506,25 @@ export async function verifyOne(rawEmail: string, opts: Opts = {}): Promise<Veri
           details: { probe: c.probe },
         };
         if (!opts.forceRefresh) setCachedResult(key, out);
-        const o2 = { ...out, durationMs: Date.now() - t0 };
-        return addScoreToResult(o2);
+        return finish(out);
       }
     } catch (e) {
       log.warn({ err: e }, "catch-all probe failed, continuing");
     }
   }
 
-  const main = await probeRcpt(mxHosts, { toAddress: raw, provider });
+  const main = await probeRcpt(mxHosts, {
+    toAddress: raw,
+    provider,
+    allowTransientRcptMxFallback: !isBig && stationCfg.MX_RCPT_TRANSIENT_FALLBACK_ENABLED,
+    useBigProviderRetryMult: isBig,
+  });
   if (isBig) {
     recordProviderSmtpUse(provider);
   }
   const out = mapSmtpToResult(raw, domain, provider, main);
   if (!opts.forceRefresh) setCachedResult(key, out);
-  const final = { ...out, durationMs: Date.now() - t0 };
-  return addScoreToResult(final, { isFreeEmail: isFreeEmailProvider(provider) });
+  return finish(out, { isFreeEmail: isFreeEmailProvider(provider) });
 }
 
 export async function safeVerify(email: string, opts: Opts): Promise<VerificationResult> {

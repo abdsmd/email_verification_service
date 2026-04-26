@@ -1,7 +1,7 @@
 import { defineConfig } from "tsup";
 
 export default defineConfig({
-  entry: ["src/server.ts"],
+  entry: ["src/server.ts", "src/cli/update-disposable-list.ts"],
   format: ["esm"],
   target: "node22",
   sourcemap: true,

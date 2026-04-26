@@ -52,6 +52,20 @@ const envSchema = z.object({
   SMTP_SESSION_MAX_MS: z.coerce.number().int().positive().default(90_000),
   SMTP_RETRIES: z.coerce.number().int().min(0).default(1),
   SMTP_RETRY_BASE_DELAY_MS: z.coerce.number().int().min(0).default(200),
+  /**
+   * Multiplier applied to `SMTP_RETRY_BASE_DELAY_MS` for **big** freemail (Gmail, Outlook, …)
+   * to reduce look-like-abuse reconnection speed when throttled.
+   */
+  SMTP_RETRY_BIG_PROVIDER_MULT: z.coerce.number().min(0.5).max(5).default(1),
+  /**
+   * If true and only for **non-big** providers: when the first MX returns a transient/greylist-style
+   * RCPT, probe up to `MX_RCPT_TRANSIENT_FALLBACK_MAX_EXTRA` more MX in priority order. Off by default.
+   */
+  MX_RCPT_TRANSIENT_FALLBACK_ENABLED: z.coerce.boolean().default(false),
+  /** Max **additional** MX hosts to try after a transient-only RCPT on a previous MX (0 = disabled path). */
+  MX_RCPT_TRANSIENT_FALLBACK_MAX_EXTRA: z.coerce.number().int().min(0).max(5).default(1),
+  /** Include `signals` (high-risk TLD, possible typo) on results when the address is syntactically valid. */
+  VERIFICATION_SIGNALS_ENABLED: z.coerce.boolean().default(true),
   SMTP_USE_STARTTLS: z.coerce.boolean().default(true),
   DNS_CACHE_MAX: z.coerce.number().int().positive().default(5_000),
   /** @deprecated use MX_CACHE_TTL_*; still used for sqlite fallback if MX not set in older deploys */
@@ -89,6 +103,27 @@ const envSchema = z.object({
   /** Transient: retry_later, greylisted, etc. (also partial unknowns) */
   VERIFICATION_SOFT_FAILURE_CACHE_TTL_MS: z.coerce.number().int().positive().default(1_800_000),
   DISPOSABLE_LIST_PATH: z.string().optional(),
+  /**
+   * When true, `node-cron` fetches upstream disposable lists on a schedule and hot-reloads memory (no PM2 restart).
+   * Unset: enabled only when `NODE_ENV=production` (set `0` / `false` to disable in prod).
+   */
+  DISPOSABLE_LIST_CRON_ENABLED: z
+    .string()
+    .optional()
+    .transform((s) => {
+      if (s === undefined || s === "") {
+        return process.env.NODE_ENV === "production";
+      }
+      const l = s.toLowerCase();
+      if (l === "0" || l === "false" || l === "no" || l === "off") {
+        return false;
+      }
+      return l === "1" || l === "true" || l === "yes" || l === "on";
+    }),
+  /** `node-cron` expression (5 fields: minute hour day month weekday). */
+  DISPOSABLE_LIST_CRON_SCHEDULE: z.string().default("15 6 * * *"),
+  /** IANA timezone for the schedule (e.g. UTC, Europe/Berlin). */
+  DISPOSABLE_LIST_CRON_TIMEZONE: z.string().default("UTC"),
   DATA_DIR: z.string().default("src/data"),
   PROVIDER_BLOCK_COOLDOWN_MS: z.coerce.number().int().positive().default(1_800_000),
   /** Minimum spacing between SMTP probes to the same *big* provider (0 = disabled, e.g. tests) */
@@ -118,6 +153,25 @@ const envSchema = z.object({
    */
   STATION_SECRET: z.string().optional(),
   API_KEY: z.string().optional(),
+  /**
+   * Optional multi-tenant API keys. JSON array: `[{ "bearer": "…", "id": "tenant1", "rateLimitRpm": 120 }]`.
+   * When set, each entry is a valid Bearer; `rateLimitRpm` is optional (requests per minute, converted to the configured window).
+   * When unset, single `STATION_SECRET` / `API_KEY` applies (logical tenant `default`).
+   */
+  TENANT_KEYS_JSON: z.string().optional(),
+  /** Expose OpenAPI + Swagger UI at `/v1/docs` and JSON at `/v1/docs/json` (still requires Bearer when auth is on). */
+  API_DOCS_ENABLED: z.coerce.boolean().default(false),
+  /** How long a successful idempotent request body is deduplicated (X-Idempotency-Key on verify/batch). */
+  IDEMPOTENCY_TTL_MS: z.coerce.number().int().min(60_000).max(7 * 24 * 3_600_000).default(3_600_000),
+  IDEMPOTENCY_MAX_ENTRIES: z.coerce.number().int().min(100).max(1_000_000).default(10_000),
+  /** Count requests slower than this as `verify_slow_total` in metrics. */
+  SLOW_REQUEST_THRESHOLD_MS: z.coerce.number().int().min(1_000).default(5_000),
+  /** How many recent verify durations to keep for p50/p95 in `/v1/metrics` (per process). */
+  METRICS_LATENCIES_MAX: z.coerce.number().int().min(100).max(1_000_000).default(2_000),
+  /** If set, append one JSON line per admin cache/cooldown action (path, tenant, time). */
+  AUDIT_LOG_PATH: z.string().optional(),
+  /** When true, responses include `explain` and `confidence` (RCPT-verdict confidence, not inbox guarantee). */
+  VERIFICATION_EXPLAIN_ENABLED: z.coerce.boolean().default(true),
   HMAC_SECRET: z.string().optional(),
   /** Max JSON body size (bytes) */
   REQUEST_BODY_MAX_BYTES: z.coerce.number().int().min(1_000).max(100_000_000).default(1_048_576),
@@ -168,6 +222,20 @@ const envSchema = z.object({
   PROVIDER_COOLDOWN_ENABLED: z.coerce.boolean().default(true),
   /** When false, do not log full email addresses in error paths */
   LOG_FULL_EMAIL: z.coerce.boolean().default(false),
+  /**
+   * If set, [`@fastify/rate-limit`](https://github.com/fastify/fastify-rate-limit) and idempotency use Redis
+   * for this process. Required for **consistent** limits across multiple app instances.
+   */
+  REDIS_URL: z.string().optional(),
+  /**
+   * When `true`, registers `POST /v1/verify/jobs` (202) and `GET /v1/verify/jobs/:id`.
+   * Jobs are processed **in-process**; use one worker or a shared queue in front for multi-node.
+   */
+  ASYNC_VERIFY_JOBS_ENABLED: z.coerce.boolean().default(false),
+  /** Max concurrent stored async jobs (pending+processing+done kept until polled or cap). */
+  ASYNC_JOBS_MAX: z.coerce.number().int().min(10).max(100_000).default(2_000),
+  /** HMAC key for `X-Webhook-Signature` on async verify callbacks. Defaults to `HMAC_SECRET` if unset. */
+  WEBHOOK_SIGNING_SECRET: z.string().optional(),
 });
 
 export type AppConfig = z.infer<typeof envSchema>;

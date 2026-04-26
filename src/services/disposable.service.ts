@@ -5,6 +5,24 @@ import { getLogger } from "../utils/logger.js";
 const fileLoaded = new Set<string>();
 let loadFilePromise: Promise<void> | null = null;
 
+async function readDisposableFiles(): Promise<void> {
+  fileLoaded.clear();
+  const extra = resolveOptionalPath(getConfig().DISPOSABLE_LIST_PATH);
+  const dataPath = findDataFile("disposable-domains.txt");
+  for (const p of [dataPath, extra].filter(Boolean) as string[]) {
+    try {
+      const text = await fs.readFile(p, "utf8");
+      for (const line of text.split("\n")) {
+        const d = line.trim().toLowerCase();
+        if (d && !d.startsWith("#")) fileLoaded.add(d);
+      }
+      getLogger().info({ count: fileLoaded.size, path: p }, "disposable domains merged");
+    } catch {
+      // optional file
+    }
+  }
+}
+
 const BUILTIN = new Set(
   [
     "mailinator.com",
@@ -30,21 +48,13 @@ export function isDisposableDomainSync(domain: string): boolean {
 
 export async function ensureDisposableListLoaded(): Promise<void> {
   if (loadFilePromise) return loadFilePromise;
-  const extra = resolveOptionalPath(getConfig().DISPOSABLE_LIST_PATH);
-  const dataPath = findDataFile("disposable-domains.txt");
-  loadFilePromise = (async () => {
-    for (const p of [dataPath, extra].filter(Boolean) as string[]) {
-      try {
-        const text = await fs.readFile(p, "utf8");
-        for (const line of text.split("\n")) {
-          const d = line.trim().toLowerCase();
-          if (d && !d.startsWith("#")) fileLoaded.add(d);
-        }
-        getLogger().info({ count: fileLoaded.size, path: p }, "disposable domains merged");
-      } catch {
-        // optional file
-      }
-    }
-  })();
+  loadFilePromise = readDisposableFiles();
   return loadFilePromise;
+}
+
+/** Re-reads disposable files from disk and replaces the in-memory set (e.g. after a scheduled list sync). */
+export async function reloadDisposableListFromDisk(): Promise<void> {
+  loadFilePromise = null;
+  loadFilePromise = readDisposableFiles();
+  await loadFilePromise;
 }

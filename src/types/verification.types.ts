@@ -45,6 +45,17 @@ const verificationOutcomeBase = z.object({
   durationMs: z.number().nonnegative().optional(),
   score: z.number().min(0).max(100).optional(),
   deliverability: DeliverabilityClassSchema.optional(),
+  /** Short support-oriented explanation; not a duplicate of `message`. */
+  explain: z.string().optional(),
+  /** 0-100 confidence in this **verdict** (probe outcome), not inbox placement. */
+  confidence: z.number().min(0).max(100).optional(),
+  /** Optional hints (high-risk TLD, possible freemail typo); do not use as sole block reason. */
+  signals: z
+    .object({
+      highRiskTld: z.boolean().optional(),
+      possibleTypoOf: z.string().optional(),
+    })
+    .optional(),
 });
 
 /**

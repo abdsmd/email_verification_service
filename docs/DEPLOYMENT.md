@@ -25,7 +25,7 @@ This guide targets a **fresh Ubuntu Server 22.04 (Jammy)** instance. The app mus
 ## 2. Network and DNS expectations
 
 - **Inbound:** SSH (22), and if using Nginx + Let’s Encrypt: HTTP (80) and HTTPS (443). The app should listen on **127.0.0.1** in production so it is not exposed directly.
-- **Outbound:** **TCP 25** to remote MX servers, **UDP/TCP 53** for DNS resolvers, **HTTPS 443** for `apt` / `certbot` / NodeSource.
+- **Outbound:** **TCP 25** to remote MX servers, **UDP/TCP 53** for DNS resolvers, **HTTPS 443** for `apt` / `certbot` / NodeSource, and **HTTPS to `raw.githubusercontent.com`** if you use in-process or manual disposable list refresh (see [README §1.7](../README.md#17-disposable-domain-list) and `DISPOSABLE_LIST_CRON_*` in [`.env.example`](../.env.example)).
 - **DNS for your public hostname:** point your API hostname (e.g. `verify-api.example.com`) **A/AAAA** record to the server **before** running `certbot`.
 
 ---
@@ -288,6 +288,18 @@ npm run build
 pm2 reload ecosystem.config.js
 ```
 
+The repository may receive **automated daily commits** that refresh [`src/data/disposable-domains.txt`](../src/data/disposable-domains.txt) (same merge as the app) when upstream changes. `git pull` + **`pm2 reload`** applies a new file from Git (the in-memory set is not updated from `git pull` alone).
+
+**In-process list sync (default in production):** the server can run **[`node-cron`](https://www.npmjs.com/package/node-cron)** on a schedule (see `DISPOSABLE_LIST_CRON_*` in [`.env.example`](../.env.example)). When the merged file on disk **changes** after a fetch, the process **reloads the disposable set in memory** without a PM2 restart. Requires outbound **HTTPS 443** to `raw.githubusercontent.com`. In development, scheduled sync is **off** unless you set `DISPOSABLE_LIST_CRON_ENABLED=true`.
+
+**Optional patterns** (use what fits; Git Action + in-process both updating the same file is usually redundant):
+
+| Pattern | How it works |
+|--------|----------------|
+| **Git + PM2** | [`.github/workflows/update-disposable-domains.yml`](../.github/workflows/update-disposable-domains.yml) commits daily; you **`git pull`** and **`pm2 reload`**. |
+| **In-process only** | Enable `DISPOSABLE_LIST_CRON_*`, disable the workflow or accept duplicate upstream pulls. No OS crontab. |
+| **Manual** | `npm run update:disposable-list` (or `node dist/cli/update-disposable-list.js` after `npm run build`) any time. |
+
 ---
 
 ## 6. Smoke tests and health checks
@@ -327,5 +339,7 @@ If TLS is in front: use `https://verify-api.example.com/...` and ensure DNS poin
 | [install-ubuntu-22.04.sh](../install-ubuntu-22.04.sh) | Ubuntu 22.04 one-shot bootstrap (root of the repo). |
 | [.env.example](../.env.example) | Template for production `.env` (see README for every variable). |
 | [docs/DEPLOYMENT.md](DEPLOYMENT.md) | This file. |
+| [src/jobs/disposable-list-scheduler.ts](../src/jobs/disposable-list-scheduler.ts) | In-process `node-cron` schedule for upstream list sync. |
+| [src/cli/update-disposable-list.ts](../src/cli/update-disposable-list.ts) | CLI: same merge (used by `npm run update:disposable-list` and tsup `dist` output). |
 
-For troubleshooting specific API errors, see **README §15** (Troubleshooting).
+For troubleshooting specific API errors, see **README [§13 Troubleshooting](../README.md#13-troubleshooting)**.

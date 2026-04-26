@@ -47,6 +47,21 @@ docker compose down
 
 The service needs **outbound TCP 25** (SMTP to MX) and **DNS** from inside the container (same as bare metal). Publish only the HTTP port you need; put TLS and auth in front with a reverse proxy in production.
 
+## Disposable list (scheduled and manual)
+
+The runtime image sets **`NODE_ENV=production`**, so **in-process [`node-cron`](https://www.npmjs.com/package/node-cron)** for disposable list sync is **on by default** (same rules as in [README.md §1.7](../README.md#17-disposable-domain-list) and [`.env.example`](../.env.example) `DISPOSABLE_LIST_CRON_*`).
+
+- **File location:** the merged list is written to **`$DATA_DIR/disposable-domains.txt`**. In Compose, `DATA_DIR` defaults to `data`, resolved under `/app` → **`/app/data/disposable-domains.txt`** on the **mounted** `./data` host directory.
+- **Network:** the scheduler fetches from **`raw.githubusercontent.com`**. If your environment **blocks HTTPS egress**, set **`DISPOSABLE_LIST_CRON_ENABLED=false`** in `.env` and refresh the file via **Git/CI** or a one-off merge on a host with network, then redeploy or copy the file into `./data`.
+- **Turn off the schedule only:** e.g. `DISPOSABLE_LIST_CRON_ENABLED=false` (keep the rest of the defaults).
+- **Manual merge inside a running container** (image includes `dist/` from the build; no `tsx` in the pruned `node_modules` for local scripts, so use the compiled CLI):
+
+  ```bash
+  docker compose exec verification-station node dist/cli/update-disposable-list.js
+  ```
+
+  Run from a directory where `process.cwd()` is `/app` (the default for the app process) so `DATA_DIR` resolves the same as the main server.
+
 ## Permissions
 
 The entrypoint runs as **root** briefly to `chown` `/app/data` for user `node`, then starts the app as **node** (uid 1000). If your host directory is NFS or you manage ownership yourself, set `SKIP_CHOWN_DATA=1` in the `environment` section of `docker-compose.yml` and ensure `/app/data` is writable by uid **1000**.

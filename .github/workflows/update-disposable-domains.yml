@@ -1,0 +1,45 @@
+# Merges disposable lists (disposable-email-domains blocklist + disposable/disposable-email-domains domains.txt)
+# and commits if src/data/disposable-domains.txt changed. Schedule: daily ~06:15 UTC.
+# If `main` is protected: allow "GitHub Actions" to bypass, or copy this workflow to use
+# peter-evans/create-pull-request instead of a direct commit (see README §1.7).
+name: Update disposable email domains
+
+on:
+  schedule:
+    - cron: "15 6 * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: update-disposable-domains
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Merge disposable domain lists
+        run: npm run update:disposable-list
+
+      - name: Commit and push if changed
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore(data): sync disposable email domain list"
+          file_pattern: src/data/disposable-domains.txt
+          commit_user_name: "github-actions[bot]"
+          commit_user_email: "github-actions[bot]@users.noreply.github.com"
+          commit_options: "--no-verify"

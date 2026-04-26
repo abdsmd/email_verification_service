@@ -13,7 +13,11 @@ export function getDnsRetryConfig(): {
   };
 }
 
-export function getSmtpRetryConfig(): { retries: number; baseDelayMs: number } {
+export function getSmtpRetryConfig(applyBigProviderMult = false): { retries: number; baseDelayMs: number } {
   const c = getConfig();
-  return { retries: c.SMTP_RETRIES, baseDelayMs: c.SMTP_RETRY_BASE_DELAY_MS };
+  const mult = applyBigProviderMult ? c.SMTP_RETRY_BIG_PROVIDER_MULT : 1;
+  return {
+    retries: c.SMTP_RETRIES,
+    baseDelayMs: Math.max(0, Math.round(c.SMTP_RETRY_BASE_DELAY_MS * mult)),
+  };
 }
