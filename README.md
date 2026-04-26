@@ -4,10 +4,12 @@
 
 | | |
 |---|--|
+| **Repository** | **[github.com/abdsmd/email_verification_service](https://github.com/abdsmd/email_verification_service)** |
 | **Stack** | Node.js ≥ 22, Fastify 5, TypeScript, Zod, pino, PM2 |
 | **Real network I/O** | Uses Node’s **`dns/promises`** and **`net` TCP** to MX hosts (no fake / simulated SMTP) |
 | **Docs (deploy)** | [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) — Ubuntu 22.04, Nginx, UFW, upgrades |
-| **One-shot install** | [install-ubuntu-22.04.sh](install-ubuntu-22.04.sh) in the **repository root** |
+| **Docker** | [docs/DOCKER.md](docs/DOCKER.md) — [Dockerfile](Dockerfile), [docker-compose.yml](docker-compose.yml), data on host `./data` |
+| **One-shot install** | [install-ubuntu-22.04.sh](install-ubuntu-22.04.sh) in the **repository root** (clone from GitHub, then run the script; see [§5](#5-production-step-by-step-ubuntu-2204)) |
 
 ---
 
@@ -18,6 +20,8 @@
 | **Name** | **Abdus Samad** |
 | **Contact** | [abdsmd@gmail.com](mailto:abdsmd@gmail.com) |
 | **License** | [MIT](LICENSE) — you may use, modify, and self-host the software. |
+
+**Managed service (optional):** The software is free to self-host. If you prefer **not** to run it yourself, you can [email Abdus](mailto:abdsmd@gmail.com) to ask about a **managed** deployment (hosting, updates, and day‑to‑day operation—scope and terms by agreement).
 
 This repository is intended to be **public** so others can **clone, install, and run** VerificationStation on their own infrastructure. This README walks through **local development**, **server installation**, the **HTTP API** (with sample requests and JSON responses), and where to go next.
 
@@ -35,7 +39,7 @@ This repository is intended to be **public** so others can **clone, install, and
 
 **Making the GitHub (or GitLab) repository public**
 
-1. Push this project to a remote: `git remote add origin <your-url>` then `git push -u origin main`.
+1. Push this project to a remote: `git remote add origin https://github.com/abdsmd/email_verification_service.git` then `git push -u origin main` (if the remote is not set yet).
 2. On GitHub: **Settings → General → Danger zone → Change repository visibility → Public**.
 3. Do **not** commit secrets. Use `.env` on the server only (or your secret store). See [.env.example](.env.example).
 
@@ -47,9 +51,10 @@ This repository is intended to be **public** so others can **clone, install, and
 2. [What this service does *not* do](#2-what-this-service-does-not-do)  
 3. [Requirements](#3-requirements)  
 4. [Quick start (local development)](#4-quick-start-local-development)  
+   - [4.1 Docker](#41-docker)  
 5. [Production: step-by-step (Ubuntu 22.04)](#5-production-step-by-step-ubuntu-2204)  
 6. [Configuration (environment)](#6-configuration-environment)  
-7. [HTTP API reference](#7-http-api-reference)  
+7. [HTTP API](#7-http-api)  
 8. [Verification result `code` values](#8-verification-result-code-values)  
 9. [Scoring and deliverability (optional fields)](#9-scoring-and-deliverability-optional-fields)  
 10. [SMTP behaviour (summary)](#10-smtp-behaviour-summary)  
@@ -67,6 +72,7 @@ This repository is intended to be **public** so others can **clone, install, and
 - **Policy**: disposable domain list, role-like local parts, optional **catch-all** detection.  
 - **SMTP** (optional): real TCP connection to port **25**, EHLO/HELO, MAIL FROM, RCPT TO; replies classified (greylist, provider block, permanent reject, etc.).  
 - **API**: `POST /v1/verify`, `POST /v1/verify/batch` (dedupe, domain grouping, `Promise.allSettled`-style row safety), health, metrics, cache/cooldown admin.  
+- **PWA** (optional): installable web shell at `/` — `manifest.webmanifest`, service worker, health and verify helpers; set `PWA_ENABLED=false` for API-only.  
 - **Security** (configurable): Bearer token, optional **HMAC** request signing, optional IP allowlist, Helmet, body size cap, global rate limit, structured JSON errors.
 
 ---
@@ -95,7 +101,7 @@ This repository is intended to be **public** so others can **clone, install, and
 **Step 1 — Clone the repository**
 
 ```bash
-git clone <repository-url> verification-station
+git clone https://github.com/abdsmd/email_verification_service.git verification-station
 cd verification-station
 ```
 
@@ -125,13 +131,13 @@ cp .env.example .env
 ```bash
 npm run build
 npm start
-# Default: http://0.0.0.0:8080  (see HOST and PORT in .env)
+# Default: http://127.0.0.1:8090  (see HOST and PORT in `.env`; `0.0.0.0` only if you need non-loopback, e.g. Docker)
 ```
 
 **Step 6 — Health check**
 
 ```bash
-curl -sS http://127.0.0.1:8080/health
+curl -sS http://127.0.0.1:8090/health
 ```
 
 **Expected response (JSON):**
@@ -148,16 +154,47 @@ npm run lint
 npm test
 ```
 
+### 4.1 Docker
+
+Run the API in Docker with **SQLite cache and data files on the host** (directory `./data` next to `docker-compose.yml`).
+
+1. `cp docker/.env.example .env` and set production values (`STATION_SECRET`, `HELO_DOMAIN`, `MAIL_FROM` or `MAIL_FROM_DOMAIN`, etc.).  
+2. `docker compose up -d --build`  
+3. `curl -sS http://127.0.0.1:8090/health` (or your `PORT` from `.env`).
+
+Compose uses **`CACHE_BACKEND=sqlite`**, writes **`/app/data/verification-station.db`**, and enables **`PROVIDER_COOLDOWN_PERSIST`** so cache and provider cooldown survive container restarts. An **entrypoint** seeds list/JSON files into `./data` the first time the directory is empty.
+
+Details: [docs/DOCKER.md](docs/DOCKER.md).
+
 ---
 
 ## 5. Production: step-by-step (Ubuntu 22.04)
 
 For a full server guide (Nginx, TLS, UFW, upgrades), read **[docs/DEPLOYMENT.md](docs/DEPLOYMENT.md)**. Below is the short path using the **root** install script.
 
-### 5.1 One-command bootstrap (as a sudo user on a fresh 22.04 server)
+**GitHub (clone source):** `https://github.com/abdsmd/email_verification_service`
+
+### 5.1 Install script from GitHub (`install-ubuntu-22.04.sh`)
+
+On **Ubuntu 22.04**, after you have **git** and **sudo**:
+
+```bash
+git clone https://github.com/abdsmd/email_verification_service.git verification-station
+cd verification-station
+chmod +x install-ubuntu-22.04.sh
+export SETUP_NGINX=0   # set to 1 if you want the script to configure Nginx
+export SETUP_UFW=0     # set to 1 if you want UFW rules
+sudo ./install-ubuntu-22.04.sh
+```
+
+The script refreshes packages, installs Node 22, creates the `verification` user (when not using a custom flow), runs `npm ci`, tests, `npm run build`, PM2, and optional Nginx/UFW per **docs/DEPLOYMENT.md**. Then edit `.env` on the server (see below).
+
+### 5.2 One-command bootstrap (manual directory layout on a fresh 22.04 server)
+
+Use this if you prefer the app under **`/opt/verification-station`** (same end result as cloning into a named folder).
 
 1. **SSH** into the server.  
-2. **Install git** and clone this repo to `/opt/verification-station` (or set `APP_DIR`):
+2. **Install git** and clone this repo to `/opt/verification-station` (or set `APP_DIR` when running the script):
 
 ```bash
 sudo apt-get update
@@ -167,7 +204,7 @@ cd /opt
 sudo mkdir -p verification-station
 sudo chown "$USER":"$USER" verification-station
 cd verification-station
-git clone <YOUR-REPO-URL> .
+git clone https://github.com/abdsmd/email_verification_service.git .
 ```
 
 3. **Run the installer** (it updates the OS, installs Node 22 from NodeSource, creates user `verification`, runs `npm ci` / `test` / `build`, installs PM2, optional Nginx/UFW):
@@ -198,7 +235,7 @@ pm2 reload ecosystem.config.js
 6. **Smoke test**
 
 ```bash
-curl -sS http://127.0.0.1:8080/health
+curl -sS http://127.0.0.1:8090/health
 ```
 
 7. **PM2 on reboot** — run the **exact** `sudo env PATH=...` line printed once by `pm2 startup` (the script also reminds you; see [DEPLOYMENT.md](docs/DEPLOYMENT.md)).
@@ -211,9 +248,9 @@ Configuration is loaded with **dotenv-flow** (e.g. `.env`, `.env.production`, `.
 
 | Variable | Purpose (short) |
 |----------|-----------------|
-| `HOST` / `PORT` | Bind address and port (use `127.0.0.1` behind Nginx) |
+| `HOST` / `PORT` | Bind address (default **`127.0.0.1`**) and port. Use `0.0.0.0` only for Docker / all-interfaces; production behind Nginx should keep `127.0.0.1` |
 | `STATION_SECRET` or `API_KEY` | `Authorization: Bearer <token>` on protected routes when set |
-| `HMAC_SECRET` | Optional second layer: signed mutating requests (see [§7.2](#72-authentication)) |
+| `HMAC_SECRET` | Optional second layer: signed mutating requests (see [docs/API.md#authentication](docs/API.md#authentication)) |
 | `TRUST_PROXY` | Set `true` behind Nginx if you use `X-Forwarded-*` (and often `IP_ALLOWLIST`) |
 | `REQUEST_BODY_MAX_BYTES` | Max JSON body (default 1 MiB) |
 | `MAX_CONCURRENCY` / batch limits / `MAX_CONCURRENT_PER_PROVIDER` | Back-pressure for verify pipeline |
@@ -225,319 +262,11 @@ Ops-style **aliases** (e.g. `API_PORT` → `PORT`) are in [src/config/env-aliase
 
 ---
 
-## 7. HTTP API reference
+## 7. HTTP API
 
-**Base URL:** `http://<host>:<port>` (e.g. `https://verify-api.example.com` behind Nginx).
+**One-page reference (routes, auth, bodies, errors):** [docs/API.md](docs/API.md)
 
-**Content type:** `Content-Type: application/json` for JSON bodies.
-
-**Common error shape** (most failures):
-
-```json
-{
-  "error": "validation_error | unauthorized | not_found | internal_error | …",
-  "message": "optional human-readable (non-production 5xx may hide detail)",
-  "details": { }
-}
-```
-
-Unknown routes return:
-
-```json
-{ "error": "not_found", "method": "GET" }
-```
-
-### 7.1 Route overview
-
-| Method | Path | Auth | Description |
-|--------|------|------|-------------|
-| `GET` | `/health` | No | Liveness |
-| `GET` | `/v1/ready` | No | Readiness |
-| `GET` | `/v1/metrics` | No* | Counters and uptime (404 if `METRICS_ENABLED=false`) |
-| `POST` | `/v1/verify` | If token/HMAC set | Single email verification |
-| `POST` | `/v1/verify/batch` | If set | Batch verification |
-| `GET` | `/v1/cache/stats` | If set | Cache statistics |
-| `POST` | `/v1/cache/clear` | If set | Clear cache namespace |
-| `GET` | `/v1/cooldown` | If set | Provider cooldown snapshot |
-| `POST` | `/v1/cooldown/reset` | If set | Reset cooldown(s) |
-
-\*Secure `/v1/metrics` at the edge in production (no auth in app by default).
-
-**Bearer auth:** if `STATION_SECRET` or `API_KEY` is set, protected routes need:
-
-```http
-Authorization: Bearer <same value as env>
-```
-
-`STATION_SECRET` wins if both are set.
-
-**Public (no auth) paths** are only: `/health`, `/v1/ready`, `/v1/metrics` (see [src/config/public-routes.ts](src/config/public-routes.ts)).
-
-### 7.2 Authentication (optional layers)
-
-1. **Bearer** — see above.  
-2. **HMAC** — if `HMAC_SECRET` is set, **non-GET/HEAD** requests to protected routes also need:  
-   - `X-Timestamp` (Unix seconds, ms, or ISO)  
-   - `X-Signature` — hex HMAC-SHA256 of string `` `${timestamp}.${rawBody}` ``  
-   - `X-Request-Id` — unique per request; replays can return **409** after a success  
-
-   Clock skew: `HMAC_SKEW_MS` (default 5 minutes).  
-3. **IP allowlist** — if `IP_ALLOWLIST` is set, only listed client IPs are allowed (use `TRUST_PROXY=true` behind Nginx so the real client IP is seen).
-
-### 7.3 `GET /health`
-
-**Response `200`:**
-
-```json
-{ "ok": true, "service": "verification-station" }
-```
-
-### 7.4 `GET /v1/ready`
-
-**Response `200`:**
-
-```json
-{ "ready": true }
-```
-
-### 7.5 `GET /v1/metrics`
-
-**Response `200`** (when `METRICS_ENABLED=true`):
-
-```json
-{
-  "verifyTotal": 42,
-  "verifyBatch": 3,
-  "errors": 0,
-  "startedAt": 1700000000000,
-  "uptimeMs": 3600000
-}
-```
-
-**Response `404`** when metrics disabled:
-
-```json
-{ "error": "metrics_disabled" }
-```
-
-### 7.6 `POST /v1/verify`
-
-**Request body**
-
-| Field | Type | Required | Description |
-|-------|------|----------|-------------|
-| `email` | string | Yes | 3–320 chars; trimmed and lowercased by API |
-| `jobId` | string | No | Opaque id for your logging |
-| `options` | object | No | `skipSmtp`, `skipCatchAll`, `forceRefresh` (all boolean, optional) |
-
-**Example (minimal)**
-
-```http
-POST /v1/verify HTTP/1.1
-Host: 127.0.0.1:8080
-Authorization: Bearer your-secret
-Content-Type: application/json
-
-{
-  "email": "user@example.com",
-  "options": {}
-}
-```
-
-**Example response `200` — mailbox accepted (illustrative; real `details` vary)**
-
-```json
-{
-  "email": "user@example.com",
-  "code": "valid",
-  "message": "RCPT accept",
-  "details": {
-    "layer": "smtp",
-    "smtp": 250,
-    "semantic": "mailbox_ok"
-  },
-  "score": 100,
-  "deliverability": "deliverable",
-  "durationMs": 1842
-}
-```
-
-**Example `200` — bad syntax (no outbound SMTP needed for “dead”)**
-
-```json
-{
-  "email": "not-an-email",
-  "code": "dead",
-  "message": "syntax: local part: …"
-}
-```
-
-**Example `200` — try again later (provider / greylist / transient path)**
-
-```json
-{
-  "email": "user@gmail.com",
-  "code": "retry_later",
-  "message": "…",
-  "details": { "reason": "provider_smtp" },
-  "providerCooldownUntil": "2026-01-15T10:00:00.000Z"
-}
-```
-
-**Response `400` — body validation**
-
-```json
-{
-  "error": "validation_error",
-  "details": {
-    "formErrors": [],
-    "fieldErrors": { "email": ["…"] }
-  }
-}
-```
-
-### 7.7 `POST /v1/verify/batch`
-
-**Request body**
-
-| Field | Type | Description |
-|-------|------|-------------|
-| `items` | array | At least 1; each item: `{ "email", "jobId"?, "options"? }` (same as single) |
-| `options` | object | Default options for all rows (per-row `options` can override) |
-
-Max array size: **10_000** hard cap in schema; also limited by `BATCH_MAX_ITEMS` in env (default 500).
-
-**Example**
-
-```json
-{
-  "items": [
-    { "email": "a@example.com" },
-    { "email": "b@other.org", "options": { "skipSmtp": true } }
-  ],
-  "options": { "forceRefresh": false }
-}
-```
-
-**Response `200`**
-
-```json
-{
-  "results": [
-    {
-      "email": "a@example.com",
-      "code": "valid",
-      "message": "…",
-      "details": { },
-      "durationMs": 1200
-    },
-    {
-      "email": "b@other.org",
-      "code": "unknown",
-      "message": "MX OK; SMTP not executed",
-      "details": { "mx": "mx1.other.org" },
-      "score": 45,
-      "deliverability": "risky",
-      "durationMs": 80
-    }
-  ]
-}
-```
-
-One result object is returned per **input row** (duplicates are verified once, then copied back). If an internal error affects one row, that row may have `"code": "system_error"`.
-
-### 7.8 `GET /v1/cache/stats`
-
-**Response `200` — memory backend**
-
-```json
-{
-  "backend": "memory",
-  "layers": {
-    "result": 12,
-    "mx": 45,
-    "domain": 10,
-    "dead": 2,
-    "disposable": 1,
-    "role": 0,
-    "catchall": 0,
-    "providerCooldown": 0,
-    "mxHealth": 0,
-    "mxPersistent": 0
-  },
-  "dnsSize": 45,
-  "resultSize": 12
-}
-```
-
-**Response `200` — SQLite backend**
-
-```json
-{ "backend": "sqlite" }
-```
-
-### 7.9 `POST /v1/cache/clear`
-
-**Request body (optional)** — default `{ "type": "all" }`.
-
-**`type` values:** `all`, `result`, `dns`, `mx`, `domain`, `dead`, `disposable`, `role`, `catchall`, `provider_cooldown`, `mx_health`, `mx_persistent`.
-
-**Example**
-
-```json
-{ "type": "result" }
-```
-
-**Response `200`**
-
-```json
-{ "ok": true, "cleared": "result" }
-```
-
-### 7.10 `GET /v1/cooldown`
-
-**Response `200`**
-
-```json
-{
-  "providers": {
-    "gmail": {
-      "untilIso": "2026-01-01T12:00:00.000Z",
-      "lastSmtpAtIso": "2026-01-01T11:00:00.000Z",
-      "blockCount": 2,
-      "active": true
-    }
-  }
-}
-```
-
-(Empty or partial objects when no state.)
-
-### 7.11 `POST /v1/cooldown/reset`
-
-**Request body (optional)**
-
-- **`{}`** or omitted body — clears **all** provider cooldown state.  
-- **`{ "provider": "gmail" }`** — clears only that provider id (`gmail`, `outlook`, `yahoo`, …, or `other`).
-
-```json
-{ "provider": "gmail" }
-```
-
-**Response `200`**
-
-```json
-{ "ok": true }
-```
-
-### 7.12 Rate limiting and HTTP status codes
-
-- **429** — global rate limit (`RATE_LIMIT_MAX` / `RATE_LIMIT_WINDOW_MS`) when tripped.  
-- **401** — missing / wrong Bearer when auth is required.  
-- **403** — IP not allowlisted, or HMAC / policy failure.  
-- **409** — HMAC replay (`X-Request-Id` reuse).  
-- **413** — body too large (`REQUEST_BODY_MAX_BYTES`).  
-- **500** — unexpected server error; in `NODE_ENV=production`, body is often `{ "error": "internal_error" }`.
+**Postman:** Import [postman/VerificationStation.postman_collection.json](postman/VerificationStation.postman_collection.json) (**File → Import** in Postman). Set collection variables **`baseUrl`** (e.g. `http://127.0.0.1:8090`) and **`bearerToken`** when `STATION_SECRET` or `API_KEY` is set. Folders: **Public** (health, ready, metrics) and **Protected** (verify, batch, cache, cooldown).
 
 ---
 
@@ -620,6 +349,7 @@ Disable gating only for debugging: `PROVIDER_COOLDOWN_ENABLED=false` (not recomm
 ## 14. Contributing and support
 
 - **Author:** Abdus Samad — [abdsmd@gmail.com](mailto:abdsmd@gmail.com)  
+- **Managed service:** same contact if you want this stack run for you; see the note under [Author & open source](#author--open-source) above.  
 - Issues, forks, and pull requests are welcome for this public project.  
 - For deployment detail beyond this README, use **[docs/DEPLOYMENT.md](docs/DEPLOYMENT.md)** and **[install-ubuntu-22.04.sh](install-ubuntu-22.04.sh)**.
 

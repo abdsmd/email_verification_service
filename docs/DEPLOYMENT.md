@@ -3,7 +3,8 @@
 This guide targets a **fresh Ubuntu Server 22.04 (Jammy)** instance. The app must be able to reach the internet for **DNS (53)** and **SMTP (25)** from this host (typical for a small VPS).
 
 - **HTTP API, sample requests/responses, auth:** root [README.md](../README.md) (public, end-user and integrator focus).  
-- **Environment variable reference:** [README.md §6 Configuration](../README.md#6-configuration-environment) and [.env.example](../.env.example).
+- **Environment variable reference:** [README.md §6 Configuration](../README.md#6-configuration-environment) and [.env.example](../.env.example).  
+- **Docker (Compose, host-mounted data, SQLite):** [DOCKER.md](DOCKER.md).
 
 ---
 
@@ -65,7 +66,7 @@ chmod +x install-ubuntu-22.04.sh
 #   GIT_REPO=...       # only if the tree is not already under /opt/verification-station
 #   APP_DIR=...        # default /opt/verification-station
 #   DEPLOY_USER=...    # default verification
-#   APP_PORT=8080
+#   APP_PORT=8090
 #   SETUP_NGINX=1
 #   NGINX_SERVER_NAME=verify-api.example.com
 #   SETUP_UFW=1
@@ -90,7 +91,7 @@ sudo ./install-ubuntu-22.04.sh
 
 1. Edit `/opt/verification-station/.env` (or your `APP_DIR`): **STATION_SECRET** (or **API_KEY**), **HELO_DOMAIN**, **MAIL_FROM**, and tuning variables from the README.
 2. Re-read PM2 on-disk instructions if boot persistence was not completed: `sudo -iu verification cat /tmp/pm2-startup-instructions.txt` (path may differ).
-3. Smoke test: `curl -sS http://127.0.0.1:8080/health` (use your `PORT` if changed).
+3. Smoke test: `curl -sS http://127.0.0.1:8090/health` (use your `PORT` if changed).
 
 ---
 
@@ -188,7 +189,7 @@ Production-oriented defaults in `.env` (adjust as needed):
 
 ```bash
 HOST=127.0.0.1
-PORT=8080
+PORT=8090
 NODE_ENV=production
 TRUST_PROXY=true
 # If using SQLite on disk (optional):
@@ -217,7 +218,7 @@ A minimal example (replace `verify-api.example.com`):
 
 ```nginx
 upstream verification_station {
-    server 127.0.0.1:8080;
+    server 127.0.0.1:8090;
     keepalive 32;
 }
 
@@ -254,7 +255,7 @@ Set **`TRUST_PROXY=true`** in the app when using Nginx and `X-Forwarded-*` heade
 sudo ufw allow OpenSSH
 sudo ufw allow 80/tcp
 sudo ufw allow 443/tcp
-# Do not open 8080 publicly if the app is bound to 127.0.0.1 and only Nginx connects
+# Do not open 8090 publicly if the app is bound to 127.0.0.1 and only Nginx connects
 echo "y" | sudo ufw enable
 sudo ufw status verbose
 ```
@@ -292,13 +293,13 @@ pm2 reload ecosystem.config.js
 ## 6. Smoke tests and health checks
 
 ```bash
-curl -sS http://127.0.0.1:8080/health
-curl -sS http://127.0.0.1:8080/v1/ready
+curl -sS http://127.0.0.1:8090/health
+curl -sS http://127.0.0.1:8090/v1/ready
 # With auth set:
 curl -sS -H "Authorization: Bearer $STATION_SECRET" \
   -H "Content-Type: application/json" \
   -d '{"email":"user@example.com","options":{}}' \
-  http://127.0.0.1:8080/v1/verify
+  http://127.0.0.1:8090/v1/verify
 ```
 
 If TLS is in front: use `https://verify-api.example.com/...` and ensure DNS points to the server.
@@ -312,7 +313,7 @@ If TLS is in front: use `https://verify-api.example.com/...` and ensure DNS poin
 | `better-sqlite3` compile errors during `npm ci` | Install `build-essential` and `python3`; re-run `npm ci`. |
 | `node: not v22` | Re-run the NodeSource `setup_22.x` block and `apt-get install -y nodejs`. |
 | PM2 not surviving reboot | Re-run `pm2 save` and the **exact** `sudo env ...` line from `pm2 startup` as **root**. |
-| `EADDRINUSE` on `PORT` | `sudo ss -tlnp \| grep 8080` (or your port) and stop the conflicting process. |
+| `EADDRINUSE` on `PORT` | `sudo ss -tlnp \| grep 8090` (or your port) and stop the conflicting process. |
 | All verifications time out or fail DNS | Check outbound **53** and **25** (provider security groups + local `ufw status`). |
 | 502 from Nginx | App not running (`pm2 status`), wrong `upstream` port, or `HOST` not `127.0.0.1` / mismatch. |
 

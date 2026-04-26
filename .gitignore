@@ -49,6 +49,10 @@ Thumbs.db
 *.sqlite-journal
 *.db
 
+# Docker / host bind mount at repo root (see docker-compose.yml)
+data/*
+!data/.gitkeep
+
 # Optional local overrides
 .turbo/
 

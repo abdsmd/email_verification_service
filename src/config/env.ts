@@ -7,8 +7,12 @@ dotenvFlow();
 
 const envSchema = z.object({
   NODE_ENV: z.enum(["development", "test", "production"]).default("development"),
-  HOST: z.string().default("0.0.0.0"),
-  PORT: z.coerce.number().int().positive().default(8080),
+  /**
+   * Bind address. Default `127.0.0.1` so the HTTP server is not reachable from other machines.
+   * Set `0.0.0.0` only when you need all interfaces (e.g. Docker published ports, LAN dev).
+   */
+  HOST: z.string().default("127.0.0.1"),
+  PORT: z.coerce.number().int().positive().default(8090),
   LOG_LEVEL: z
     .enum(["fatal", "error", "warn", "info", "debug", "trace", "silent"])
     .default("info"),
@@ -96,6 +100,18 @@ const envSchema = z.object({
   MAJOR_FREE_MAIL_PROVIDERS_MIN_INTERVAL_MS: z.coerce.number().int().min(0).default(5_000),
   CORS_ENABLED: z.coerce.boolean().default(false),
   CORS_ORIGIN: z.string().optional(),
+  /** Serve the installable PWA (manifest, service worker, / shell) from ./public. String `false`/`0` is false. */
+  PWA_ENABLED: z
+    .string()
+    .optional()
+    .default("true")
+    .transform((s) => {
+      const l = s.trim().toLowerCase();
+      if (l === "false" || l === "0" || l === "no" || l === "off") {
+        return false;
+      }
+      return true;
+    }),
   /**
    * Bearer token for `Authorization: Bearer <token>`. Takes precedence over API_KEY when both set.
    * @see API_KEY — legacy name, same use

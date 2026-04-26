@@ -1,0 +1,2 @@
+# Shell entrypoints must stay LF for Linux containers
+docker/entrypoint.sh text eol=lf

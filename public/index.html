@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Verification Station</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Email verification API: health, metrics, and local verify" />
+    <meta name="theme-color" content="#0d9488" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/icons/icon.svg" />
+    <style>
+      :root {
+        --bg: #f8fafc;
+        --fg: #0f172a;
+        --card: #fff;
+        --accent: #0d9488;
+        --border: #e2e8f0;
+        --muted: #64748b;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #0f172a;
+          --fg: #e2e8f0;
+          --card: #1e293b;
+          --border: #334155;
+          --muted: #94a3b8;
+        }
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: system-ui, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+        margin: 0;
+        min-height: 100dvh;
+        background: var(--bg);
+        color: var(--fg);
+        line-height: 1.5;
+      }
+      main {
+        max-width: 40rem;
+        margin: 0 auto;
+        padding: 1.5rem;
+      }
+      h1 {
+        font-size: 1.35rem;
+        font-weight: 600;
+        margin: 0 0 0.5rem;
+      }
+      p.lead {
+        margin: 0 0 1.5rem;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+      section {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 0.5rem;
+        padding: 1rem 1.15rem;
+        margin-bottom: 1rem;
+      }
+      h2 {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        color: var(--muted);
+        margin: 0 0 0.75rem;
+        font-weight: 600;
+      }
+      label {
+        display: block;
+        font-size: 0.85rem;
+        margin-bottom: 0.25rem;
+      }
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+        padding: 0.5rem 0.6rem;
+        border: 1px solid var(--border);
+        border-radius: 0.35rem;
+        background: var(--bg);
+        color: var(--fg);
+        font-size: 0.95rem;
+      }
+      .row {
+        margin-bottom: 0.75rem;
+      }
+      button {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        background: var(--accent);
+        color: #f0fdfa;
+        border: none;
+        padding: 0.45rem 0.9rem;
+        border-radius: 0.35rem;
+        font-size: 0.9rem;
+        font-weight: 500;
+        cursor: pointer;
+      }
+      button.secondary {
+        background: transparent;
+        color: var(--accent);
+        border: 1px solid var(--accent);
+      }
+      button:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
+      pre {
+        font-size: 0.8rem;
+        margin: 0.5rem 0 0;
+        white-space: pre-wrap;
+        word-break: break-word;
+        max-height: 12rem;
+        overflow: auto;
+        padding: 0.6rem;
+        background: var(--bg);
+        border-radius: 0.35rem;
+        border: 1px solid var(--border);
+      }
+      .subtle {
+        font-size: 0.8rem;
+        color: var(--muted);
+        margin: 0.5rem 0 0;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Verification Station</h1>
+      <p class="lead">API shell and local verify (bearer token stays in this browser only).</p>
+
+      <section aria-labelledby="a11y-probe">
+        <h2 id="a11y-probe">Probes</h2>
+        <button type="button" class="secondary" id="btn-health">GET /health</button>
+        <pre id="out-probe" role="status"></pre>
+      </section>
+
+      <section aria-labelledby="a11y-verify">
+        <h2 id="a11y-verify">POST /v1/verify</h2>
+        <p class="subtle" id="auth-hint" hidden>No bearer token: set an API key on the server to enable verify, or open this page on a host with auth disabled (dev only).</p>
+        <div class="row">
+          <label for="bearer">Bearer token</label>
+          <input
+            type="password"
+            id="bearer"
+            name="bearer"
+            autocomplete="off"
+            placeholder="from STATION_SECRET or API_KEY"
+          />
+        </div>
+        <div class="row">
+          <label for="email">Email</label>
+          <input type="text" id="email" name="email" inputmode="email" placeholder="name@example.com" />
+        </div>
+        <button type="button" id="btn-verify">Run verify</button>
+        <pre id="out-verify" role="status"></pre>
+        <p class="subtle">If the API requires a token, pasting it here is optional but needed for a 200. Never use production secrets on a shared device.</p>
+      </section>
+    </main>
+    <script>
+      (function () {
+        const LS = "verifystation_pwa_bearer";
+        const base = function () {
+          return window.location.origin;
+        };
+        const bearer = document.getElementById("bearer");
+        const email = document.getElementById("email");
+        const outProbe = document.getElementById("out-probe");
+        const outVerify = document.getElementById("out-verify");
+        const authHint = document.getElementById("auth-hint");
+        if (bearer) bearer.value = localStorage.getItem(LS) || "";
+        function saveBearer() {
+          if (bearer) localStorage.setItem(LS, bearer.value);
+        }
+        if (bearer) bearer.addEventListener("change", saveBearer);
+
+        document.getElementById("btn-health").addEventListener("click", async function () {
+          outProbe.textContent = "…";
+          try {
+            const r = await fetch(base() + "/health", { method: "GET" });
+            const t = await r.text();
+            outProbe.textContent = r.status + " " + r.statusText + "\n" + t;
+          } catch (e) {
+            outProbe.textContent = "Network error: " + (e && e.message ? e.message : e);
+          }
+        });
+
+        document.getElementById("btn-verify").addEventListener("click", async function () {
+          saveBearer();
+          outVerify.textContent = "…";
+          const t = (bearer && bearer.value.trim()) || "";
+          const em = (email && email.value.trim()) || "";
+          if (!em) {
+            outVerify.textContent = "Enter an email address.";
+            return;
+          }
+          const headers = { "content-type": "application/json" };
+          if (t) {
+            headers["authorization"] = "Bearer " + t;
+            authHint.hidden = true;
+          } else {
+            authHint.hidden = false;
+          }
+          try {
+            const r = await fetch(base() + "/v1/verify", {
+              method: "POST",
+              headers: headers,
+              body: JSON.stringify({ email: em, options: {} })
+            });
+            const text = await r.text();
+            outVerify.textContent = r.status + " " + r.statusText + "\n" + text;
+          } catch (e) {
+            outVerify.textContent = "Network error: " + (e && e.message ? e.message : e);
+          }
+        });
+
+        if ("serviceWorker" in navigator) {
+          window.addEventListener("load", function () {
+            navigator.serviceWorker
+              .register("/sw.js", { scope: "/" })
+              .then(function (reg) {
+                if (reg.waiting) {
+                  return;
+                }
+              })
+              .catch(function () {});
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>

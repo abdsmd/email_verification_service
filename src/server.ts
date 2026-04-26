@@ -21,6 +21,16 @@ try {
   process.exit(1);
 }
 
+if (
+  config.NODE_ENV === "production" &&
+  (config.HOST === "0.0.0.0" || config.HOST === "::")
+) {
+  log.warn(
+    { host: config.HOST },
+    "HTTP bound to all interfaces; prefer 127.0.0.1 behind a reverse proxy unless required (e.g. Docker)"
+  );
+}
+
 log.info(
   {
     port: config.PORT,

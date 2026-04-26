@@ -14,6 +14,7 @@ import { registerBatchRoutes } from "./routes/batch.route.js";
 import { registerMetricsRoutes } from "./routes/metrics.route.js";
 import { registerCacheRoutes } from "./routes/cache.route.js";
 import { registerCooldownRoutes } from "./routes/cooldown.route.js";
+import { registerPwaStaticFiles } from "./pwa/register-static.js";
 import { ensureDisposableListLoaded } from "./services/disposable.service.js";
 import { ensureRolePrefixesLoaded } from "./services/role.service.js";
 import { initializeProviderCooldownModule } from "./services/provider-cooldown.service.js";
@@ -80,6 +81,7 @@ export async function buildApp(): Promise<FastifyInstance> {
   registerMetricsRoutes(app);
   registerCacheRoutes(app);
   registerCooldownRoutes(app);
+  await registerPwaStaticFiles(app);
 
   return app;
 }

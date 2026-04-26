@@ -15,7 +15,10 @@ export default {
       out_file: "/var/log/verification-station/out.log",
       error_file: "/var/log/verification-station/error.log",
       merge_logs: false,
-      env: { NODE_ENV: "production" },
+      env: {
+        NODE_ENV: "production",
+        HOST: "127.0.0.1",
+      },
     },
   ],
 };

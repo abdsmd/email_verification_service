@@ -10,7 +10,7 @@
 #   export SETUP_UFW=1     # 1 to enable UFW (SSH + 80 + 443)
 #   ./install-ubuntu-22.04.sh
 #
-# Defaults: APP_DIR=/opt/verification-station, DEPLOY_USER=verification, APP_PORT=8080
+# Defaults: APP_DIR=/opt/verification-station, DEPLOY_USER=verification, APP_PORT=8090
 # =============================================================================
 set -euo pipefail
 
@@ -76,7 +76,7 @@ log "Using: $(command -v node) $(node -v)  $(command -v npm) $(npm -v)"
 # --- 3) Service account and paths --------------------------------------------
 DEPLOY_USER="${DEPLOY_USER:-verification}"
 APP_DIR="${APP_DIR:-/opt/verification-station}"
-APP_PORT="${APP_PORT:-8080}"
+APP_PORT="${APP_PORT:-8090}"
 LOG_DIR="/var/log/verification-station"
 DATA_DIR="${DATA_DIR:-/var/lib/verification-station/data}"
 GIT_REPO="${GIT_REPO:-}"

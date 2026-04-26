@@ -15,6 +15,7 @@ beforeEach(() => {
   delete process.env.API_KEY;
   delete process.env.HMAC_SECRET;
   delete process.env.SQLITE_PATH;
+  delete process.env.PWA_ENABLED;
   resetConfigForTests();
   resetProviderStateForTests();
   resetMemoryCachesForTests();

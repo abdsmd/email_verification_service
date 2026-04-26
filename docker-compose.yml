@@ -1,0 +1,36 @@
+# Verification Station — run with durable cache/DB on the host under ./data
+#
+# Quick start:
+#   cp docker/.env.example .env
+#   # edit .env: set STATION_SECRET, HELO_DOMAIN, MAIL_FROM or MAIL_FROM_DOMAIN, etc.
+#   docker compose up -d --build
+#
+# Data on host: ./data  (SQLite DB, list files, provider cooldown if enabled)
+# API: http://127.0.0.1:8090  (map ports in this file or set PORT)
+
+services:
+  verification-station:
+    build: .
+    image: verification-station:local
+    container_name: verification-station
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      NODE_ENV: production
+      # Paths inside the container; ./data is mounted from the host (override in .env if needed)
+      DATA_DIR: ${DATA_DIR:-data}
+      CACHE_BACKEND: ${CACHE_BACKEND:-sqlite}
+      SQLITE_PATH: ${SQLITE_PATH:-/app/data/verification-station.db}
+      PROVIDER_COOLDOWN_PERSIST: ${PROVIDER_COOLDOWN_PERSIST:-true}
+      # Required inside Docker so host `ports:` forwarding works; still not public until you publish the port
+      HOST: "0.0.0.0"
+    ports:
+      - "${PORT:-8090}:${PORT:-8090}"
+    volumes:
+      - ./data:/app/data
+    # Outbound: TCP 25 (SMTP), 53 (DNS) — not restricted; ensure firewall/host allows.
+    ulimits:
+      nofile:
+        soft: 65535
+        hard: 65535

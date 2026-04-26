@@ -1,0 +1,37 @@
+# Dependencies and build output (rebuilt in image)
+node_modules
+dist
+
+# Git and IDE
+.git
+.github
+.vscode
+.idea
+*.code-workspace
+
+# Tests and local tooling
+tests
+coverage
+*.test.ts
+vitest.config.*
+eslint.config.*
+.prettierrc*
+
+# Env and secrets (use compose env_file / host .env, never bake secrets)
+.env
+.env.*
+!docker/.env.example
+
+# OS / misc
+Thumbs.db
+.DS_Store
+*.log
+
+# Host-only data (compose mounts ./data; do not copy large DB into build context)
+data
+
+# Docs and scripts not needed to run the server
+postman
+*.md
+!README.md
+install-ubuntu-22.04.sh

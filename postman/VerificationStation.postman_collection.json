@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d",
+		"name": "Verification Station",
+		"description": "Email verification API. Set collection variables: `baseUrl` (e.g. http://127.0.0.1:8090), `bearerToken` (same as STATION_SECRET or API_KEY when auth is enabled). See docs/API.md for HMAC and full details.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"variable": [
+		{ "key": "baseUrl", "value": "http://127.0.0.1:8090" },
+		{ "key": "bearerToken", "value": "" }
+	],
+	"item": [
+		{
+			"name": "Public",
+			"item": [
+				{
+					"name": "GET Health",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{baseUrl}}/health"
+					}
+				},
+				{
+					"name": "GET Ready",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{baseUrl}}/v1/ready"
+					}
+				},
+				{
+					"name": "GET Metrics",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{baseUrl}}/v1/metrics",
+						"description": "404 if METRICS_ENABLED=false"
+					}
+				}
+			]
+		},
+		{
+			"name": "Protected (Bearer)",
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{bearerToken}}",
+						"type": "string"
+					}
+				]
+			},
+			"item": [
+				{
+					"name": "POST Verify single",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"user@example.com\",\n  \"options\": {\n    \"skipSmtp\": false,\n    \"skipCatchAll\": false,\n    \"forceRefresh\": false\n  }\n}"
+						},
+						"url": "{{baseUrl}}/v1/verify"
+					}
+				},
+				{
+					"name": "POST Verify batch",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"items\": [\n    { \"email\": \"a@example.com\" },\n    { \"email\": \"b@other.org\", \"options\": { \"skipSmtp\": true } }\n  ],\n  \"options\": { \"forceRefresh\": false }\n}"
+						},
+						"url": "{{baseUrl}}/v1/verify/batch"
+					}
+				},
+				{
+					"name": "GET Cache stats",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{baseUrl}}/v1/cache/stats"
+					}
+				},
+				{
+					"name": "POST Cache clear",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"type\": \"all\"\n}"
+						},
+						"url": "{{baseUrl}}/v1/cache/clear",
+						"description": "`type`: all, result, dns, mx, domain, dead, disposable, role, catchall, provider_cooldown, mx_health, mx_persistent"
+					}
+				},
+				{
+					"name": "GET Cooldown",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{baseUrl}}/v1/cooldown"
+					}
+				},
+				{
+					"name": "POST Cooldown reset",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"provider\": \"gmail\"\n}"
+						},
+						"url": "{{baseUrl}}/v1/cooldown/reset",
+						"description": "Omit `provider` or use `{}` to clear all. Provider: gmail, outlook, yahoo, aol, icloud, zoho, proton, yandex, gmx, fastmail, mail, other"
+					}
+				}
+			]
+		}
+	]
+}
