@@ -1,0 +1,29 @@
+{
+  "domainSuffixes": {
+    "gmail.com": "gmail",
+    "googlemail.com": "gmail",
+    "outlook.com": "outlook",
+    "hotmail.com": "outlook",
+    "yahoo.com": "yahoo",
+    "ymail.com": "yahoo",
+    "aol.com": "aol",
+    "icloud.com": "icloud",
+    "me.com": "icloud",
+    "zoho.com": "zoho",
+    "yandex.com": "yandex",
+    "gmx.com": "gmx"
+  },
+  "mxSubstrings": [
+    { "sub": "google.com", "id": "gmail" },
+    { "sub": "outlook.com", "id": "outlook" },
+    { "sub": "protection.outlook", "id": "outlook" },
+    { "sub": "yahoo", "id": "yahoo" },
+    { "sub": "aol", "id": "aol" },
+    { "sub": "icloud", "id": "icloud" },
+    { "sub": "zoho", "id": "zoho" },
+    { "sub": "protonmail", "id": "proton" },
+    { "sub": "yandex", "id": "yandex" },
+    { "sub": "gmx", "id": "gmx" },
+    { "sub": "messagingengine", "id": "fastmail" }
+  ]
+}

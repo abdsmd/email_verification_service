@@ -1,0 +1,56 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+*.tsbuildinfo
+
+# Environment and secrets (never commit)
+.env
+.env.*
+!.env.example
+!.env.test
+!env.production.example
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Test / coverage
+coverage/
+.nyc_output/
+*.lcov
+
+# Vitest
+.vitest/
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# IDE / editor
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+*.sublime-*
+
+# PM2
+.pm2/
+
+# Local SQLite and data (if created outside repo paths)
+*.sqlite
+*.sqlite-journal
+*.db
+
+# Optional local overrides
+.turbo/
+
+# Cursor / tooling (optional; uncomment if you do not want these in the repo)
+# .cursor/

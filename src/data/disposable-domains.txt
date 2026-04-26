@@ -1,0 +1,9 @@
+# One domain per line; extend for your deployment
+mailinator.com
+guerrillamail.com
+yopmail.com
+tempmail.com
+10minutemail.com
+trashmail.com
+getnada.com
+disposable.com

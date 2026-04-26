@@ -1,0 +1,24 @@
+# Role / generic local parts (one per line)
+admin
+administrator
+abuse
+postmaster
+hostmaster
+webmaster
+noreply
+no-reply
+donotreply
+do-not-reply
+mailer-daemon
+maildaemon
+uucp
+ftp
+www
+root
+info
+support
+help
+sales
+billing
+security
+contact
