@@ -9,7 +9,7 @@ export function isPublicPath(url: string): boolean {
     return true;
   }
   if (p === "/" || p === "/index.html" || p === "/manual-verify") return true;
-  if (p.startsWith("/icons/")) return true;
+  if (p.startsWith("/icons/") || p.startsWith("/css/")) return true;
   if (
     p === "/manifest.webmanifest" ||
     p === "/sw.js" ||

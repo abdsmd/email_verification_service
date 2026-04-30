@@ -1,6 +1,13 @@
 /* Verification Station — minimal offline shell. Bump CACHE when static assets change. */
-const CACHE = "verifystation-pwa-v1";
-const PRECACHE = ["/", "/offline.html", "/manifest.webmanifest", "/favicon.svg", "/icons/icon.svg"];
+const CACHE = "verifystation-pwa-v2";
+const PRECACHE = [
+  "/",
+  "/offline.html",
+  "/manifest.webmanifest",
+  "/favicon.svg",
+  "/icons/icon.svg",
+  "/css/site.css",
+];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(

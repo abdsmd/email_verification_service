@@ -54,7 +54,22 @@ describe("HTTP JSON contract", () => {
       const res = await app.inject({ method: "GET", url: "/manual-verify" });
       expect(res.statusCode).toBe(200);
       expect(res.headers["content-type"]?.includes("text/html")).toBe(true);
-      expect(res.body).toContain("Manual email verification");
+      expect(res.body).toContain("Manual verify");
+    } finally {
+      await app.close();
+    }
+  });
+
+  it("allows GET /css/site.css without bearer when STATION_SECRET is set", async () => {
+    process.env.STATION_SECRET = "test-secret-css-public";
+    resetConfigForTests();
+    const { buildApp } = await import("../src/app.js");
+    const app = await buildApp();
+    try {
+      const res = await app.inject({ method: "GET", url: "/css/site.css" });
+      expect(res.statusCode).toBe(200);
+      expect(res.headers["content-type"]?.includes("css")).toBe(true);
+      expect(res.body).toContain(":root");
     } finally {
       await app.close();
     }

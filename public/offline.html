@@ -5,30 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Offline — Verification Station</title>
     <meta name="theme-color" content="#0f172a" />
-    <style>
-      * {
-        box-sizing: border-box;
-      }
-      body {
-        font-family: system-ui, "Segoe UI", Roboto, sans-serif;
-        margin: 0;
-        min-height: 100dvh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 1.5rem;
-        background: #0f172a;
-        color: #e2e8f0;
-      }
-      p {
-        margin: 0;
-        text-align: center;
-        line-height: 1.5;
-        max-width: 28rem;
-      }
-    </style>
+    <meta name="color-scheme" content="dark" />
+    <link rel="stylesheet" href="/css/site.css" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   </head>
-  <body>
-    <p>You are offline. Reconnect, then return to the app. Cached health checks may not reach the server until you are back online.</p>
+  <body class="offline-body">
+    <div class="vs-offline-inner">
+      <svg
+        class="vs-offline-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="#5eead4"
+        stroke-width="1.75"
+        stroke-linecap="round"
+        aria-hidden="true"
+      >
+        <path d="M1 5l22 22M5 12.55a11 11 0 0114.08 0M1.42 9a16 16 0 0114-2.94" />
+        <path d="M8.53 16.11a6 6 0 013.47 1M12 20h.01M12 17v1" />
+      </svg>
+      <h1>You are offline</h1>
+      <p>
+        Reconnect to reach the Verification Station API. Cached shell pages may open, but live health checks and verifies need the network.
+      </p>
+      <div class="vs-btn-wrap">
+        <a class="vs-btn-inline" href="/">Retry from home</a>
+      </div>
+    </div>
   </body>
 </html>

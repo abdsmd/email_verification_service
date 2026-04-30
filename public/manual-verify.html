@@ -10,271 +10,92 @@
     />
     <meta name="theme-color" content="#0d9488" />
     <meta name="color-scheme" content="light dark" />
+    <link rel="stylesheet" href="/css/site.css" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <style>
-      :root {
-        --bg: #f8fafc;
-        --fg: #0f172a;
-        --card: #fff;
-        --accent: #0d9488;
-        --border: #e2e8f0;
-        --muted: #64748b;
-        --ok: #15803d;
-      }
-      @media (prefers-color-scheme: dark) {
-        :root {
-          --bg: #0f172a;
-          --fg: #e2e8f0;
-          --card: #1e293b;
-          --border: #334155;
-          --muted: #94a3b8;
-          --ok: #22c55e;
-        }
-      }
-      * {
-        box-sizing: border-box;
-      }
-      body {
-        font-family: system-ui, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
-        margin: 0;
-        min-height: 100dvh;
-        background: var(--bg);
-        color: var(--fg);
-        line-height: 1.5;
-      }
-      main {
-        max-width: 54rem;
-        margin: 0 auto;
-        padding: 1.25rem 1.25rem 2rem;
-      }
-      h1 {
-        font-size: 1.35rem;
-        font-weight: 650;
-        margin: 0 0 0.35rem;
-      }
-      header p.lead {
-        margin: 0 0 1rem;
-        color: var(--muted);
-        font-size: 0.92rem;
-      }
-      nav a {
-        color: var(--accent);
-        font-size: 0.88rem;
-      }
-      section {
-        background: var(--card);
-        border: 1px solid var(--border);
-        border-radius: 0.45rem;
-        padding: 1rem 1.15rem;
-        margin-bottom: 1rem;
-      }
-      h2 {
-        font-size: 0.72rem;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-        color: var(--muted);
-        margin: 0 0 0.85rem;
-        font-weight: 600;
-      }
-      label {
-        display: block;
-        font-size: 0.85rem;
-        margin-bottom: 0.2rem;
-        font-weight: 500;
-      }
-      input[type="text"],
-      input[type="password"] {
-        width: 100%;
-        padding: 0.52rem 0.62rem;
-        border: 1px solid var(--border);
-        border-radius: 0.35rem;
-        background: var(--bg);
-        color: var(--fg);
-        font-size: 0.96rem;
-      }
-      input[type="text"].mono {
-        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-        font-size: 0.88rem;
-      }
-      .row {
-        margin-bottom: 0.85rem;
-      }
-      fieldset.opts {
-        border: 1px dashed var(--border);
-        border-radius: 0.35rem;
-        padding: 0.65rem 0.75rem;
-        margin: 0 0 0.85rem;
-      }
-      fieldset.opts legend {
-        font-size: 0.75rem;
-        color: var(--muted);
-        padding: 0 0.35rem;
-      }
-      .opts label.inline {
-        display: flex;
-        align-items: center;
-        gap: 0.45rem;
-        font-weight: 400;
-        margin-bottom: 0.45rem;
-        cursor: pointer;
-      }
-      .opts label.inline:last-child {
-        margin-bottom: 0;
-      }
-      .actions {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-        align-items: center;
-        margin-top: 0.25rem;
-      }
-      button {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        gap: 0.4rem;
-        background: var(--accent);
-        color: #f0fdfa;
-        border: none;
-        padding: 0.5rem 1rem;
-        border-radius: 0.35rem;
-        font-size: 0.9rem;
-        font-weight: 550;
-        cursor: pointer;
-      }
-      button.secondary {
-        background: transparent;
-        color: var(--accent);
-        border: 1px solid var(--accent);
-      }
-      button:disabled {
-        opacity: 0.55;
-        cursor: not-allowed;
-      }
-      .status-line {
-        font-size: 0.8rem;
-        color: var(--muted);
-        margin: 0 0 0.5rem;
-        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-      }
-      .status-line.ok {
-        color: var(--ok);
-      }
-      pre#out {
-        margin: 0;
-        padding: 0.85rem 1rem;
-        min-height: 22rem;
-        max-height: min(70vh, 48rem);
-        overflow: auto;
-        font-size: 0.8rem;
-        line-height: 1.45;
-        tab-size: 2;
-        white-space: pre;
-        word-break: normal;
-        background: var(--bg);
-        border: 1px solid var(--border);
-        border-radius: 0.35rem;
-        color: var(--fg);
-      }
-      .subtle {
-        font-size: 0.78rem;
-        color: var(--muted);
-        margin: 0.65rem 0 0;
-      }
-      .warn {
-        font-size: 0.8rem;
-        color: #b45309;
-        background: rgba(251, 191, 36, 0.12);
-        border: 1px solid rgba(251, 191, 36, 0.35);
-        padding: 0.5rem 0.65rem;
-        border-radius: 0.35rem;
-        margin: 0 0 0.75rem;
-      }
-      @media (prefers-color-scheme: dark) {
-        .warn {
-          color: #fbbf24;
-        }
-      }
-    </style>
   </head>
   <body>
-    <main>
-      <header>
-        <h1>Manual email verification</h1>
-        <p class="lead">
-          Calls <code>POST /v1/verify</code> on this host. The full JSON response is shown below (same structure the API returns to your integrators).
+    <div class="vs-topbar" aria-hidden="true"></div>
+    <a class="vs-skip" href="#main">Skip to content</a>
+    <div class="vs-shell vs-shell--wide" id="main">
+      <header class="vs-header">
+        <a class="vs-brand" href="/">
+          <img class="vs-logo" src="/favicon.svg" width="36" height="36" alt="" />
+          Manual verify
+        </a>
+        <p class="vs-tagline">
+          Runs <code>POST /v1/verify</code> against this origin. Below is the same JSON payload your integrations receive—pretty-printed for inspection.
         </p>
-        <nav><a href="/">← Home</a></nav>
+        <nav class="vs-nav" aria-label="Site">
+          <a href="/">Home</a>
+          <a href="/manual-verify" aria-current="page">Manual verify</a>
+        </nav>
       </header>
 
-      <section aria-labelledby="sec-form">
-        <h2 id="sec-form">Request</h2>
-        <div id="hmac-warn" class="warn" hidden>
-          <strong>HMAC is enabled on this server.</strong> Browser requests cannot sign the body. Use curl, Postman, or disable HMAC for this path in dev, or call from your backend.
+      <section class="vs-section" aria-labelledby="sec-form">
+        <h2 id="sec-form" class="vs-h2">Request</h2>
+        <div id="hmac-warn" class="vs-callout" hidden>
+          <strong>HMAC signing is enabled</strong>
+          This browser cannot add <code>X-Signature</code>. Use curl, Postman, your backend, or disable HMAC in dev when testing here.
         </div>
-        <div class="row">
+        <div class="vs-field">
           <label for="bearer">Bearer token</label>
           <input
             type="password"
             id="bearer"
             name="bearer"
+            class="vs-input mono"
             autocomplete="off"
-            placeholder="Same as STATION_SECRET or API_KEY (local only)"
-            class="mono"
+            placeholder="STATION_SECRET or API_KEY — stored only in this browser"
           />
         </div>
-        <div class="row">
+        <div class="vs-field">
           <label for="email">Email address</label>
           <input
             type="text"
             id="email"
             name="email"
+            class="vs-input mono"
             inputmode="email"
             autocomplete="email"
             placeholder="you@domain.com"
-            class="mono"
           />
         </div>
-        <fieldset class="opts">
-          <legend>Options (optional)</legend>
-          <label class="inline"
-            ><input type="checkbox" id="skipSmtp" /> skipSmtp (syntax / DNS only)</label
-          >
-          <label class="inline"
-            ><input type="checkbox" id="skipCatchAll" /> skipCatchAll</label
-          >
-          <label class="inline"><input type="checkbox" id="forceRefresh" /> forceRefresh</label>
+        <fieldset class="vs-fieldset">
+          <legend>Verify options</legend>
+          <label class="vs-check"><input type="checkbox" id="skipSmtp" /> skipSmtp (syntax + DNS/MX only)</label>
+          <label class="vs-check"><input type="checkbox" id="skipCatchAll" /> skipCatchAll</label>
+          <label class="vs-check"><input type="checkbox" id="forceRefresh" /> forceRefresh</label>
         </fieldset>
-        <div class="actions">
-          <button type="button" id="btn-run">Verify</button>
-          <button type="button" class="secondary" id="btn-clear">Clear result</button>
+        <div class="vs-actions">
+          <button type="button" class="vs-btn" id="btn-run">Verify</button>
+          <button type="button" class="vs-btn vs-btn--secondary" id="btn-clear">Clear output</button>
         </div>
-        <p class="subtle">
-          Token is stored in this browser only (<code>localStorage</code>), shared with the home page shell. Never enter production secrets on a shared machine.
+        <p class="vs-hint">
+          Bearer is saved in <code>localStorage</code> (<code>verifystation_pwa_bearer</code>), shared with the home page—same as clearing site data removes it.
         </p>
       </section>
 
-      <section aria-labelledby="sec-out">
-        <h2 id="sec-out">Full response</h2>
-        <p id="status" class="status-line" aria-live="polite"></p>
-        <pre id="out" role="status">Submit the form above. The complete response body appears here.</pre>
+      <section class="vs-section" aria-labelledby="sec-out">
+        <h2 id="sec-out" class="vs-h2">Response body</h2>
+        <p id="status" class="vs-status" aria-live="polite"></p>
+        <pre id="out" class="vs-output vs-output--full" role="region" aria-label="API JSON response">
+Submit the form above. The complete response appears here.</pre>
       </section>
-    </main>
+    </div>
     <script>
       (function () {
         var LS = "verifystation_pwa_bearer";
 
-        document.getElementById("btn-clear").addEventListener("click", function () {
-          document.getElementById("out").textContent =
-            "Submit the form above. The complete response body appears here.";
-          document.getElementById("status").textContent = "";
-          document.getElementById("status").className = "status-line";
-        });
-
-        /** @returns {HTMLElement | null} */
         function gid(id) {
           return document.getElementById(id);
         }
+
+        gid("btn-clear").addEventListener("click", function () {
+          gid("out").textContent =
+            "Submit the form above. The complete response appears here.";
+          gid("status").textContent = "";
+          gid("status").className = "vs-status";
+        });
 
         var bearer = gid("bearer");
         var email = gid("email");
@@ -288,13 +109,14 @@
           if (bearer) localStorage.setItem(LS, bearer.value);
         }
 
-        document.getElementById("btn-run").addEventListener("click", async function () {
+        gid("btn-run").addEventListener("click", async function () {
           saveBearer();
           var t = (bearer && bearer.value.trim()) || "";
           var em = (email && email.value.trim()) || "";
           if (!em) {
             outEl.textContent = "Enter an email address.";
             statusEl.textContent = "";
+            statusEl.className = "vs-status";
             return;
           }
 
@@ -304,29 +126,25 @@
           if (gid("forceRefresh").checked) options.forceRefresh = true;
 
           var headers = { "content-type": "application/json" };
-          if (t) headers["authorization"] = "Bearer " + t;
+          if (t) headers.authorization = "Bearer " + t;
 
-          var payload = { email: em, options: options };
           statusEl.textContent = "Requesting…";
-          statusEl.className = "status-line";
+          statusEl.className = "vs-status";
           outEl.textContent = "…";
 
           try {
             var r = await fetch(window.location.origin + "/v1/verify", {
               method: "POST",
               headers: headers,
-              body: JSON.stringify(payload),
+              body: JSON.stringify({ email: em, options: options }),
             });
             var raw = await r.text();
             var pretty = raw;
             try {
-              var j = JSON.parse(raw);
-              pretty = JSON.stringify(j, null, 2);
-            } catch (e) {
-              pretty = raw;
-            }
-            statusEl.textContent = r.status + " " + r.statusText;
-            statusEl.className = "status-line" + (r.ok ? " ok" : "");
+              pretty = JSON.stringify(JSON.parse(raw), null, 2);
+            } catch (e1) {}
+            statusEl.textContent = r.status + " " + r.statusText + (r.ok ? " • OK" : "");
+            statusEl.className = "vs-status" + (r.ok ? " vs-status--ok" : "") + (!r.ok ? " vs-status--err" : "");
             outEl.textContent = pretty;
 
             if (r.status === 403 && /hmac|signature/i.test(raw)) {
@@ -334,10 +152,10 @@
             } else if (r.status !== 403) {
               hmacWarn.hidden = true;
             }
-          } catch (e) {
+          } catch (e2) {
             statusEl.textContent = "Network error";
-            statusEl.className = "status-line";
-            outEl.textContent = String(e && e.message ? e.message : e);
+            statusEl.className = "vs-status vs-status--err";
+            outEl.textContent = e2 && e2.message ? e2.message : String(e2);
           }
         });
 

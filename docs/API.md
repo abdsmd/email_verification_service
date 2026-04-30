@@ -39,7 +39,7 @@ Unknown routes: `{ "error": "not_found", "method": "GET" }`.
 
 - **Bearer (single-tenant / self-host):** If `STATION_SECRET` or `API_KEY` is set and **`TENANT_KEYS_JSON` is not used**, protected routes need `Authorization: Bearer <same as env>`. `STATION_SECRET` wins if both are set.
 - **Multi-tenant (optional):** If `TENANT_KEYS_JSON` is set, only bearer tokens from that list are accepted (per-key rate limits: see `rateLimitRpm` in the JSON and [PRODUCT.md](PRODUCT.md)).
-- **Public (no auth):** `/health`, `/v1/ready`, `/v1/metrics`, **`/manual-verify`** (HTML tool) — see [src/config/public-routes.ts](../src/config/public-routes.ts).
+- **Public (no auth):** `/health`, `/v1/ready`, `/v1/metrics`, **`/manual-verify`** (HTML tool), and **static UI assets** (`/`, `/index.html`, `/css/*`, `/icons/*`, `manifest`, `sw.js`, etc.) — see [src/config/public-routes.ts](../src/config/public-routes.ts).
 - **HMAC (optional):** If `HMAC_SECRET` is set, non-GET/HEAD to protected routes also need `X-Timestamp`, `X-Signature` (HMAC-SHA256 hex of `` `${timestamp}.${rawBody}` ``), `X-Request-Id`. Skew: `HMAC_SKEW_MS` (default 5 min). Replays can return **409**.
 - **IP allowlist:** `IP_ALLOWLIST` — use `TRUST_PROXY=true` behind a reverse proxy.
 
