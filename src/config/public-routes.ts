@@ -8,7 +8,7 @@ export function isPublicPath(url: string): boolean {
   if (p.startsWith("/health") || p.startsWith("/v1/ready") || p.startsWith("/v1/metrics")) {
     return true;
   }
-  if (p === "/" || p === "/index.html") return true;
+  if (p === "/" || p === "/index.html" || p === "/manual-verify") return true;
   if (p.startsWith("/icons/")) return true;
   if (
     p === "/manifest.webmanifest" ||

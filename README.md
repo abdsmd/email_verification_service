@@ -131,7 +131,8 @@ VerificationStation is a **single process** you run on a VPS. It answers “can 
 
 ### 1.8 Progressive web app
 
-- **Optional** static shell: `manifest`, service worker, simple health/verify UI at `/` when `PWA_ENABLED` is on. Disable for API-only.
+- **Optional** static shell: `manifest`, service worker, simple health/verify UI at `/` when `PWA_ENABLED` is on. Disable for API-only.  
+- **Manual verify UI** (pretty-printed full JSON): browse **`/manual-verify`** on the HTTP port — works even when **`PWA_ENABLED=false`** (implemented by [src/routes/manual-verify.route.ts](src/routes/manual-verify.route.ts) + [public/manual-verify.html](public/manual-verify.html)).
 
 ### 1.9 Security
 

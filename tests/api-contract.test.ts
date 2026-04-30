@@ -42,6 +42,24 @@ describe("HTTP JSON contract", () => {
     }
   });
 
+  it("serves GET /manual-verify as HTML even when PWA_ENABLED=false", async () => {
+    process.env.PWA_ENABLED = "false";
+    resetConfigForTests();
+    const { buildApp } = await import("../src/app.js");
+    const app = await buildApp();
+    try {
+      const root = await app.inject({ method: "GET", url: "/" });
+      expect(root.statusCode).toBe(404);
+
+      const res = await app.inject({ method: "GET", url: "/manual-verify" });
+      expect(res.statusCode).toBe(200);
+      expect(res.headers["content-type"]?.includes("text/html")).toBe(true);
+      expect(res.body).toContain("Manual email verification");
+    } finally {
+      await app.close();
+    }
+  });
+
   it("returns structured JSON for unknown routes (no HTML 404)", async () => {
     const { buildApp } = await import("../src/app.js");
     const app = await buildApp();

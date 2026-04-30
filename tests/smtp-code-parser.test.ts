@@ -38,6 +38,15 @@ describe("smtp-code-parser", () => {
     expect(classifySmtp(550, L(550, "nope")).class).toBe("permanent_reject");
   });
 
+  it("553 with Yahoo TSS / IP deferral text is provider_block, not permanent reject", () => {
+    const yahoo553 = [
+      "553 5.7.2 [TSS09] All messages from 103.203.95.66 will be permanently deferred; Retrying will NOT succeed.",
+    ];
+    const r = classifySmtp(553, yahoo553);
+    expect(r.class).toBe("provider_block");
+    expect(r.providerBlockHint).toBe(true);
+  });
+
   it("mapSmtpSocketErrno maps errno to stable reasons", () => {
     expect(mapSmtpSocketErrno("timeout", undefined)).toBe("smtp_timeout");
     expect(mapSmtpSocketErrno("connect", "ECONNREFUSED")).toBe("smtp_connect_failed");

@@ -1,5 +1,6 @@
 import type { FastifyInstance } from "fastify";
 import { registerHealthRoutes } from "./health.route.js";
+import { registerManualVerifyPage } from "./manual-verify.route.js";
 import { registerVerifyRoutes } from "./verify.route.js";
 import { registerBatchRoutes } from "./batch.route.js";
 import { registerMetricsRoutes } from "./metrics.route.js";
@@ -21,6 +22,7 @@ export async function registerHttpRoutes(
   options: RegisterHttpRoutesOptions
 ): Promise<void> {
   registerHealthRoutes(app);
+  registerManualVerifyPage(app);
   registerVerifyRoutes(app);
   registerBatchRoutes(app);
   registerMetricsRoutes(app);

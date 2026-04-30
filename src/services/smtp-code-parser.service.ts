@@ -40,6 +40,10 @@ const BLOCK_PATTERNS = [
   /access\s*denied/i,
   /banned/i,
   /rejected\s+due/i,
+  /** Yahoo (and similar): sender-IP / reputation — not “mailbox does not exist” */
+  /\bTSS\d+/i,
+  /all messages from .+will be .+deferred/i,
+  /postmaster\.yahooinc\.com/i,
 ];
 
 export function isProviderBlockText(s: string): boolean {
