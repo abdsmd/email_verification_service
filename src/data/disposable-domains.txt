@@ -7,10 +7,10 @@
     #   - https://raw.githubusercontent.com/disposable/disposable-email-domains/master/domains.txt
 # Local: npm run update:disposable-list
 # In-process schedule: see DISPOSABLE_LIST_CRON_* in .env; GitHub: .github/workflows/update-disposable-domains.yml
-# Last merge: 2026-05-11 — unique domains: 72171
-# Per-source line counts (before merge; overlap removed in 72171):
-    #   - disposable-email-domains/blocklist: 5443 (pre-dedup)
-    #   - disposable/disposable (domains.txt): 72165 (pre-dedup)
+# Last merge: 2026-05-12 — unique domains: 72175
+# Per-source line counts (before merge; overlap removed in 72175):
+    #   - disposable-email-domains/blocklist: 5444 (pre-dedup)
+    #   - disposable/disposable (domains.txt): 72174 (pre-dedup)
 # Runtime: set DISPOSABLE_LIST_PATH to merge an additional file at startup if needed.
 
 0-00.usa.cc
@@ -10524,7 +10524,6 @@ bjork.wtf
 bjorn-frantzen.art
 bjorwi.buzz
 bjorwi.click
-bjorwi.online
 bjorwi.rest
 bjorwi.store
 bjorwi.top
@@ -12652,7 +12651,6 @@ bz-cons.ru
 bz-mytyshi.ru
 bz.emlhub.com
 bz4jk.anonbox.net
-bzajx.anonbox.net
 bzbu9u7w.xorg.pl
 bzctv.online
 bzcvc.anonbox.net
@@ -12846,6 +12844,7 @@ caddelll12819.info
 cade.org.uk
 cadillac-ats.tk
 cadinr.com
+cadok.biz.id
 cadolls.com
 cadomoingay.info
 cadoudecraciun.tk
@@ -14837,6 +14836,7 @@ clearancebooth.com
 clearbeam.pro
 clearcutcreative.com
 clearmail.online
+clearstackr.site
 clearwaterarizona.com
 clearwatercpa.com
 clearwatermail.info
@@ -14856,6 +14856,7 @@ click24.site
 click2btc.com
 click2mail.net
 clickanerd.net
+clickcore99.click
 clickdeal.co
 clickernews.com
 clickmagnit.ru
@@ -18502,7 +18503,6 @@ diplo.edu.pl
 diplom-voronesh.ru
 diplomnaya-rabota.com
 dipoelast.ru
-dipzstore.net
 diqalaciga.warszawa.pl
 dir43.org
 diranybooks.site
@@ -23443,6 +23443,7 @@ fastloans.us
 fastloans1080.co.uk
 fastmail.edu.pl
 fastmail.name
+fastmail24.click
 fastmailer.cf
 fastmailforyou.net
 fastmailnode.com
@@ -26748,6 +26749,7 @@ ggsel.ml
 ggtoll.com
 ggvk.ru
 ggvk.store
+ggwpray.biz.id
 ggxhunter.com
 ggxx.com
 gh-stroy.ru
@@ -28409,7 +28411,6 @@ guvewfmn7j1dmp.tk
 guybox.info
 guysmail.com
 guystelchim.tk
-guzinduygukuka.cfd
 guzqrwroil.pl
 gv.laste.ml
 gvatemala-nedv.ru
@@ -33463,6 +33464,7 @@ jasmierodgers.ga
 jasminsusan.paris-gmail.top
 jasmne.com
 jasonbella.online
+jasonpost.site
 jasonvix.asia
 jasxft.fun
 jatmikav.top
@@ -33878,7 +33880,6 @@ jjeonji12.com
 jjgg.de
 jjhgg.com
 jji.spymail.one
-jjice.com
 jjj.ee
 jjjiii.ml
 jjk.app
@@ -34914,6 +34915,7 @@ kartykredytowepl.info
 kartyusb.pl
 karya4d.org
 kasandraava.livefreemail.top
+kasb7.anonbox.net
 kasdewhtewhrfasaea.vv.cc
 kaseig.com
 kashenko.site
@@ -35736,7 +35738,6 @@ kingfunsg.com
 kingfunvn.com
 kingfuvirus.com
 kinggame247.club
-kinggpt.biz.id
 kingice-store.com
 kinglyruhyat.io
 kingmenshealth.com
@@ -36560,12 +36561,10 @@ ktbk.ru
 ktbv.com
 ktds.co.uk
 kterer.com
-ktfamily.my.id
 ktisocial.asia
 ktlx.laste.ml
 ktm.yomail.info
 ktno.laste.ml
-ktools.web.id
 ktotey6.mil.pl
 ktt.dropmail.me
 ktumail.com
@@ -41476,6 +41475,7 @@ masasih.loan
 mascpottho.ga
 masdihoo.ga
 masdo88.top
+masdwi.site
 masgtd.xyz
 mashed.site
 mashkrush.info
@@ -45322,6 +45322,7 @@ neosstudy.work
 neotlozhniy-zaim.ru
 neotrade.ru
 neoven.us
+neovortex.tokyo
 nepal-nedv.ru
 nepging.com
 nephisandeanpanflute.com
@@ -46808,6 +46809,7 @@ numitas.ga
 numllery.com
 numweb.ru
 nun.ca
+nunindin.my.id
 nunudatau.art
 nunung.cf
 nunungcantik.ga
@@ -54363,6 +54365,7 @@ rigtmail.com
 rijahg.spymail.one
 rijschoolcosma-nijmegen.nl
 rika0525.com
+riko.my
 rikpol.site
 rillamail.info
 rim7lth8moct0o8edoe.cf
@@ -56641,7 +56644,6 @@ sejkt.com
 sekcjajudo.pl
 sekiyadohaku.xyz
 sekoeuropa.pl
-sekotong.store
 sekris.com
 seksfotki.pl
 seksiaki.pl
@@ -59610,6 +59612,7 @@ stokyards.info
 stomach4m.com
 stomatogomail.ru
 stomatolog.pl
+ston.my.id
 stonehousegrp1.com
 stonesmails.cz.cc
 stoneurope.com
@@ -65002,6 +65005,7 @@ unip.edu.pl
 uniqo.xyz
 uniquebedroom-au.com
 uniquebrand.pl
+uniqueproducts.site
 uniquesa.shop
 uniqueseo.pl
 unireaurzicenikaput.com
@@ -66547,6 +66551,7 @@ visualisme.com
 visualkonzept.de
 visualpro.online
 visweden.com
+vitacimin.me
 vitahicks.com
 vitalbeginning.com
 vitaldevelopmentsolutions.com
@@ -68134,7 +68139,6 @@ whopy.com
 whorci.site
 whose-is-this-phone-number.com
 whowlft.com
-whskrspc.shop
 whstores.com
 whwow.com
 why.cowsnbullz.com
