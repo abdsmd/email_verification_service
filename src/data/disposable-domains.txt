@@ -7,9 +7,9 @@
     #   - https://raw.githubusercontent.com/disposable/disposable-email-domains/master/domains.txt
 # Local: npm run update:disposable-list
 # In-process schedule: see DISPOSABLE_LIST_CRON_* in .env; GitHub: .github/workflows/update-disposable-domains.yml
-# Last merge: 2026-05-31 — unique domains: 72264
-# Per-source line counts (before merge; overlap removed in 72264):
-    #   - disposable-email-domains/blocklist: 5488 (pre-dedup)
+# Last merge: 2026-06-01 — unique domains: 72270
+# Per-source line counts (before merge; overlap removed in 72270):
+    #   - disposable-email-domains/blocklist: 5494 (pre-dedup)
     #   - disposable/disposable (domains.txt): 72263 (pre-dedup)
 # Runtime: set DISPOSABLE_LIST_PATH to merge an additional file at startup if needed.
 
@@ -8802,6 +8802,7 @@ badutstore.com
 badwyn.biz
 bae-systems.tk
 baebaebox.com
+baechecker.com
 baegibagy.com
 baf4j.anonbox.net
 bafanglaicai.sbs
@@ -13115,7 +13116,6 @@ caowar.com
 cap-or.com
 capatal.com
 capcud.shop
-capcut.asia
 capcut.buzz
 capcut.digital
 capcut.my.id
@@ -14846,6 +14846,7 @@ clear-code.ru
 clearancebooth.com
 clearbeam.pro
 clearcutcreative.com
+clearhabitpath.com
 clearmail.online
 clearwaterarizona.com
 clearwatercpa.com
@@ -20532,7 +20533,6 @@ easynetwork.info
 easyonlinecollege.com
 easyonlinemail.net
 easypaperplanes.com
-easyplainlife.com
 easyrecipetoday.com
 easysetting.org
 easytrashmail.com
@@ -26830,7 +26830,6 @@ giaoisgla35ta.cf
 giaotiep.xyz
 giaovienvn.gq
 giaovienvn.tk
-giare.fun
 giayhieucu.com
 gibit.us
 giblpyqhb.pl
@@ -30609,6 +30608,7 @@ hqjzb9shnuk3k0u48.gq
 hqjzb9shnuk3k0u48.ml
 hqjzb9shnuk3k0u48.tk
 hqnmhr.com
+hqpdf.com
 hqsecmail.com
 hqt.one
 hqv8grv8dxdkt1b.cf
@@ -32329,7 +32329,6 @@ insischildpank.xyz
 insomniade.org.ua
 insorg-mail.info
 inspiracjatwoja.pl
-inspirahubnet.com
 inspirationzuhause.me
 inspirative.online
 inspiredbyspire.com
@@ -39795,7 +39794,6 @@ mail.bccto.com
 mail.bccto.me
 mail.beeplush.com
 mail.bentrask.com
-mail.berwie.com
 mail.bikedid.com
 mail.binech.com
 mail.bitofee.com
@@ -42030,6 +42028,7 @@ meetmeatthebar.com
 meetnova.my.id
 meetoricture.site
 meetwave.lat
+meevpo.id
 meevpo.site
 meferesdlxver.store
 meflous.shop
@@ -45033,6 +45032,7 @@ narcoboy.sbs
 nares.de
 narjwoosyn.pl
 narrereste.ml
+narrowment.com
 narsaab.site
 narsan.ru
 narsub.online
@@ -47730,6 +47730,7 @@ old.makingdomes.com
 old.marksypark.com
 old.ploooop.com
 old.poisedtoshrike.com
+oldao.com
 oldcelebrities.net
 olden.com.pl
 oldgoi.emltmp.com
@@ -47755,7 +47756,6 @@ olgt6etnrcxh3.ml
 olgt6etnrcxh3.tk
 oli.spymail.one
 oliespace.com
-oliespace.site
 olimp-case.ru
 olinbzt.ga
 olindaonline.site
@@ -49230,6 +49230,7 @@ passava.com
 passboxer.com
 passedil.com
 passeone.com
+passeone.xyz
 passgrumqui.ga
 passionblood.com
 passionforbusinessblog.com
@@ -50479,6 +50480,7 @@ plussparkzen.com
 plustrak.ga
 plutocow.com
 plutofox.com
+pluzauo.shop
 plw.me
 plxa.com
 plymouthrotarynh.org
@@ -54958,6 +54960,7 @@ royalweb.email
 royalwestmail.com
 royandk.com
 royaumedesjeux.fr
+roybl.com
 royins.com
 roys.ml
 rozaoils.site
@@ -56656,6 +56659,7 @@ see.makingdomes.com
 see.marksypark.com
 seed.ml
 seedaz.com
+seedingfb.click
 seedscommerce.com
 seedspeed.site
 seegars.com
@@ -59288,6 +59292,7 @@ sr.dropmail.me
 sr.emlpro.com
 sr.ro.lt
 sraka.xyz
+srame.com
 srancypancy.net
 srb.spymail.one
 srcitation.com
@@ -63697,6 +63702,7 @@ tressicolli.com
 treterter.shop
 tretinoincream-05.com
 tretmuhle.com
+trevourus.com
 trezvostrus.ru
 trfu.to
 trg.pw
@@ -68218,12 +68224,12 @@ whopy.com
 whorci.site
 whose-is-this-phone-number.com
 whowlft.com
-whskrspc.shop
 whstores.com
 whwow.com
 why.cowsnbullz.com
 why.edu.pl
 why.warboardplace.com
+whybe.dev
 whydoihaveacne.com
 whydrinktea.info
 whyflkj.com
@@ -69318,6 +69324,7 @@ xboxlivegenerator.xyz
 xboxppshua.top
 xbpantibody.com
 xbreg.com
+xbrok.com
 xbtravel.com
 xbvrfy45g.ga
 xbz.yomail.info
@@ -70732,7 +70739,6 @@ yop.itram.es
 yop.kyriog.fr
 yop.mc-fly.be
 yop.milter.int.eu.org
-yop.moolee.net
 yop.profmusique.com
 yop.smeux.com
 yop.too.li
