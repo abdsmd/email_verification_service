@@ -7,10 +7,10 @@
     #   - https://raw.githubusercontent.com/disposable/disposable-email-domains/master/domains.txt
 # Local: npm run update:disposable-list
 # In-process schedule: see DISPOSABLE_LIST_CRON_* in .env; GitHub: .github/workflows/update-disposable-domains.yml
-# Last merge: 2026-06-04 — unique domains: 72513
-# Per-source line counts (before merge; overlap removed in 72513):
-    #   - disposable-email-domains/blocklist: 5739 (pre-dedup)
-    #   - disposable/disposable (domains.txt): 72512 (pre-dedup)
+# Last merge: 2026-06-05 — unique domains: 72533
+# Per-source line counts (before merge; overlap removed in 72533):
+    #   - disposable-email-domains/blocklist: 5760 (pre-dedup)
+    #   - disposable/disposable (domains.txt): 72532 (pre-dedup)
 # Runtime: set DISPOSABLE_LIST_PATH to merge an additional file at startup if needed.
 
 0-00.usa.cc
@@ -850,6 +850,7 @@
 1mail.ml
 1mail.site
 1mail.uk.to
+1maillt.store
 1maschio.site
 1milliondollars.xyz
 1mojadieta.ru
@@ -4537,6 +4538,7 @@ adamastore.co
 adambra.com
 adamcoloradofitness.com
 adamholtphotography.net
+adamrisni.site
 adamsarchitects.com
 adamtraffic.com
 adann.xyz
@@ -6490,6 +6492,7 @@ annettebruhn.dk
 annetteturow.com
 annidis.com
 anniversarygiftideasnow.com
+annnekkk.com
 anno90.nl
 annoor.us
 annuaire-seotons.com
@@ -8126,6 +8129,7 @@ axerflow.com
 axerflow.org
 axie.ml
 axiemeta.fun
+axin05.icu
 axisbank.co
 axiz.digital
 axiz.org
@@ -10554,7 +10558,6 @@ bjorn-frantzen.art
 bjorwi.buzz
 bjorwi.cfd
 bjorwi.click
-bjorwi.online
 bjorwi.rest
 bjorwi.site
 bjorwi.store
@@ -10604,6 +10607,7 @@ bkoil.anonbox.net
 bkrointernational.site
 bkru.freeml.net
 bkru.spymail.one
+bks2p.anonbox.net
 bktps.com
 bktyo.anonbox.net
 bky168.com
@@ -11922,7 +11926,6 @@ bru-lobnya.ru
 brubank.club
 brueyinl.emlhub.com
 brufef.emlpro.com
-brul6.anonbox.net
 brunhilde.ml
 brunomarsconcert2014.com
 brunosamericangrill.com
@@ -13552,6 +13555,7 @@ cc2ilplyg77e.ga
 cc2ilplyg77e.gq
 cc2ilplyg77e.ml
 cc2ilplyg77e.tk
+cc3.name.ng
 cc6.name.ng
 ccad.emlpro.com
 ccat.cf
@@ -14882,7 +14886,6 @@ clear-code.ru
 clearancebooth.com
 clearbeam.pro
 clearcutcreative.com
-clearhabitpath.com
 clearmail.online
 clearwaterarizona.com
 clearwatercpa.com
@@ -16934,6 +16937,7 @@ dahelvets.gq
 dahlenerend.de
 dahongying.net
 daibond.info
+daicyz.dev
 daiettodorinku.com
 daiigroup.com
 daiklinh.com
@@ -18467,6 +18471,7 @@ digitalshopkita.my.id
 digitalsole.info
 digitaltransarchive.net
 digitalwebus.com
+digitalzz2.shop
 digitava.com
 digitchernob.xyz
 digitecy.live
@@ -18702,6 +18707,7 @@ discusseism.xyz
 discussion.website
 discussmusic.ru
 disdraplo.com
+disefl.com
 disfrut.es
 dish-tvsatellite.com
 dishcatfish.com
@@ -19206,6 +19212,7 @@ doggy-lovers-email.bid
 doggyloversemail.bid
 doghairprotector.com
 dogiloveniggababydoll.com
+dogmrp.com
 dogn.com
 dogonoithatlienha.com
 dogsandpuppies.info
@@ -20794,6 +20801,7 @@ ed1crhaka8u4.ml
 ed1crhaka8u4.tk
 edaikou.com
 edalist.ru
+edankeunwe.site
 edat.site
 edaup.com
 edbnu.com
@@ -24928,7 +24936,6 @@ for4.com
 for4mail.com
 foragentsonky.com
 forapps.shop
-forapps.space
 foraro.com
 forcelons.xyz
 forcrack.com
@@ -26833,7 +26840,6 @@ ggrainn.com
 ggrreds.com
 ggsel.ml
 ggtoll.com
-ggvendas.store
 ggvk.ru
 ggvk.store
 ggwpray.biz.id
@@ -32116,7 +32122,6 @@ inboxmails.net
 inboxnow.ru
 inboxnow.store
 inboxorigin.com
-inboxpro247.click
 inboxproxy.com
 inboxstore.me
 inboxturtle.dev
@@ -32423,7 +32428,6 @@ insischildpank.xyz
 insomniade.org.ua
 insorg-mail.info
 inspiracjatwoja.pl
-inspirahubnet.com
 inspirationzuhause.me
 inspirative.online
 inspiredbyspire.com
@@ -33324,6 +33328,7 @@ j275xaw4h.pl
 j2anellschild.ga
 j3j.org
 j3nn.net
+j3r8qd.site
 j3r8qd.store
 j3rqt89ez.com
 j4rang0y4nk.ga
@@ -38748,6 +38753,7 @@ loikl.joyrideday.com
 loil.site
 loin.in
 loj.emlhub.com
+lojastream.shop
 lokajjfs.website
 lokaperuss.com
 lokata-w-banku.com.pl
@@ -40478,6 +40484,7 @@ mailcua.com
 mailcua.cyou
 mailcua.store
 mailcuatoi.click
+mailcuatoi123.space
 mailcuk.com
 mailcupp.com
 mailcurity.com
@@ -40753,6 +40760,7 @@ maillei.net
 mailler.cf
 maillii.shop
 maillii.store
+maillii.website
 mailline.net
 mailling.ru
 maillink.in
@@ -41238,6 +41246,7 @@ maklaca.cfd
 maklacpolza.cfd
 makmadness.info
 makmotors.com
+makoli.sbs
 makoli.store
 makotamarketing.com
 maks.com
@@ -46847,6 +46856,7 @@ nqn.freeml.net
 nqpf.laste.ml
 nqse.yomail.info
 nrb.dropmail.me
+nrbs.me
 nrehi.com
 nresponsea.com
 nrf.spymail.one
@@ -47072,6 +47082,7 @@ nuts2trade.com
 nutsmine.com
 nutte.com
 nuttyjackstay.ml
+nututhayur.click
 nuv.laste.ml
 nuvast.com
 nuvi.site
@@ -48362,6 +48373,7 @@ openskiesgroup.com
 openskj.com
 opensourceed.app
 opentrash.com
+openwaveo.online
 openwebmail.contractors
 operabrow.com
 operacjezeza.pl
@@ -50645,6 +50657,7 @@ plussparkzen.com
 plustrak.ga
 plutocow.com
 plutofox.com
+pluzauo.shop
 plw.me
 plxa.com
 plymouthrotarynh.org
@@ -50858,6 +50871,7 @@ polsekan.club
 polskikatalogfirm.pl
 poltawa.ru
 polvexar.space
+polvexar.store
 poly-swarm.com
 polyace.ru
 polycond.eu
@@ -58217,6 +58231,7 @@ skydrive.tk
 skye.com
 skyemails.app
 skyemails.tech
+skyeo.sbs
 skyfieldhub.com
 skygazerhub.com
 skyjetnet.com
@@ -59305,6 +59320,7 @@ spikeworth.com
 spikeysix.site
 spikio.com
 spin.net
+spin1428.top
 spinacz99.ru
 spindl-e.com
 spinefruit.com
@@ -61905,6 +61921,7 @@ terminaltheme.cf
 terminate.tech
 terminateee12.com
 termuxtech.tk
+termweave.life
 ternaklele.ga
 terpistick.com
 terra-incognita.co
@@ -66699,6 +66716,7 @@ viperace.com
 vipfon.ru
 vipg.com
 vipgod.ru
+viphihi123.tokyo
 viphomeljjljk658.info
 viphone.eu.org
 vipitv.com
@@ -68490,7 +68508,6 @@ wierie.tk
 wiestel.online
 wifame.com
 wifi-map.net
-wifian.space
 wificon.eu
 wifimaple.com
 wifimaples.com
@@ -69648,6 +69665,7 @@ xehop.org
 xeiex.com
 xelio.sbs
 xelu.space
+xelvoranovatrix.website
 xemaps.com
 xemkqxs.com
 xemne.com
@@ -69775,6 +69793,7 @@ xingwater.com
 xinkubu.com
 xinlicn.com
 xinmail.info
+xinmo.lat
 xinnian.sbs
 xinsijitv58.info
 xinsijitv74.info
@@ -70808,6 +70827,7 @@ yh9837.com
 yhcaturkl79jk.tk
 yhcaturxc69ol.ml
 yhei.laste.ml
+yhfgfthuyg.site
 yhg.biz
 yhjgh65hghgfj.tk
 yhldqhvie.pl
