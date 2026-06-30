@@ -7,10 +7,10 @@
     #   - https://raw.githubusercontent.com/disposable/disposable-email-domains/master/domains.txt
 # Local: npm run update:disposable-list
 # In-process schedule: see DISPOSABLE_LIST_CRON_* in .env; GitHub: .github/workflows/update-disposable-domains.yml
-# Last merge: 2026-06-29 — unique domains: 74658
-# Per-source line counts (before merge; overlap removed in 74658):
+# Last merge: 2026-06-30 — unique domains: 74657
+# Per-source line counts (before merge; overlap removed in 74657):
     #   - disposable-email-domains/blocklist: 7860 (pre-dedup)
-    #   - disposable/disposable (domains.txt): 74296 (pre-dedup)
+    #   - disposable/disposable (domains.txt): 74297 (pre-dedup)
 # Runtime: set DISPOSABLE_LIST_PATH to merge an additional file at startup if needed.
 
 0-00.usa.cc
@@ -6710,7 +6710,6 @@ anotherwinters.site
 anpolitics.ru
 anquandx.com
 anruma.site
-anruty.me
 ansaldo.cf
 ansaldo.ga
 ansaldo.gq
@@ -12171,7 +12170,6 @@ breitbandanbindung.de
 breitlingsale.org
 breka.orge.pl
 brekai.nl
-brelixomorvexan.website
 brendonweston.info
 brenlova.com
 brennendesreich.de
@@ -12407,6 +12405,7 @@ bt0zvsvcqqid8.gq
 bt0zvsvcqqid8.ml
 bt0zvsvcqqid8.tk
 bt3019k.com
+bt446.anonbox.net
 bt6fn.anonbox.net
 btar.spymail.one
 btarikarlinda.art
@@ -21043,7 +21042,6 @@ e5r6ynr5.ml
 e5r6ynr5.tk
 e5v7tp.pl
 e6hq33h9o.pl
-e77s6.anonbox.net
 e7n06wz.com
 e84ywua9hxr5q.cf
 e84ywua9hxr5q.ga
@@ -25102,6 +25100,7 @@ firststopmusic.com
 firsttimes.in
 firsttradelimited.info
 firt.site
+firwurd.com
 fisanick88.universallightkeys.com
 fischkun.de
 fisdom.vip
@@ -25157,7 +25156,6 @@ fitzinn.com
 fitzola.com
 fiuedu.com
 fiuwhfi212.com
-fivanstore.shop
 five-club.com
 five-plus.net
 five.emailfake.ml
@@ -34627,6 +34625,7 @@ javmail.tech
 javmaniac.co
 javnoi.com
 jawatengah.net
+jawatimur.net
 jawtec.com
 jaxonrose.com
 jaxprop.com
@@ -34997,6 +34996,7 @@ jinnesia.site
 jinnmail.net
 jinsguaranteedpaydayloans.co.uk
 jinva.fr.nf
+jiongguo.top
 jiooq.com
 jioso.com
 jir.freeml.net
@@ -36378,7 +36378,6 @@ kemampuan.me
 kemanngon.online
 kembangpasir.website
 kembung.com
-kemelmaka.cfd
 kemeneur.org
 kemfra.com
 kemi.freeml.net
@@ -40501,7 +40500,6 @@ lur.emltmp.com
 luravel.com
 luravell.com
 lureens.com
-lurekmopa.cfd
 lurenwu.com
 luscar.com
 lusernews.com
@@ -41928,6 +41926,7 @@ mailkita.cf
 mailkom.site
 mailkon.com
 mailkor.xyz
+mailkp.info
 mailksders.com
 mailku.co
 mailku.live
@@ -42424,6 +42423,7 @@ makente.com
 makentehosting.com
 makepleasure.club
 makerains.tk
+makeraura.online
 makerkiller.ml
 makertrial.com
 makeshopping.pp.ua
@@ -42443,6 +42443,7 @@ maklacpolza.cfd
 makmadness.info
 makmotors.com
 makoli.sbs
+makoli.site
 makoli.store
 makotamarketing.com
 maks.com
@@ -47681,7 +47682,6 @@ nissanleaf.club
 nitricoxidesupplementshq.com
 nitricpowerreview.org
 nitroshine.xyz
-nitrotokens.gg
 nitynote.com
 nitza.ga
 niubiba.lol
@@ -58657,6 +58657,7 @@ sendmesomemails.biz
 sendnow.win
 sendo.dedyn.io
 sendo.giize.com
+sendokai.click
 sendos.fr.nf
 sendos.infos.st
 sendrule.com
@@ -59313,7 +59314,6 @@ shop.lalaboutique.com
 shop.winestains.org
 shop4mail.net
 shopaccmmo.com
-shopaccvip.pro
 shopbaby.me
 shopbabygirlz.com
 shopbagsjp.org
@@ -62841,7 +62841,6 @@ tailoredhemp.com
 taimb.com
 taimeha.cf
 taimurfun.fun
-tainguyenfbchat.com
 taitz.gq
 taiv8.win
 taiwan.com
@@ -68641,7 +68640,6 @@ viperace.com
 vipfon.ru
 vipg.com
 vipgod.ru
-viphihi123.tokyo
 viphomeljjljk658.info
 viphone.eu.org
 vipitv.com
@@ -69753,6 +69751,7 @@ watkacukrowa.pl
 watkinsmail.bid
 watpho.online
 watrf.com
+watsawang.com
 wattpad.pl
 wau.emltmp.com
 waventra.cfd
@@ -71674,7 +71673,6 @@ xehop.org
 xeiex.com
 xelio.sbs
 xelu.space
-xelvoranovatrix.website
 xemaps.com
 xemkqxs.com
 xemne.com
@@ -71743,6 +71741,7 @@ xgk6dy3eodx9kwqvn.cf
 xgk6dy3eodx9kwqvn.ga
 xgk6dy3eodx9kwqvn.gq
 xgk6dy3eodx9kwqvn.tk
+xglorymu.online
 xglrcflghzt.pl
 xgmail.com
 xgmailoo.com
