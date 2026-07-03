@@ -7,10 +7,10 @@
     #   - https://raw.githubusercontent.com/disposable/disposable-email-domains/master/domains.txt
 # Local: npm run update:disposable-list
 # In-process schedule: see DISPOSABLE_LIST_CRON_* in .env; GitHub: .github/workflows/update-disposable-domains.yml
-# Last merge: 2026-07-02 — unique domains: 74777
-# Per-source line counts (before merge; overlap removed in 74777):
+# Last merge: 2026-07-03 — unique domains: 74803
+# Per-source line counts (before merge; overlap removed in 74803):
     #   - disposable-email-domains/blocklist: 7860 (pre-dedup)
-    #   - disposable/disposable (domains.txt): 74417 (pre-dedup)
+    #   - disposable/disposable (domains.txt): 74443 (pre-dedup)
 # Runtime: set DISPOSABLE_LIST_PATH to merge an additional file at startup if needed.
 
 0-00.usa.cc
@@ -6218,6 +6218,7 @@ alwmail.site
 alykpa.biz.st
 alyssa.allie.wollomail.top
 alysz.com
+alyxgod.rf.gd
 alzhelpnow.com
 alzy.mailpwr.com
 am-am.su
@@ -6485,7 +6486,6 @@ and.poisedtoshrike.com
 andalanglobal.app
 andbitcoins.com
 ander.us
-anderbeck.se
 andersonelectricnw.com
 andetne.win
 andhani.ml
@@ -6711,6 +6711,7 @@ anotherwinters.site
 anpolitics.ru
 anquandx.com
 anruma.site
+anruty.me
 ansaldo.cf
 ansaldo.ga
 ansaldo.gq
@@ -11944,7 +11945,6 @@ boxmail.co
 boxmail.lol
 boxmail.store
 boxmail1.com
-boxmail1.name
 boxmailbox.club
 boxmailers.com
 boxmailvn.com
@@ -15335,7 +15335,6 @@ clearbeam.pro
 clearcutcreative.com
 clearhabitpath.com
 clearmail.online
-clearpathblog.com
 clearstackr.site
 clearwaterarizona.com
 clearwatercpa.com
@@ -19758,6 +19757,7 @@ dodi157855.site
 dodnitues.gr
 dodode.com
 dodsi.com
+doefy.com
 doemx.com
 doerma.com
 doesnment.com
@@ -21194,6 +21194,7 @@ easynetwork.info
 easyonlinecollege.com
 easyonlinemail.net
 easypaperplanes.com
+easyplainlife.com
 easyreadnow.com
 easyrecipetoday.com
 easysetting.org
@@ -26602,6 +26603,7 @@ fwza.yomail.info
 fx-banking.com
 fx-brokers.review
 fx8333.com
+fxau5.anonbox.net
 fxavaj.com
 fxch.com
 fxcomet.com
@@ -26932,6 +26934,7 @@ gaqa.com
 garage46.com
 garagedoormonkey.com
 garagedoorschina.com
+garanburn.shop
 garansian.com
 garasikita.pw
 garaze-blaszaki.pl
@@ -27611,6 +27614,7 @@ gh2xuwenobsz.tk
 ghamil.com
 ghan.com
 ghanalandbank.com
+ghania.site
 ghastlynursyahid.biz
 ghcptmvqa.pl
 ghcrublowjob20127.com
@@ -28171,6 +28175,7 @@ gmailsdfskdf.com
 gmailsdfskdf.net
 gmailskm.com
 gmailssdf.com
+gmailtook.tech
 gmailu.ru
 gmailup.com
 gmailus.top
@@ -35604,6 +35609,7 @@ jualakunfb.co
 jualcloud.net
 jualfb.co
 jualherbal.top
+jualsosmed.com
 juarabola.org
 juarezlaw.net
 jucatyo.com
@@ -36226,6 +36232,7 @@ kavio.my.id
 kavxx.xyz
 kawaii.vet
 kawaiishojo.com
+kawneha.site
 kaws4u.com
 kawu.site
 kawy-4.pl
@@ -39959,6 +39966,7 @@ loikl.joyrideday.com
 loil.site
 loin.in
 loj.emlhub.com
+lojastream.shop
 lokajjfs.website
 lokaperuss.com
 lokata-w-banku.com.pl
@@ -40334,7 +40342,6 @@ loyalnfljerseys.com
 loyalwiranti.biz
 loyalworld.com
 lpaoaoao80101919.ibaloch.com
-lpd6j.anonbox.net
 lpdf.site
 lpefuho.com
 lpfmgmtltd.com
@@ -40583,6 +40590,7 @@ luutrudulieu.net
 luutrudulieu.online
 luv2.us
 luvara.de
+luvaramail.nl
 luvfun.site
 luvju.anonbox.net
 luvnish.com
@@ -41005,6 +41013,7 @@ magnet1.com
 magneticmessagingbobby.com
 magnetik.com.ua
 magnetl.ink
+magno.lat
 magnoliapost.com
 magnomsolutions.com
 magpietravel.com
@@ -42393,6 +42402,7 @@ mailw.ml
 mailw.site
 mailw.tk
 mailwebsite.info
+mailwichw.website
 mailwithyou.com
 mailwriting.com
 mailx.click
@@ -42506,7 +42516,6 @@ maklacpolza.cfd
 makmadness.info
 makmotors.com
 makoli.sbs
-makoli.site
 makoli.store
 makotamarketing.com
 maks.com
@@ -44281,6 +44290,7 @@ mitobet.com
 miton.lat
 mitori.org
 mitrabisa.com
+mitracc.site
 mitraprem.com
 mitraprem.online
 mitrasbo.com
@@ -44315,6 +44325,7 @@ miur.ga
 miur.gq
 miur.ml
 miur.tk
+mivex.sbs
 miwacle.com
 miwhibi.ga
 mix-good.com
@@ -47755,6 +47766,7 @@ nissanleaf.club
 nitricoxidesupplementshq.com
 nitricpowerreview.org
 nitroshine.xyz
+nitrotokens.gg
 nitynote.com
 nitza.ga
 niubiba.lol
@@ -48521,6 +48533,7 @@ numllery.com
 numweb.ru
 nun.ca
 nunindin.my.id
+nunlami.tech
 nunudatau.art
 nunung.cf
 nunungcantik.ga
@@ -51547,6 +51560,7 @@ pet.emlhub.com
 petalmail.tk
 petalmail.xyz
 petebrigham.net
+peterceocto.us
 peterdethier.com
 petergunter.com
 peterhoffmanlaw.com
@@ -51628,6 +51642,7 @@ pguar-t.com
 pgwj.emlpro.com
 phaantm.de
 phamay.com
+phamlam.online
 phamtuki.com
 phanmembanhang24h.com
 phanmemfacebook.com
@@ -57099,6 +57114,7 @@ rulersonline.com
 rules.lat
 rulk.spymail.one
 rumahcloudindonesia.online
+rumahpremium.com
 rumbu.com
 rumednews.site
 rumgel.com
@@ -57111,6 +57127,7 @@ runalone.uni.me
 runball.us
 runballrally.us
 runchet.com
+runcubesapps.id
 rundablage.com
 runeclient.com
 runfons.com
@@ -58433,7 +58450,6 @@ seaku.dev
 seakuu.dev
 seal-concepts.com
 seallyfool.site
-seangroup.org
 seansun.ru
 seaoning.click
 seaponsension.xyz
@@ -63811,6 +63827,7 @@ terminaltheme.cf
 terminate.tech
 terminateee12.com
 termuxtech.tk
+termweave.life
 ternaklele.ga
 terpistick.com
 terra-incognita.co
@@ -64053,6 +64070,7 @@ thc.st
 thclips.com
 thclub.com
 thdesign.pl
+thdfgth.online
 thdfyrg.top
 thdv.ru
 the-blockchainnews.xyz
@@ -64544,6 +64562,7 @@ thund.tk
 thunderballs.net
 thunderbolt.science
 thunkinator.org
+thuongxg.com
 thurleighchurchestate.church
 thurstoncounty.biz
 thusincret.site
@@ -65689,6 +65708,7 @@ trangiabao.click
 trangmuon.com
 trango.co
 trangzim.uk
+tranhunggg.tokyo
 tranlamanh.ml
 transcience.org
 transervice.es
@@ -68598,6 +68618,7 @@ videotubegames.ru
 videour.com
 videoxx-francais.fr
 videoxxl.info
+videyt.online
 viditag.com
 vidloop.biz.id
 vidney.com
@@ -70534,6 +70555,7 @@ whopy.com
 whorci.site
 whose-is-this-phone-number.com
 whowlft.com
+whskrspc.shop
 whstores.com
 whu.edu.pl
 whwow.com
@@ -71648,7 +71670,6 @@ xaxugen.org
 xaxx.ml
 xaynetsss.ddns.net
 xazo.xyz
-xazyxe.com
 xb-eco.info
 xbaby69.top
 xbeq.com
@@ -71786,6 +71807,7 @@ xehop.org
 xeiex.com
 xelio.sbs
 xelu.space
+xelvoranovatrix.website
 xemaps.com
 xemkqxs.com
 xemne.com
@@ -71854,6 +71876,7 @@ xgk6dy3eodx9kwqvn.cf
 xgk6dy3eodx9kwqvn.ga
 xgk6dy3eodx9kwqvn.gq
 xgk6dy3eodx9kwqvn.tk
+xglorymu.online
 xglrcflghzt.pl
 xgmail.com
 xgmailoo.com
@@ -72980,6 +73003,7 @@ yh9837.com
 yhcaturkl79jk.tk
 yhcaturxc69ol.ml
 yhei.laste.ml
+yhfgfthuyg.site
 yhg.biz
 yhjgh65hghgfj.tk
 yhldqhvie.pl
@@ -73523,6 +73547,7 @@ yuoia.com
 yups.xyz
 yurakim.cfd
 yurevia.cfd
+yuricdos.tech
 yurikeprastika.art
 yuristpro.xyz
 yuslamail.com
@@ -73938,6 +73963,7 @@ zeinconsulting.info
 zekzo.com
 zelda-planet.de
 zeldaa.ccwu.cc
+zelia.uk
 zellatrix.cfd
 zellio.yachts
 zelras.ru
