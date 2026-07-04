@@ -7,10 +7,10 @@
     #   - https://raw.githubusercontent.com/disposable/disposable-email-domains/master/domains.txt
 # Local: npm run update:disposable-list
 # In-process schedule: see DISPOSABLE_LIST_CRON_* in .env; GitHub: .github/workflows/update-disposable-domains.yml
-# Last merge: 2026-07-03 — unique domains: 74803
-# Per-source line counts (before merge; overlap removed in 74803):
+# Last merge: 2026-07-04 — unique domains: 74789
+# Per-source line counts (before merge; overlap removed in 74789):
     #   - disposable-email-domains/blocklist: 7860 (pre-dedup)
-    #   - disposable/disposable (domains.txt): 74443 (pre-dedup)
+    #   - disposable/disposable (domains.txt): 74429 (pre-dedup)
 # Runtime: set DISPOSABLE_LIST_PATH to merge an additional file at startup if needed.
 
 0-00.usa.cc
@@ -1174,7 +1174,6 @@
 2266av.com
 22794.com
 227gmail.com
-227r7.anonbox.net
 22856dbmobbil.emlhub.com
 22ffnrxk11oog.cf
 22ffnrxk11oog.ga
@@ -6711,7 +6710,6 @@ anotherwinters.site
 anpolitics.ru
 anquandx.com
 anruma.site
-anruty.me
 ansaldo.cf
 ansaldo.ga
 ansaldo.gq
@@ -11403,6 +11401,7 @@ bnfgtyert.com
 bnghdg545gdd.gq
 bniwpwkke.site
 bnj52.anonbox.net
+bnkmd.anonbox.net
 bnm612.com
 bnny4.anonbox.net
 bnoko.com
@@ -11563,6 +11562,7 @@ bola389.org
 bola389.top
 bolalogam.com
 bolamas88.online
+bolas.lat
 bolaymay.top
 bold.ovh
 boldhut.com
@@ -19987,7 +19987,6 @@ doriana424.com
 dorkalicious.co.uk
 dorodred.com
 dorothyfoundation.org
-dorukhansozer.cfd
 dorywalski.pl
 dosait.ru
 dosan12.com
@@ -20009,7 +20008,6 @@ dotabet118.com
 dotaja.store
 dotapa.shop
 dotapodemail.com
-doteluxe.com
 dotfixed.com
 dothivinhomescangio.vn
 dotland.net
@@ -22113,6 +22111,7 @@ emailaoa.pro
 emailappp.com
 emailapps.in
 emailapps.info
+emailasia1.com
 emailat.website
 emailate.com
 emailawb.pro
@@ -22195,6 +22194,7 @@ emailist.tk
 emailisvalid.com
 emailjetable.icu
 emailjonny.net
+emailjps.com
 emailke.live
 emailket.online
 emailkg.com
@@ -22308,6 +22308,7 @@ emailtoo.ml
 emailtoshare.com
 emailtown.club
 emailtrain.ga
+emailuae.com
 emailure.net
 emailvb.pro
 emailvenue.com
@@ -22527,6 +22528,7 @@ enercranyr.eu
 energen.live
 energetus.pl
 energiadeportugal.com
+energisurya.cfd
 energo-solar.pl
 energon-co.ru
 energy69.com
@@ -24372,7 +24374,6 @@ fbiagent.cyou
 fbins001mail.com
 fbins607.com
 fbkjlnry.top
-fbkubro2024.cloud
 fblgsl.cam
 fbliang58958.top
 fblo.com
@@ -25088,6 +25089,7 @@ firmfinancecompany.org
 firmjam.com
 firmspp.com
 fironia.com
+firpurwa.me
 firrior.ru
 first-email.net
 first-mail.info
@@ -27093,6 +27095,7 @@ gddao.com
 gddcorp.com
 gddp2018.edu.vn
 gdemoy.site
+gdfgergrer.online
 gdfgergrer.shop
 gdfgsd.cloud
 gdfretertwer.com
@@ -27614,7 +27617,6 @@ gh2xuwenobsz.tk
 ghamil.com
 ghan.com
 ghanalandbank.com
-ghania.site
 ghastlynursyahid.biz
 ghcptmvqa.pl
 ghcrublowjob20127.com
@@ -28175,7 +28177,6 @@ gmailsdfskdf.com
 gmailsdfskdf.net
 gmailskm.com
 gmailssdf.com
-gmailtook.tech
 gmailu.ru
 gmailup.com
 gmailus.top
@@ -34383,6 +34384,7 @@ j275xaw4h.pl
 j2anellschild.ga
 j3j.org
 j3nn.net
+j3r8qd.site
 j3r8qd.store
 j3rqt89ez.com
 j4rang0y4nk.ga
@@ -37089,6 +37091,7 @@ kinoz.pl
 kinrose.care
 kinsef.com
 kinsil.co.uk
+kintil.buzz
 kintravel.com
 kinws.com
 kinx.cf
@@ -39966,7 +39969,6 @@ loikl.joyrideday.com
 loil.site
 loin.in
 loj.emlhub.com
-lojastream.shop
 lokajjfs.website
 lokaperuss.com
 lokata-w-banku.com.pl
@@ -40501,7 +40503,6 @@ lucvu.com
 lucysummers.biz
 lucyu.com
 luddo.me
-ludejo.fr
 ludi.com
 ludovicomedia.com
 ludovodka.com
@@ -40527,7 +40528,6 @@ lujialu.edu.kg
 lujian.de5.net
 lukaat.com
 lukamzcofs.cfd
-lukapzca.cfd
 lukasfloor.com.pl
 lukaszmitula.pl
 lukecarriere.com
@@ -40590,7 +40590,6 @@ luutrudulieu.net
 luutrudulieu.online
 luv2.us
 luvara.de
-luvaramail.nl
 luvfun.site
 luvju.anonbox.net
 luvnish.com
@@ -42402,7 +42401,6 @@ mailw.ml
 mailw.site
 mailw.tk
 mailwebsite.info
-mailwichw.website
 mailwithyou.com
 mailwriting.com
 mailx.click
@@ -44290,9 +44288,9 @@ mitobet.com
 miton.lat
 mitori.org
 mitrabisa.com
-mitracc.site
 mitraprem.com
 mitraprem.online
+mitraprem.site
 mitrasbo.com
 mitsubishi-asx.cf
 mitsubishi-asx.ga
@@ -44325,7 +44323,6 @@ miur.ga
 miur.gq
 miur.ml
 miur.tk
-mivex.sbs
 miwacle.com
 miwhibi.ga
 mix-good.com
@@ -46842,7 +46839,6 @@ nd.emltmp.com
 ndade.eu.cc
 ndaraiangop2wae.buzz
 ndarseyco.com
-ndbt.click
 nddgxslntg3ogv.cf
 nddgxslntg3ogv.ga
 nddgxslntg3ogv.gq
@@ -47766,7 +47762,6 @@ nissanleaf.club
 nitricoxidesupplementshq.com
 nitricpowerreview.org
 nitroshine.xyz
-nitrotokens.gg
 nitynote.com
 nitza.ga
 niubiba.lol
@@ -48533,7 +48528,6 @@ numllery.com
 numweb.ru
 nun.ca
 nunindin.my.id
-nunlami.tech
 nunudatau.art
 nunung.cf
 nunungcantik.ga
@@ -51560,7 +51554,6 @@ pet.emlhub.com
 petalmail.tk
 petalmail.xyz
 petebrigham.net
-peterceocto.us
 peterdethier.com
 petergunter.com
 peterhoffmanlaw.com
@@ -51642,7 +51635,6 @@ pguar-t.com
 pgwj.emlpro.com
 phaantm.de
 phamay.com
-phamlam.online
 phamtuki.com
 phanmembanhang24h.com
 phanmemfacebook.com
@@ -54628,6 +54620,7 @@ quirsratio.com
 quis.freeml.net
 quitsmokinghelpfulguide.net
 quitsmokingmanyguides.net
+quiwi.lat
 quixentra.cfd
 quizitaly.com
 quizr.org
@@ -55893,6 +55886,7 @@ rendrone.online
 rendrone.xyz
 rendymail.com
 renegade-hair-studio.com
+renewable0.shop
 rengginangred95btw.cf
 rengo.tk
 renliner.cf
@@ -62950,6 +62944,7 @@ tailoredhemp.com
 taimb.com
 taimeha.cf
 taimurfun.fun
+taischaves.com
 taitz.gq
 taiv8.win
 taiwan.com
@@ -63827,7 +63822,6 @@ terminaltheme.cf
 terminate.tech
 terminateee12.com
 termuxtech.tk
-termweave.life
 ternaklele.ga
 terpistick.com
 terra-incognita.co
@@ -64070,7 +64064,6 @@ thc.st
 thclips.com
 thclub.com
 thdesign.pl
-thdfgth.online
 thdfyrg.top
 thdv.ru
 the-blockchainnews.xyz
@@ -65235,7 +65228,6 @@ tool-9-you.com
 tool.pp.ua
 toolbox.ovh
 toolnator.plus
-toolourles.tech
 tools-capcut.com
 toolsfly.com
 toolsig.team
@@ -65708,7 +65700,6 @@ trangiabao.click
 trangmuon.com
 trango.co
 trangzim.uk
-tranhunggg.tokyo
 tranlamanh.ml
 transcience.org
 transervice.es
@@ -68618,7 +68609,6 @@ videotubegames.ru
 videour.com
 videoxx-francais.fr
 videoxxl.info
-videyt.online
 viditag.com
 vidloop.biz.id
 vidney.com
@@ -70555,7 +70545,6 @@ whopy.com
 whorci.site
 whose-is-this-phone-number.com
 whowlft.com
-whskrspc.shop
 whstores.com
 whu.edu.pl
 whwow.com
@@ -71670,6 +71659,7 @@ xaxugen.org
 xaxx.ml
 xaynetsss.ddns.net
 xazo.xyz
+xazymarcie.space
 xb-eco.info
 xbaby69.top
 xbeq.com
@@ -71807,7 +71797,6 @@ xehop.org
 xeiex.com
 xelio.sbs
 xelu.space
-xelvoranovatrix.website
 xemaps.com
 xemkqxs.com
 xemne.com
@@ -71876,7 +71865,6 @@ xgk6dy3eodx9kwqvn.cf
 xgk6dy3eodx9kwqvn.ga
 xgk6dy3eodx9kwqvn.gq
 xgk6dy3eodx9kwqvn.tk
-xglorymu.online
 xglrcflghzt.pl
 xgmail.com
 xgmailoo.com
@@ -73003,7 +72991,6 @@ yh9837.com
 yhcaturkl79jk.tk
 yhcaturxc69ol.ml
 yhei.laste.ml
-yhfgfthuyg.site
 yhg.biz
 yhjgh65hghgfj.tk
 yhldqhvie.pl
@@ -73547,7 +73534,6 @@ yuoia.com
 yups.xyz
 yurakim.cfd
 yurevia.cfd
-yuricdos.tech
 yurikeprastika.art
 yuristpro.xyz
 yuslamail.com
@@ -73963,7 +73949,6 @@ zeinconsulting.info
 zekzo.com
 zelda-planet.de
 zeldaa.ccwu.cc
-zelia.uk
 zellatrix.cfd
 zellio.yachts
 zelras.ru
@@ -74121,6 +74106,7 @@ zhibo69.com
 zhidkiy-gazon.ru
 zhiezmotion.me
 zhiezpremium.store
+zhinex.online
 zhizhiwei.fun
 zhjjq.tech
 zhongchengtz.com
