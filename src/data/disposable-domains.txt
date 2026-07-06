@@ -7,10 +7,10 @@
     #   - https://raw.githubusercontent.com/disposable/disposable-email-domains/master/domains.txt
 # Local: npm run update:disposable-list
 # In-process schedule: see DISPOSABLE_LIST_CRON_* in .env; GitHub: .github/workflows/update-disposable-domains.yml
-# Last merge: 2026-07-05 — unique domains: 74782
-# Per-source line counts (before merge; overlap removed in 74782):
-    #   - disposable-email-domains/blocklist: 7860 (pre-dedup)
-    #   - disposable/disposable (domains.txt): 74422 (pre-dedup)
+# Last merge: 2026-07-06 — unique domains: 74799
+# Per-source line counts (before merge; overlap removed in 74799):
+    #   - disposable-email-domains/blocklist: 7900 (pre-dedup)
+    #   - disposable/disposable (domains.txt): 74438 (pre-dedup)
 # Runtime: set DISPOSABLE_LIST_PATH to merge an additional file at startup if needed.
 
 0-00.usa.cc
@@ -85,6 +85,7 @@
 01hosting.biz
 01trends.com
 02.pl
+020307.xyz
 020gmail.com
 020yiren.com
 020zlgc.com
@@ -2606,6 +2607,7 @@
 5hfmczghlkmuiduha8t.gq
 5hfmczghlkmuiduha8t.ml
 5hfmczghlkmuiduha8t.tk
+5ixmonth.xyz
 5iznnnr6sabq0b6.cf
 5iznnnr6sabq0b6.ga
 5iznnnr6sabq0b6.gq
@@ -6918,6 +6920,7 @@ aperiol.com
 apes-ai.linkpc.net
 apexhearthealth.com
 apexmail.ru
+apexnovaser.com
 apexone.top
 apexsilver.com
 apfelkorps.de
@@ -9364,6 +9367,7 @@ bapumoj.gq
 bapumoj.ml
 bapumoj.tk
 bapumojo.ga
+bar-ton.store
 baracudapoolcleaner.com
 barafa.gs
 barajasmail.bid
@@ -16310,6 +16314,7 @@ coqmail.com
 cora.marketdoors.info
 coraglobalista.com
 coralgablesguide.com
+coralhost.my
 coraljoylondon.com
 coramail.live
 coramaster.com
@@ -21193,6 +21198,7 @@ easynetwork.info
 easyonlinecollege.com
 easyonlinemail.net
 easypaperplanes.com
+easyplainlife.com
 easyreadnow.com
 easyrecipetoday.com
 easysetting.org
@@ -34380,7 +34386,6 @@ j275xaw4h.pl
 j2anellschild.ga
 j3j.org
 j3nn.net
-j3r8qd.site
 j3r8qd.store
 j3rqt89ez.com
 j4rang0y4nk.ga
@@ -37219,6 +37224,7 @@ kkjef655grg.tk
 kkk.emlpro.com
 kkkkkk.com
 kkkmail.tk
+kkkoouy.cyou
 kkkzzz.cz.cc
 kkmail.be
 kkmjnhff.com
@@ -38466,6 +38472,7 @@ lanipe.com
 lankew.com
 lanoixe.com
 lantofe.ga
+lanuiopl.bond
 lanxi8.com
 laocaishen.cc
 laoctarine.store
@@ -40716,6 +40723,7 @@ lxupukiw4dr277kay.ga
 lxupukiw4dr277kay.gq
 lxupukiw4dr277kay.ml
 lxupukiw4dr277kay.tk
+lxydawang.top
 lyalnorm.com
 lybyz.com
 lycis.com
@@ -47327,6 +47335,7 @@ newzbling.com
 newzeroemail.com
 newzgraph.net
 nexafilm.com
+nexarshop.store
 nexentia.cfd
 nexhibit.com
 nexhost.nl
@@ -49911,6 +49920,7 @@ opexonline.com
 ophaltde.com
 ophdoghau.ga
 opheliia.com
+opihhushdjn.cyou
 opilon.com
 opinionsbte.com
 opisce.site
@@ -56174,6 +56184,7 @@ rgtvtnxvci8dnwy8dfe.ga
 rgtvtnxvci8dnwy8dfe.gq
 rgtvtnxvci8dnwy8dfe.ml
 rgtvtnxvci8dnwy8dfe.tk
+rgvendas.shop
 rgwfagbc9ufthnkmvu.cf
 rgwfagbc9ufthnkmvu.ml
 rgwfagbc9ufthnkmvu.tk
@@ -57298,6 +57309,7 @@ ryteto.me
 ryu.emltmp.com
 ryumail.net
 ryumail.ooo
+ryuu.codes
 ryuzak.site
 ryyr.ru
 ryyr.store
@@ -59267,6 +59279,7 @@ shelbymattingly.com
 sheless.xyz
 shelvem.com
 shemy.site
+shengxia.asia
 shenhgts.net
 shenji.info
 shenshahfood.com
@@ -61659,6 +61672,7 @@ stepx100.ru
 sterlingfinancecompany.com
 sterlingheightsquote.com
 sterlinginvestigations.com
+sterlingpointco.com
 sterlingsilverandscapeing.com
 sterlingsilverflatwareset.net
 stermail.flu.cc
@@ -64454,6 +64468,7 @@ thisismyemail.xyz
 thisisnotmyrealemail.com
 thismail.net
 thisplay.com.pl
+thispy.top
 thistime.uni.me
 thistimedd.tk
 thistimenow.org.ua
@@ -65222,6 +65237,7 @@ tool-9-you.com
 tool.pp.ua
 toolbox.ovh
 toolnator.plus
+toolourles.tech
 tools-capcut.com
 toolsfly.com
 toolsig.team
@@ -71390,6 +71406,7 @@ wwpshop.com
 wwrmails.com
 wws.emltmp.com
 wwstockist.com
+wwtykkm.bond
 wwvec.uno
 wwvk.ru
 wwvk.store
