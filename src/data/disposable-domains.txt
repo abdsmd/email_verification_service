@@ -7,10 +7,10 @@
     #   - https://raw.githubusercontent.com/disposable/disposable-email-domains/master/domains.txt
 # Local: npm run update:disposable-list
 # In-process schedule: see DISPOSABLE_LIST_CRON_* in .env; GitHub: .github/workflows/update-disposable-domains.yml
-# Last merge: 2026-07-06 — unique domains: 74799
-# Per-source line counts (before merge; overlap removed in 74799):
-    #   - disposable-email-domains/blocklist: 7900 (pre-dedup)
-    #   - disposable/disposable (domains.txt): 74438 (pre-dedup)
+# Last merge: 2026-07-07 — unique domains: 74803
+# Per-source line counts (before merge; overlap removed in 74803):
+    #   - disposable-email-domains/blocklist: 7915 (pre-dedup)
+    #   - disposable/disposable (domains.txt): 74442 (pre-dedup)
 # Runtime: set DISPOSABLE_LIST_PATH to merge an additional file at startup if needed.
 
 0-00.usa.cc
@@ -10455,6 +10455,7 @@ bhag.us
 bhajanmusic.info
 bhakti-tree.com
 bhaktiswaroopam.com
+bhana.xyz
 bhap.me
 bhappy0sagruz.ru
 bhappy1fajli.ru
@@ -21198,7 +21199,6 @@ easynetwork.info
 easyonlinecollege.com
 easyonlinemail.net
 easypaperplanes.com
-easyplainlife.com
 easyreadnow.com
 easyrecipetoday.com
 easysetting.org
@@ -22534,6 +22534,7 @@ enercranyr.eu
 energen.live
 energetus.pl
 energiadeportugal.com
+energisurya.cfd
 energo-solar.pl
 energon-co.ru
 energy69.com
@@ -42518,6 +42519,7 @@ maklacpolza.cfd
 makmadness.info
 makmotors.com
 makoli.sbs
+makoli.site
 makoli.store
 makotamarketing.com
 maks.com
@@ -43755,6 +43757,7 @@ meta68.xyz
 metaboliccookingpdf.com
 metadownload.org
 metaintern.net
+metajaya.biz.id
 metajeans.com
 metalcasinao.com
 metalike.pro
@@ -60176,6 +60179,7 @@ small.lakemneadows.com
 small.makingdomes.com
 small.ploooop.com
 small.poisedtoshrike.com
+small680.online
 smallalpaca.com
 smallanawanginbeach.com
 smallbusinesshowto.com
@@ -65237,7 +65241,6 @@ tool-9-you.com
 tool.pp.ua
 toolbox.ovh
 toolnator.plus
-toolourles.tech
 tools-capcut.com
 toolsfly.com
 toolsig.team
@@ -71876,6 +71879,7 @@ xgk6dy3eodx9kwqvn.cf
 xgk6dy3eodx9kwqvn.ga
 xgk6dy3eodx9kwqvn.gq
 xgk6dy3eodx9kwqvn.tk
+xglorymu.online
 xglrcflghzt.pl
 xgmail.com
 xgmailoo.com
