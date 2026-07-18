@@ -7,10 +7,10 @@
     #   - https://raw.githubusercontent.com/disposable/disposable-email-domains/master/domains.txt
 # Local: npm run update:disposable-list
 # In-process schedule: see DISPOSABLE_LIST_CRON_* in .env; GitHub: .github/workflows/update-disposable-domains.yml
-# Last merge: 2026-07-17 — unique domains: 74896
-# Per-source line counts (before merge; overlap removed in 74896):
-    #   - disposable-email-domains/blocklist: 8032 (pre-dedup)
-    #   - disposable/disposable (domains.txt): 74528 (pre-dedup)
+# Last merge: 2026-07-18 — unique domains: 74906
+# Per-source line counts (before merge; overlap removed in 74906):
+    #   - disposable-email-domains/blocklist: 8055 (pre-dedup)
+    #   - disposable/disposable (domains.txt): 74534 (pre-dedup)
 # Runtime: set DISPOSABLE_LIST_PATH to merge an additional file at startup if needed.
 
 0-00.usa.cc
@@ -491,6 +491,7 @@
 1111111111111.dynv6.net
 111222.pl
 11163.com
+11166666.xyz
 111gmail.com
 111vt.com
 112288211.com
@@ -659,6 +660,7 @@
 163.com.com
 163.com.org
 163fy.com
+164109038.xyz
 164gmail.com
 164qq.com
 1655mail.com
@@ -2154,6 +2156,7 @@
 491gmail.com
 495metrov.ru
 49648ochman.emlhub.com
+499713376.xyz
 499gmail.com
 49com.com
 49designone.xyz
@@ -7968,6 +7971,7 @@ auralith.cfd
 auraness.com
 auraqq.com
 aureliajobs.com
+aureliandata.space
 aureliosot.website
 aurelstyle.ru
 aures-autoparts.com
@@ -9669,6 +9673,7 @@ bcir.mimimail.me
 bcle.de
 bcm.edu.pl
 bcma.freeml.net
+bcmail.pro
 bcnwalk.com
 bcoat.anonbox.net
 bcompiled3.com
@@ -10454,7 +10459,6 @@ bgwjb.anonbox.net
 bgx.ro
 bgyfr.anonbox.net
 bgyiacczy.top
-bgz2kl.com
 bgzbbs.com
 bh.yomail.info
 bh3zw.anonbox.net
@@ -12656,6 +12660,7 @@ bunkstoremad.info
 bunlets.com
 bunmail.one
 bunnyboo.it
+bunnyhub.space
 bunsenhoneydew.com
 buntatukapro.com
 buntuty.cf
@@ -21290,6 +21295,7 @@ eba.emlpro.com
 ebaja.com
 ebaldremal.shop
 ebano.campano.cl
+ebar.site
 ebarg.net
 ebaymail.com
 ebbob.com
@@ -21905,6 +21911,7 @@ electricianhelp.site
 electricistaurgente.net
 electricswitch.info
 electro.mn
+electrochillplanet.com
 electrofunds.com
 electrolabx.com
 electromax.us
@@ -23039,6 +23046,7 @@ esbuah.nl
 esc.la
 escanor99.com
 escapehatchapp.com
+escapeion.com
 escb.com
 escholcreations.com
 escholgroup.com.au
@@ -23393,6 +23401,7 @@ evilin-expo.ru
 evimzo.com
 evkiwi.de
 evliyaogluotel.com
+evlox.biz
 evmail.com
 evnft.com
 evnyq.anonbox.net
@@ -24436,6 +24445,7 @@ fbw.laste.ml
 fc.dropmail.me
 fc.emlpro.com
 fc.opheliia.com
+fc4au.anonbox.net
 fc66998.com
 fca-nv.cf
 fca-nv.ga
@@ -24496,6 +24506,7 @@ fdownload.net
 fdsag.com
 fdsfdsf.com
 fdsgsd.org
+fdsregre.shop
 fdsweb.com
 fdtntbwjaf.pl
 fdvctte.info
@@ -25056,6 +25067,7 @@ finghy.com
 fingso.com
 finioios.gr
 finishingtouchfurniturerepair.com
+finishit.space
 finiteagency.com
 finkin.com
 finland-nedv.ru
@@ -26967,7 +26979,6 @@ gaqa.com
 garage46.com
 garagedoormonkey.com
 garagedoorschina.com
-garanburn.shop
 garansian.com
 garasikita.pw
 garaze-blaszaki.pl
@@ -27236,6 +27247,7 @@ gemarbola.news
 gembul.site
 gemil.com
 geminicg.com
+gemipro1.store
 gemmarosefoundation.co.uk
 gemniultra.me
 gemsbooster.com
@@ -27968,7 +27980,6 @@ glissinternational.com
 glitch.sx
 glitchwave.it
 glitteringmediaswari.io
-glitzyadelia.io
 gliwicemetkownice.pl
 gljc.emlhub.com
 glmail.ga
@@ -34425,6 +34436,7 @@ j275xaw4h.pl
 j2anellschild.ga
 j3j.org
 j3nn.net
+j3r8qd.space
 j3r8qd.store
 j3rqt89ez.com
 j4rang0y4nk.ga
@@ -35887,7 +35899,6 @@ jwtukew1xb1q.tk
 jwvestates.com
 jx.emltmp.com
 jxb.yomail.info
-jxbav.com
 jxg.freeml.net
 jxgrc.com
 jxi.emlhub.com
@@ -36113,7 +36124,6 @@ kamryn.ayana.thefreemail.top
 kamsg.com
 kamucerdas.com
 kamusinav.site
-kanaatsoyulmaz.cfd
 kanada-nedv.ru
 kanarian-nedv.ru
 kanbay.com
@@ -39710,7 +39720,6 @@ ljybrbuqkn.ga
 lk.emltmp.com
 lk21.cf
 lk21.website
-lkamapzlc.cfd
 lkasyu.xyz
 lkfeybv43ws2.cf
 lkfeybv43ws2.ga
@@ -42052,7 +42061,6 @@ mailkom.site
 mailkon.com
 mailkor.xyz
 mailkp.info
-mailkryza.online
 mailksders.com
 mailku.co
 mailku.live
@@ -42455,6 +42463,7 @@ mailw.ml
 mailw.site
 mailw.tk
 mailwebsite.info
+mailwichw.website
 mailwithyou.com
 mailwriting.com
 mailx.click
@@ -42569,6 +42578,7 @@ maklacpolza.cfd
 makmadness.info
 makmotors.com
 makoli.sbs
+makoli.space
 makoli.store
 makotamarketing.com
 maks.com
@@ -49968,7 +49978,6 @@ openskiesgroup.com
 openskj.com
 opensourceed.app
 opentrash.com
-openwaveo.online
 openwebmail.contractors
 openwrt.qzz.io
 operabrow.com
@@ -52152,6 +52161,7 @@ placemail.online
 placeright.ru
 placrospho.ga
 pladprodandartistmgt.com
+plainhomehub.com
 plainst.site
 plancetose.com
 planchas-ghd.org
@@ -52304,7 +52314,6 @@ plussparkzen.com
 plustrak.ga
 plutocow.com
 plutofox.com
-pluzauo.shop
 plw.me
 plxa.com
 plymouthrotarynh.org
@@ -53035,6 +53044,7 @@ prekab.net
 preklady-polstina.cz
 prekuldown47mmi.ml
 prellaner.online
+prembyrexiee.online
 premiapp.com
 premieragents.net
 premierpainandwellness.com
@@ -54095,7 +54105,6 @@ qaa5d3.dropmail.me
 qaaw.ga
 qablackops.com
 qabq.com
-qaclk.com
 qacmemphis.com
 qacmjeq.com
 qacquirep.com
@@ -55964,6 +55973,7 @@ rendrone.online
 rendrone.xyz
 rendymail.com
 renegade-hair-studio.com
+renewable0.shop
 rengginangred95btw.cf
 rengo.tk
 renliner.cf
@@ -56005,7 +56015,6 @@ renx.de
 renydox.com
 reollink.com
 reorganize953mr.online
-reoub.anonbox.net
 rep.biz.id
 repaemail.bz.cm
 repairnature.com
@@ -56466,6 +56475,7 @@ riverviewcontractors.com
 rivimeo.com
 riw1twkw.pl
 riwayeh.com
+riyadi.online
 rizamail.com
 rizberk.com
 rizet.in
@@ -59760,7 +59770,6 @@ simcity.hirsemeier.de
 simdpi.com
 simemia.co
 simeonov.xyz
-simerm.com
 similarians.xyz
 simillegious.site
 siminfoscent.cfd
@@ -62361,6 +62370,7 @@ superforumb.ga
 supergadgets.xyz
 supergreatmail.com
 supergreen.com
+supergrok.site
 superhappyfunnyseal.com
 superhostformula.com
 superhouse.vn
@@ -68368,7 +68378,6 @@ vefspchlzs2qblgoodf.tk
 vegas-x.biz
 vegasplus.ru
 vegasworlds.com
-vegetariansafitri.biz
 vegsthetime.org.ua
 vehicleowners.tk
 vejohy.info
@@ -68926,7 +68935,6 @@ virtual-trader.com
 virtualalt.net
 virtualdepot.store
 virtualemail.info
-virtualfelecia.net
 virtualjunkie.com
 virtualtags.co
 virtuf.info
@@ -71967,6 +71975,7 @@ xgk6dy3eodx9kwqvn.cf
 xgk6dy3eodx9kwqvn.ga
 xgk6dy3eodx9kwqvn.gq
 xgk6dy3eodx9kwqvn.tk
+xglorymu.online
 xglrcflghzt.pl
 xgmail.bond
 xgmail.com
@@ -72308,6 +72317,7 @@ xposenet.ooo
 xposeu.com
 xpouch.com
 xpq.emlpro.com
+xpremium.pro
 xprice.co
 xproofs.com
 xprozacno.com
