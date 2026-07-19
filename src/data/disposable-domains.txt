@@ -7,10 +7,10 @@
     #   - https://raw.githubusercontent.com/disposable/disposable-email-domains/master/domains.txt
 # Local: npm run update:disposable-list
 # In-process schedule: see DISPOSABLE_LIST_CRON_* in .env; GitHub: .github/workflows/update-disposable-domains.yml
-# Last merge: 2026-07-18 — unique domains: 74906
-# Per-source line counts (before merge; overlap removed in 74906):
+# Last merge: 2026-07-19 — unique domains: 74902
+# Per-source line counts (before merge; overlap removed in 74902):
     #   - disposable-email-domains/blocklist: 8055 (pre-dedup)
-    #   - disposable/disposable (domains.txt): 74534 (pre-dedup)
+    #   - disposable/disposable (domains.txt): 74542 (pre-dedup)
 # Runtime: set DISPOSABLE_LIST_PATH to merge an additional file at startup if needed.
 
 0-00.usa.cc
@@ -19054,6 +19054,7 @@ digitalsole.info
 digitalstudios.shop
 digitaltransarchive.net
 digitalwebus.com
+digitalzz2.shop
 digitava.com
 digitchernob.xyz
 digitecy.live
@@ -22556,7 +22557,6 @@ endeavorla.com
 endeavorsllc.com
 endergraph.com
 endflash.com
-endibit.com
 endingimpunity.com
 endob.com
 endosferes.ru
@@ -26866,6 +26866,7 @@ galvanizefitness.com
 galvanmail.men
 gam1fy.com
 gamadaiz.shop
+gamah.lat
 gamail.com
 gamail.emlhub.com
 gamail.emlpro.com
@@ -27906,6 +27907,7 @@ gk-konsult.ru
 gkd2323c.in
 gkjeee.com
 gkl.dropmail.me
+gklap.anonbox.net
 gkohau.xyz
 gkolimp.ru
 gkorii.com
@@ -31331,7 +31333,6 @@ horshing.site
 hortmail.de
 horvathurtablahoz.ml
 hos24.de
-hosintoy.com
 hospitals.solutions
 hospitalvains.social
 host-info.com
@@ -32891,7 +32892,6 @@ ikangou.com
 ikanid.com
 ikanteri.com
 ikaza.info
-ikbalsongur.cfd
 ikbenspamvrij.nl
 ikelsik.cf
 ikelsik.ga
@@ -39162,7 +39162,6 @@ lhkjfg45bnvg.gq
 lhkk.yomail.info
 lhl4c.anonbox.net
 lho.emltmp.com
-lhory.com
 lhpa.com
 lhrnferne.mil.pl
 lhsdv.com
@@ -41530,6 +41529,7 @@ mail10.ga
 mail10.gq
 mail10.ml
 mail101.xyz
+mail1012.shop
 mail10m.com
 mail11.cf
 mail11.gq
@@ -42463,7 +42463,6 @@ mailw.ml
 mailw.site
 mailw.tk
 mailwebsite.info
-mailwichw.website
 mailwithyou.com
 mailwriting.com
 mailx.click
@@ -46394,7 +46393,6 @@ mysugartime.ru
 mysukam.com
 mysuperwebhost.com
 mytacticaldepot.com
-mytaemin.com
 mytandberg.com
 mytandbergonline.com
 mytarget.info
@@ -50731,7 +50729,6 @@ pacarmu.link
 pacdoitreiunu.com
 paceforwarders.com
 paceincorp.com
-pacfut.com
 pachilly.com
 pacificraft.com
 pacificwestrealty.net
@@ -50997,6 +50994,7 @@ parleasalwebp.zyns.com
 parlimentpetitioner.tk
 parolonboycomerun.com
 parqueadero.work
+parrtne.com
 parsinglabs.com
 parsitv.com
 partchild.biz
@@ -55973,7 +55971,6 @@ rendrone.online
 rendrone.xyz
 rendymail.com
 renegade-hair-studio.com
-renewable0.shop
 rengginangred95btw.cf
 rengo.tk
 renliner.cf
@@ -65256,6 +65253,7 @@ tokfly.org
 tokito.sbs
 tokkabanshop.com
 tokki3124.com
+tokmail.fun
 tokmail.net
 tokobibit.co
 tokogpt24jam.online
@@ -71689,7 +71687,6 @@ x3puf.anonbox.net
 x3sbp.anonbox.net
 x4ob6.anonbox.net
 x4u.me
-x4uzm.anonbox.net
 x4y.club
 x5a9m8ugq.com
 x5bj6zb5fsvbmqa.ga
@@ -71975,7 +71972,6 @@ xgk6dy3eodx9kwqvn.cf
 xgk6dy3eodx9kwqvn.ga
 xgk6dy3eodx9kwqvn.gq
 xgk6dy3eodx9kwqvn.tk
-xglorymu.online
 xglrcflghzt.pl
 xgmail.bond
 xgmail.com
