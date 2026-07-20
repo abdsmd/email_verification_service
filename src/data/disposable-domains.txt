@@ -7,10 +7,10 @@
     #   - https://raw.githubusercontent.com/disposable/disposable-email-domains/master/domains.txt
 # Local: npm run update:disposable-list
 # In-process schedule: see DISPOSABLE_LIST_CRON_* in .env; GitHub: .github/workflows/update-disposable-domains.yml
-# Last merge: 2026-07-19 — unique domains: 74902
-# Per-source line counts (before merge; overlap removed in 74902):
-    #   - disposable-email-domains/blocklist: 8055 (pre-dedup)
-    #   - disposable/disposable (domains.txt): 74542 (pre-dedup)
+# Last merge: 2026-07-20 — unique domains: 74911
+# Per-source line counts (before merge; overlap removed in 74911):
+    #   - disposable-email-domains/blocklist: 8068 (pre-dedup)
+    #   - disposable/disposable (domains.txt): 74549 (pre-dedup)
 # Runtime: set DISPOSABLE_LIST_PATH to merge an additional file at startup if needed.
 
 0-00.usa.cc
@@ -1415,7 +1415,6 @@
 2fdgdfgdfgdf.tk
 2fi.ru
 2filmshd.online
-2fmm5.anonbox.net
 2gear.ru
 2gep2ipnuno4oc.cf
 2gep2ipnuno4oc.ga
@@ -2434,6 +2433,7 @@
 521883.xyz
 521gmail.com
 5225b4d0pi3627q9.privatewhois.net
+522885.xyz
 522gmail.com
 523gmail.com
 524446913.xyz
@@ -2820,6 +2820,7 @@
 65zen.pl
 66-77.cc
 6624445.com
+662602718.xyz
 663gmail.com
 665gmail.com
 666-evil.com
@@ -7827,6 +7828,7 @@ atlantaquote.com
 atlantawatercloset.com
 atlantaweb-design.com
 atlanticyu.com
+atlas4381.me
 atlasimple.com
 atletico.ga
 atlteknet.com
@@ -10889,6 +10891,7 @@ bitx.nl
 bityemedia.com
 bitymails.us
 bitzonasy.info
+biubiuwholeworld.cn
 biumemail.com
 biuranet.pl
 biuro-naprawcze.pl
@@ -14815,6 +14818,7 @@ cheska-nedv.ru
 chesles.com
 chessgameland.com
 chessgamingworld.com
+chestcloudx.com
 chesterfieldcountyschools.com
 chetroi.site
 chevachi.com
@@ -15607,6 +15611,7 @@ clyvantis.cfd
 clzo.com
 clzoptics.com
 cmael.com
+cmail.blog
 cmail.club
 cmail.com
 cmail.host
@@ -16953,7 +16958,6 @@ cuaina.com
 cuaks.fun
 cuan.email
 cuanbrothers.com
-cuanbrowncs.mom
 cuanka.id
 cuanka.online
 cuanmarket.xyz
@@ -17223,6 +17227,7 @@ cybergamerit.ga
 cybergfl.com
 cyberhohol.tk
 cyberian.net
+cyberionexus.shop
 cyberknx.com
 cyberlinkhub.com
 cybermail.ga
@@ -19054,7 +19059,6 @@ digitalsole.info
 digitalstudios.shop
 digitaltransarchive.net
 digitalwebus.com
-digitalzz2.shop
 digitava.com
 digitchernob.xyz
 digitecy.live
@@ -25682,6 +25686,7 @@ foragentsonky.com
 forapps.shop
 forapps.space
 foraro.com
+forbmmend.com
 forcelons.xyz
 ford-edge.club
 ford-flex.club
@@ -30239,6 +30244,7 @@ hclrizav2a.ml
 hclrizav2a.tk
 hcoupledp.com
 hcuglasgow.com
+hcypku.cloud
 hcyughc.ml
 hczx8888.com
 hd-boot.info
@@ -31601,7 +31607,6 @@ houtil.com
 houtlook.com
 houtlook.es
 houtlook.xyz
-hovanfood.com
 hovikindustries.com
 how-to-offshore.com
 how.blatnet.com
@@ -39217,6 +39222,7 @@ lid4s.anonbox.net
 lidaye-facai.xyz
 lidell.com
 lidely.com
+lider.lat
 lidercontabilidadebrasil.com
 lidprep.vision
 lidte.com
@@ -41529,7 +41535,6 @@ mail10.ga
 mail10.gq
 mail10.ml
 mail101.xyz
-mail1012.shop
 mail10m.com
 mail11.cf
 mail11.gq
@@ -42076,6 +42081,7 @@ maillbox.ga
 maillei.com
 maillei.net
 mailler.cf
+maillii.click
 maillii.shop
 maillii.store
 maillii.website
@@ -47591,6 +47597,7 @@ nhifswkaidn4hr0dwf4.tk
 nhisystem1.org
 nhjxwhpyg.pl
 nhk.emlhub.com
+nhk47.anonbox.net
 nhmi1.com
 nhmicrosoft.com
 nhmty.com
@@ -53042,7 +53049,6 @@ prekab.net
 preklady-polstina.cz
 prekuldown47mmi.ml
 prellaner.online
-prembyrexiee.online
 premiapp.com
 premieragents.net
 premierpainandwellness.com
@@ -54596,6 +54602,7 @@ quantnodes.com
 quantobasta.ru
 quantorynexus.space
 quantsoftware.com
+quantumeridian.site
 quantumofhappiness.com
 quantyti.com
 quarida.com
@@ -59323,7 +59330,6 @@ sharkliveroil.in
 sharkmail.xyz
 sharkslasers.com
 sharksteammop.in
-sharli.xyz
 sharpmail.com
 sharyndoll.com
 shasto.com
@@ -61202,6 +61208,7 @@ spheretelecom.com
 sphile.site
 sphosp.com
 sphrio.com
+spiab.biz
 spicethainj.com
 spickety.com
 spicy.photo
@@ -62786,6 +62793,7 @@ synovaris.cfd
 synsky.com
 syntaxcdn.website
 syntaxnews.xyz
+syntheradynamics.site
 syon.freeml.net
 syonacosmetics.com
 syorb.com
@@ -70652,6 +70660,7 @@ whopy.com
 whorci.site
 whose-is-this-phone-number.com
 whowlft.com
+whskrspc.shop
 whstores.com
 whu.edu.pl
 whwow.com
