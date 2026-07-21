@@ -7,10 +7,10 @@
     #   - https://raw.githubusercontent.com/disposable/disposable-email-domains/master/domains.txt
 # Local: npm run update:disposable-list
 # In-process schedule: see DISPOSABLE_LIST_CRON_* in .env; GitHub: .github/workflows/update-disposable-domains.yml
-# Last merge: 2026-07-20 — unique domains: 74911
-# Per-source line counts (before merge; overlap removed in 74911):
-    #   - disposable-email-domains/blocklist: 8068 (pre-dedup)
-    #   - disposable/disposable (domains.txt): 74549 (pre-dedup)
+# Last merge: 2026-07-21 — unique domains: 74924
+# Per-source line counts (before merge; overlap removed in 74924):
+    #   - disposable-email-domains/blocklist: 8084 (pre-dedup)
+    #   - disposable/disposable (domains.txt): 74558 (pre-dedup)
 # Runtime: set DISPOSABLE_LIST_PATH to merge an additional file at startup if needed.
 
 0-00.usa.cc
@@ -1318,7 +1318,6 @@
 26llxdhttjb.ml
 26llxdhttjb.tk
 26pg.com
-26wq2.anonbox.net
 26yahoo.com
 273gmail.com
 274gmail.com
@@ -7457,6 +7456,7 @@ asaption.com
 asaroad.com
 asas1.co.tv
 asasaaaf77.site
+asav.site
 asb-mail.info
 asbakpinuh.club
 asbcglobal.net
@@ -8455,6 +8455,7 @@ axerflow.org
 axie.ml
 axiemeta.fun
 axin05.icu
+axionintellex.shop
 axisbank.co
 axiz.digital
 axiz.org
@@ -13596,6 +13597,7 @@ capcutku.cc
 capcutku.com
 capcutku.io
 capcutmeflo.shop
+capcutmm.shop
 capcutnihbos.site
 capcutpro.click
 capcutpro.dev
@@ -16492,6 +16494,7 @@ coveryourpills.org
 covfefe-mail.gq
 covfefe-mail.tk
 covidnews24.xyz
+covisuki.icu
 covorin.com
 covteh37.ru
 cowabungamail.com
@@ -23673,6 +23676,7 @@ eyandex.ru
 eycegru.site
 eycfhb.com
 eyecaredoctors.net
+eyee.eu.cc
 eyeemail.com
 eyefullproductions.com
 eyelashextensionsinottawa.com
@@ -39237,6 +39241,7 @@ life-coder.com
 life-online1.ru
 life-smile.ru
 lifeafterlabels.org
+lifebitsnotes.com
 lifebyfood.com
 lifecoach4elite.net
 lifeeye.us
@@ -39256,6 +39261,7 @@ lifetalkrc.com
 lifetimefriends.info
 lifetotech.com
 lifetreechurch.co.uk
+lifewiseleaf.com
 lifewithouttanlines.com
 lifezg.com
 liffoberi.com
@@ -47194,6 +47200,7 @@ networkofemail.com
 networks-site-real.xyz
 networksfs.com
 networksmail.gdn
+networksolutionshk.asia
 netzidiot.de
 netzwerk-industrie.de
 neujahrsgruesse.info
@@ -47449,6 +47456,7 @@ nexttonorm.com
 nexttrend.site
 nexumadapta.es
 nexus-streams.online
+nexverseal.shop
 nexwp.com
 nexxterp.com
 neystipan.ga
@@ -48753,6 +48761,7 @@ nxgwr24fdqwe2.ga
 nxgwr24fdqwe2.gq
 nxgwr24fdqwe2.ml
 nxgwr24fdqwe2.tk
+nxirad.online
 nxmwzlvux.pl
 nxpeakfzp5qud6aslxg.cf
 nxpeakfzp5qud6aslxg.ga
@@ -52347,6 +52356,7 @@ pn.emlpro.com
 pnc.laste.ml
 pndan.com
 pnew-purse.com
+pngk.uk
 pngrise.com
 pngykhgrhz.ga
 pnizgotten.com
@@ -54972,6 +54982,7 @@ rabuberkah.cf
 rac.spymail.one
 racaho.com
 racarie.com
+racavor.com
 race-karts.com
 rachelleighny.com
 rachelmaryam.art
@@ -56716,6 +56727,7 @@ roewe.cf
 roewe.ga
 roewe.gq
 roewe.ml
+rog77.biz
 rogacomp.tk
 rogbau.pl
 roger-leads.com
@@ -59944,6 +59956,7 @@ sivtmwumqz6fqtieicx.ml
 sivtmwumqz6fqtieicx.tk
 siwiyjlc.xyz
 siwonmail.com
+siwp4.anonbox.net
 six-six-six.cf
 six-six-six.ga
 six-six-six.gq
@@ -60620,6 +60633,7 @@ softautotool.com
 softballball.com
 softbank.id
 softbank.tk
+softdailyguide.com
 softdesk.net
 softkey-office.ru
 softlitceg.com
@@ -61321,6 +61335,7 @@ spot.popautomated.com
 spotale.com
 spotify.best
 spotitidku.me
+spotlightdiary.com
 spotlightgossip.com
 spotoid.com
 spotshops.com
@@ -61590,7 +61605,6 @@ stalos.pl
 stamberg.nl
 stampsprint.com
 stanastroo.ml
-stanbondsa.com.au
 standbildes.ml
 standrewswide.co.uk
 standupright.com
@@ -61708,6 +61722,7 @@ staypei.com
 stboj.pl
 stbwo.anonbox.net
 stcompany.top
+steadyhabithub.com
 stealbest.com
 stealthapps.org
 stealthypost.net
@@ -70660,7 +70675,6 @@ whopy.com
 whorci.site
 whose-is-this-phone-number.com
 whowlft.com
-whskrspc.shop
 whstores.com
 whu.edu.pl
 whwow.com
@@ -73856,7 +73870,6 @@ zalopner87.com
 zalotti.com
 zalvisual.us
 zalzl.com
-zamana.com
 zamaneta.com
 zambia-nedv.ru
 zamburu.com
