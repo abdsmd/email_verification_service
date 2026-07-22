@@ -7,10 +7,10 @@
     #   - https://raw.githubusercontent.com/disposable/disposable-email-domains/master/domains.txt
 # Local: npm run update:disposable-list
 # In-process schedule: see DISPOSABLE_LIST_CRON_* in .env; GitHub: .github/workflows/update-disposable-domains.yml
-# Last merge: 2026-07-21 — unique domains: 74924
-# Per-source line counts (before merge; overlap removed in 74924):
-    #   - disposable-email-domains/blocklist: 8084 (pre-dedup)
-    #   - disposable/disposable (domains.txt): 74558 (pre-dedup)
+# Last merge: 2026-07-22 — unique domains: 74937
+# Per-source line counts (before merge; overlap removed in 74937):
+    #   - disposable-email-domains/blocklist: 8098 (pre-dedup)
+    #   - disposable/disposable (domains.txt): 74569 (pre-dedup)
 # Runtime: set DISPOSABLE_LIST_PATH to merge an additional file at startup if needed.
 
 0-00.usa.cc
@@ -2592,6 +2592,7 @@
 5ej7f.anonbox.net
 5el5nhjf.pl
 5esnu.anonbox.net
+5fcie.anonbox.net
 5fhu5.anonbox.net
 5fingershoesoutlet.com
 5gags.com
@@ -5078,7 +5079,6 @@ afisha.biz.ua
 afishaonline.info
 aflam06.com
 aflamyclub.com
-afluidbear.cc
 afmail.com
 afmail.xyz
 afopmail.com
@@ -5619,6 +5619,7 @@ ajsd.de
 aju.onlysext.com
 ajustementsain.club
 ajx.laste.ml
+ak6lay.shop
 aka2.pl
 akaan.emailind.com
 akademiyauspexa.xyz
@@ -7383,6 +7384,7 @@ artisanbooth.com
 artistsignal.com
 artiviodesign.com
 artix.ga
+artleoncommunications.com
 artlover.shop
 artmail.icu
 artman-conception.com
@@ -7456,7 +7458,6 @@ asaption.com
 asaroad.com
 asas1.co.tv
 asasaaaf77.site
-asav.site
 asb-mail.info
 asbakpinuh.club
 asbcglobal.net
@@ -14048,6 +14049,7 @@ cctoolz.com
 cctruyen.com
 cctyoo.com
 ccvisal.xyz
+ccxiao.cn
 ccxpnthu2.pw
 cd.emlpro.com
 cd.freeml.net
@@ -15920,6 +15922,7 @@ coin-link.com
 coin-mail.com
 coin-one.com
 coin.wf
+coina.biz
 coinalgotrader.com
 coinbroker.club
 coincal.org
@@ -16247,7 +16250,6 @@ contenand.xyz
 contentwanted.com
 contextconversation.com
 continental-europe.ru
-continumail.com
 contmy.info
 contopo.com
 contple.com
@@ -23055,6 +23057,7 @@ escanor99.com
 escapehatchapp.com
 escapeion.com
 escb.com
+escely.com
 escholcreations.com
 escholgroup.com.au
 escocompany.com
@@ -24331,7 +24334,6 @@ faxapdf.com
 faxico.com
 faxjet.com
 faxzu.com
-faybe.anonbox.net
 faybetsy.com
 fayrozaa.shop
 fazdnetc.com
@@ -27097,6 +27099,7 @@ gberos-makos.com
 gbf48123.com
 gbfashions.com
 gbhh.freeml.net
+gblw.site
 gbmail.top
 gbmb.com
 gbmods.net
@@ -27319,7 +27322,6 @@ genetiklab.com
 genf20plus.com
 genf20review1.com
 gengkapak.ml
-genjosam.com
 genk5mail2.ga
 genkibit.com
 gennaromatarese.ml
@@ -27671,6 +27673,7 @@ gh2xuwenobsz.tk
 ghamil.com
 ghan.com
 ghanalandbank.com
+ghania.site
 ghastlynursyahid.biz
 ghcptmvqa.pl
 ghcrublowjob20127.com
@@ -28560,6 +28563,7 @@ gomiso.com
 gomomy.sbs
 gonaute.com
 goncangan.com
+gonde.lat
 gondskumis69.me
 gonduras-nedv.ru
 gonetor.com
@@ -33965,6 +33969,7 @@ irolpccc.com
 irolpo.com
 iron1.xyz
 ironarmail.com
+ironbrookco.com
 ironfire.net
 ironflys.com
 ironhulk.com
@@ -48497,6 +48502,7 @@ nsvmx.com
 nsvpn.com
 nswgovernment.ga
 nsxy.emlpro.com
+nsyncxy.com
 nt3lj.anonbox.net
 ntadalafil.com
 ntalecom.net
@@ -56490,6 +56496,7 @@ riverviewcontractors.com
 rivimeo.com
 riw1twkw.pl
 riwayeh.com
+riwutz-gmail.com
 riyadi.online
 rizamail.com
 rizberk.com
@@ -58512,6 +58519,7 @@ sdmc.emltmp.com
 sdnr.it
 sdo6k.info
 sds-a-gff.xyz
+sds-awe.top
 sdsas.xyz
 sdsd88.cc
 sdsda.com
@@ -59440,6 +59448,7 @@ shiqiyx.vip
 shirleyanggraini.art
 shirleybowman.com
 shirleylogan.com
+shiro-alice.live
 shiro.pw
 shiroinime.ga
 shironime.ga
@@ -59662,6 +59671,7 @@ shwg.de
 shxwonew.xyz
 shyhzsc.com
 shzsedu.com
+si1ver.xyz
 siai.com
 siamhd.com
 siap-sepuh.com
@@ -65267,6 +65277,7 @@ tokatta.org
 tokeishops.jp
 tokem.co
 token.ro
+token0v0.com
 tokenguy.com
 tokenmail.de
 tokeracademy.com
@@ -67415,6 +67426,7 @@ unigeol.com
 unijnedotacje.info.pl
 unikle.com
 unimail.com
+unimain.tech
 unimark.org
 unimbalr.com
 unioc.asia
@@ -74527,6 +74539,7 @@ zmylf33tompym.ga
 zmylf33tompym.gq
 zmylf33tompym.ml
 zmylf33tompym.tk
+zmypxprb.sbs
 zmywarkilodz.pl
 zn4chyguz9rz2gvjcq.cf
 zn4chyguz9rz2gvjcq.ga
