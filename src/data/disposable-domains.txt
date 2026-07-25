@@ -7,10 +7,10 @@
     #   - https://raw.githubusercontent.com/disposable/disposable-email-domains/master/domains.txt
 # Local: npm run update:disposable-list
 # In-process schedule: see DISPOSABLE_LIST_CRON_* in .env; GitHub: .github/workflows/update-disposable-domains.yml
-# Last merge: 2026-07-24 — unique domains: 74975
-# Per-source line counts (before merge; overlap removed in 74975):
+# Last merge: 2026-07-25 — unique domains: 74980
+# Per-source line counts (before merge; overlap removed in 74980):
     #   - disposable-email-domains/blocklist: 8143 (pre-dedup)
-    #   - disposable/disposable (domains.txt): 74615 (pre-dedup)
+    #   - disposable/disposable (domains.txt): 74620 (pre-dedup)
 # Runtime: set DISPOSABLE_LIST_PATH to merge an additional file at startup if needed.
 
 0-00.usa.cc
@@ -5146,6 +5146,7 @@ agafx.com
 agagmail.com
 agallagher.id
 agamail.com
+aganseo.com
 agapetus.info
 agar.co.pl
 agartstudio.com.pl
@@ -5933,6 +5934,7 @@ alif.co.pl
 alifestyle.ru
 aligamel.com
 alightmotion.cloud
+alightmotion.icu
 alightmotion.id
 alightmotion.top
 aligreen.top
@@ -7460,7 +7462,6 @@ asaption.com
 asaroad.com
 asas1.co.tv
 asasaaaf77.site
-asav.site
 asb-mail.info
 asbakpinuh.club
 asbcglobal.net
@@ -7981,6 +7982,7 @@ aureliandata.space
 aureliosot.website
 aurelstyle.ru
 aures-autoparts.com
+auris.lat
 auroraalcoholrehab.com
 auroracontrol.com
 auroraheroinrehab.com
@@ -11434,6 +11436,7 @@ bnfgtyert.com
 bnghdg545gdd.gq
 bniwpwkke.site
 bnj52.anonbox.net
+bnkhc.anonbox.net
 bnkmd.anonbox.net
 bnm612.com
 bnny4.anonbox.net
@@ -17706,7 +17709,6 @@ dardr.com
 dareblog.com
 daricadishastanesi.com
 daridarkom.com
-dariolo.com
 daritute.site
 dark-tempmail.zapto.org
 dark.lc
@@ -18433,7 +18435,6 @@ demolition-hammers.com
 demonclerredi.info
 demotivatorru.info
 demotywator.com
-demowebsite02.click
 dena.ga
 dena.ml
 denarcteel.com
@@ -20046,7 +20047,6 @@ dosan12.com
 dosas54.shop
 dosbee.com
 doscobal.com
-dosonex.com
 dostatniapraca.pl
 dostupnaya-ipoteka.ru
 dosug-kolomna.ru
@@ -27685,6 +27685,7 @@ gh2xuwenobsz.tk
 ghamil.com
 ghan.com
 ghanalandbank.com
+ghania.site
 ghastlynursyahid.biz
 ghcptmvqa.pl
 ghcrublowjob20127.com
@@ -36965,6 +36966,7 @@ kientao.tech
 kieranasaro.com
 kierastyle.shop
 kieravogue.shop
+kierko.com
 kiet.freeml.net
 kietnguyenisocial.com
 kiflin.ml
@@ -38580,6 +38582,7 @@ laparbgt.gq
 laparbgt.ml
 lapeds.com
 lapetcent.gq
+lapluz.xyz
 laporinaja.com
 lapost.net
 lappies.net
@@ -40193,7 +40196,6 @@ lordvold.ga
 lordvold.gq
 lordvold.ml
 lorencic.ro
-loridu.com
 lorientediy.com
 lorkex.com
 lorotzeliothavershcha.info
@@ -44309,6 +44311,7 @@ miracle5123.com
 miraclegarciniareview.com
 miraclemillwork.com
 miracleoilhairelixir.com
+mirai.lat
 mirai.re
 miraigames.net
 miramail.my.id
@@ -47769,6 +47772,7 @@ nightfunmore.online.ctu.edu.gr
 nightmedia.cf
 nightorb.com
 nihennaisi188.cc
+nihikari.ink
 nihongames.pl
 niibb.com
 niickel.us
@@ -51736,7 +51740,6 @@ pg59tvomq.pl
 pgazhyawd.pl
 pgbs.de
 pgby.dropmail.me
-pgbyx.anonbox.net
 pgd.spymail.one
 pgdln.cf
 pgdln.ga
@@ -54896,6 +54899,7 @@ r-mail.ga
 r-mail.gq
 r-mail.ml
 r-tech.com.pl
+r.email
 r.polosburberry.com
 r.yasser.ru
 r0.igg.biz
@@ -62218,6 +62222,7 @@ subrolive.com
 subsequestriver.xyz
 substanceabusetreatmentrehab.site
 substate.info
+substoretools.com
 suburbanthug.com
 subwaysubversive.com
 subwaysurfers.info
@@ -65874,6 +65879,7 @@ trangmuon.com
 trango.co
 trangzim.uk
 tranlamanh.ml
+transaksikita.tech
 transcience.org
 transervice.es
 transfaraga.co.in
@@ -66106,7 +66112,6 @@ trisana.net
 trishkimbell.com
 tristanabestolaf.com
 tristarasdfdk1parse.net
-tristore.xyz
 tritega.com
 triteksolution.info
 tritunggalmail.com
