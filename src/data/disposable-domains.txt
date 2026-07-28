@@ -7,10 +7,10 @@
     #   - https://raw.githubusercontent.com/disposable/disposable-email-domains/master/domains.txt
 # Local: npm run update:disposable-list
 # In-process schedule: see DISPOSABLE_LIST_CRON_* in .env; GitHub: .github/workflows/update-disposable-domains.yml
-# Last merge: 2026-07-27 — unique domains: 75016
-# Per-source line counts (before merge; overlap removed in 75016):
-    #   - disposable-email-domains/blocklist: 8179 (pre-dedup)
-    #   - disposable/disposable (domains.txt): 74644 (pre-dedup)
+# Last merge: 2026-07-28 — unique domains: 75018
+# Per-source line counts (before merge; overlap removed in 75018):
+    #   - disposable-email-domains/blocklist: 8182 (pre-dedup)
+    #   - disposable/disposable (domains.txt): 74655 (pre-dedup)
 # Runtime: set DISPOSABLE_LIST_PATH to merge an additional file at startup if needed.
 
 0-00.usa.cc
@@ -5313,6 +5313,7 @@ ahmadidik.cf
 ahmadidik.ga
 ahmadidik.gq
 ahmadidik.ml
+ahmadizhar.net
 ahmadmohsen.shop
 ahmadmohsen2.shop
 ahmadne.cloud
@@ -5668,7 +5669,6 @@ akfoin.us.ci
 akgaf.orge.pl
 akgaming.com
 akgq701.com
-akhirluvia.biz
 akhmadi.cf
 akhost.trade
 akhpremium.site
@@ -9838,6 +9838,7 @@ bebekpenyet.buzz
 bebekurap.xyz
 bebemeuescumpfoc.com
 beben.xyz
+bebir.anonbox.net
 becamanus.site
 because.cowsnbullz.com
 because.lakemneadows.com
@@ -10986,7 +10987,6 @@ bjvya.anonbox.net
 bjwnh.anonbox.net
 bjwx.emltmp.com
 bjx2m.anonbox.net
-bjxej.anonbox.net
 bjxr4.anonbox.net
 bk.emlhub.com
 bk3un.anonbox.net
@@ -18962,7 +18962,6 @@ dibtec.store
 dicerollplease.com
 diceservices.com
 dichalorli.xyz
-dichvudaorut247.com
 dichvumxh247.top
 dichvuseothue.com
 dichvuxe24h.com
@@ -28259,7 +28258,6 @@ gmailsdfskdf.com
 gmailsdfskdf.net
 gmailskm.com
 gmailssdf.com
-gmailtook.tech
 gmailu.ru
 gmailup.com
 gmailus.top
@@ -33255,7 +33253,6 @@ inboxnow.ru
 inboxnow.store
 inboxopen.space
 inboxorigin.com
-inboxpro247.click
 inboxproxy.com
 inboxstore.me
 inboxturtle.dev
@@ -33283,6 +33280,7 @@ incoware.com
 incq.com
 increase5f.com
 increasefollower.com
+increasu.com
 increater.ru
 incredibility.info
 incrediemail.com
@@ -43673,6 +43671,7 @@ meksika-nedv.ru
 mekuron.com
 melapatas.space
 melatoninsideeffects.org
+melbourne.edu.pl
 melbox.store
 melcow.com
 meldedigital.com
@@ -45468,7 +45467,6 @@ msgsafe.ninja
 msgwire.com
 msiofke.com
 msisanitation.com
-msitip.com
 msivina.com
 msiwkzihkqifdsp3mzz.cf
 msiwkzihkqifdsp3mzz.ga
@@ -52602,6 +52600,7 @@ polsekan.club
 polskikatalogfirm.pl
 poltawa.ru
 polvexar.space
+polvexar.store
 poly-swarm.com
 polyace.ru
 polycond.eu
@@ -59077,6 +59076,7 @@ sepoisk.ru
 sepole.com
 septeberuare.ru
 septicvernon.com
+sepultura.info
 sepuranex.me
 seputarbet.live
 seputarti.com
@@ -62847,6 +62847,7 @@ syahmiqjoss.host
 syamstore.biz.id
 syckcenzvpn.cf
 syd.com
+sydney.edu.pl
 sydprems.ml
 syerqrx14.pl
 syfilis.ru
@@ -65368,6 +65369,7 @@ tokopremium.co
 tokot.ru
 tokuriders.club
 tokyo-mail1.top
+tokyo.edu.pl
 tokyo112.top
 tokyoflarex.tokyo
 tokyoto.site
@@ -66504,6 +66506,7 @@ turboparts.info
 turbospinz.co
 turechartt.com
 turf.exchange
+turis.lat
 turist-tur.ru
 turkey-nedv.ru
 turkeyth.com
@@ -72847,7 +72850,6 @@ yagg.com
 yagoo.co.uk
 yaha.com
 yahaoo.co.uk
-yahesazo.me
 yahho.gr
 yahho.jino.ru
 yahikod.online
