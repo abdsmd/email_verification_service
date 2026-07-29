@@ -7,10 +7,10 @@
     #   - https://raw.githubusercontent.com/disposable/disposable-email-domains/master/domains.txt
 # Local: npm run update:disposable-list
 # In-process schedule: see DISPOSABLE_LIST_CRON_* in .env; GitHub: .github/workflows/update-disposable-domains.yml
-# Last merge: 2026-07-28 — unique domains: 75018
-# Per-source line counts (before merge; overlap removed in 75018):
-    #   - disposable-email-domains/blocklist: 8182 (pre-dedup)
-    #   - disposable/disposable (domains.txt): 74655 (pre-dedup)
+# Last merge: 2026-07-29 — unique domains: 75021
+# Per-source line counts (before merge; overlap removed in 75021):
+    #   - disposable-email-domains/blocklist: 8183 (pre-dedup)
+    #   - disposable/disposable (domains.txt): 74660 (pre-dedup)
 # Runtime: set DISPOSABLE_LIST_PATH to merge an additional file at startup if needed.
 
 0-00.usa.cc
@@ -11381,6 +11381,7 @@ bmomento.com
 bmonlinebanking.com
 bmpk.org
 bmqu6.anonbox.net
+bmrs7.anonbox.net
 bmsh.dropmail.me
 bmsojon4d.pl
 bmst4.anonbox.net
@@ -12371,7 +12372,6 @@ brutaldate.com
 brutuscontingencia.site
 bruzdownice-v.pl
 brxe.dropmail.me
-brxkf.anonbox.net
 bryanlgx.com
 bryantspoint.com
 bryq.site
@@ -18242,7 +18242,6 @@ ded-moroz-vesti.ru
 dedatre.com
 dede.infos.st
 dede10hrs.site
-dedesignessentials.com
 dedetox.center
 dedi.blatnet.com
 dedi.cowsnbullz.com
@@ -22423,6 +22422,7 @@ embergonebro.gq
 embergonebro.ml
 embergonebro.tk
 emberhookah.com
+embg.app
 emblemail.com
 embrapamail.pw
 embrille.com
@@ -24199,6 +24199,7 @@ fashionwatches2012.info
 fashionwomenaccessories.com
 fashionzone69.com
 fashlend.com
+fashond.com
 fasigula.name
 fask2.anonbox.net
 fasl4kas3.site
@@ -52600,7 +52601,6 @@ polsekan.club
 polskikatalogfirm.pl
 poltawa.ru
 polvexar.space
-polvexar.store
 poly-swarm.com
 polyace.ru
 polycond.eu
@@ -59475,6 +59475,7 @@ shhsfqijnw.ga
 shhuut.org
 shicoast.com
 shid.de
+shide.lat
 shieldedmail.com
 shieldemail.com
 shievent.site
@@ -59818,7 +59819,6 @@ sikux.com
 silaaccounting.com
 silacon.com
 silaleg.tk
-silangmata.com
 silbarts.com
 silda8vv1p6qem.cf
 silda8vv1p6qem.ga
@@ -60204,6 +60204,7 @@ skyforte25k.io.vn
 skygazer42.cn
 skygazerhub.com
 skyhope666.icu
+skyhopenb.shop
 skyjetnet.com
 skylai.cfd
 skylarchic.shop
@@ -67885,6 +67886,7 @@ usedhospitalbeds.net
 usedus.me
 usefulab.com
 usehealth.club
+uselessje.dev
 uselesss.org
 uselesswebsites.net
 usemail.live
@@ -69921,6 +69923,7 @@ wanadoo.com
 wanadoux.fr
 wanai.biz.id
 wanamore.com
+wanan.lat
 wanaofamouscar.com
 wanari.info
 wanbeiz.com
