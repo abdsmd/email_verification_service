@@ -7,10 +7,10 @@
     #   - https://raw.githubusercontent.com/disposable/disposable-email-domains/master/domains.txt
 # Local: npm run update:disposable-list
 # In-process schedule: see DISPOSABLE_LIST_CRON_* in .env; GitHub: .github/workflows/update-disposable-domains.yml
-# Last merge: 2026-07-30 — unique domains: 75025
-# Per-source line counts (before merge; overlap removed in 75025):
-    #   - disposable-email-domains/blocklist: 8188 (pre-dedup)
-    #   - disposable/disposable (domains.txt): 74660 (pre-dedup)
+# Last merge: 2026-07-31 — unique domains: 75049
+# Per-source line counts (before merge; overlap removed in 75049):
+    #   - disposable-email-domains/blocklist: 8197 (pre-dedup)
+    #   - disposable/disposable (domains.txt): 74680 (pre-dedup)
 # Runtime: set DISPOSABLE_LIST_PATH to merge an additional file at startup if needed.
 
 0-00.usa.cc
@@ -986,6 +986,7 @@
 1thecity.biz
 1tmail.club
 1tmail.ltd
+1tml.com
 1to1mail.org
 1trick.net
 1trionclub.com
@@ -1276,6 +1277,7 @@
 24vlk.xyz
 24volcano.net
 24x7daily.com
+25012026.page
 250hz.com
 252gmail.com
 253gmail.com
@@ -2376,6 +2378,7 @@
 4zm1fjk8hpn.gq
 4zm1fjk8hpn.ml
 4zm1fjk8hpn.tk
+4zw5l.anonbox.net
 5-attorney.com
 5-mail.info
 5.emailfake.ml
@@ -2720,6 +2723,7 @@
 5yi9xi9.mil.pl
 5yk.idea-makers.tk
 5ymail.com
+5ymail.me
 5ytff56753kkk.cf
 5ytff56753kkk.ga
 5ytff56753kkk.gq
@@ -5392,6 +5396,7 @@ aigptplus.co
 aihent.com
 aihtnb.com
 aihualiu.com
+aihubtools.space
 aiindia.xyz
 aiiots.net
 aij.freeml.net
@@ -7668,7 +7673,6 @@ asl13.gq
 asl13.ml
 asl13.tk
 asleepity.com
-asli.cloud
 aslibayar.com
 asls.ml
 asm.snapwet.com
@@ -11915,7 +11919,6 @@ bossless.net
 bossmail.de
 bossmanjack.lol
 bossmanjack.shop
-bossmanjack.store
 bossmanjack.xyz
 bosterpremium.com
 bostonhydraulic.com
@@ -13040,7 +13043,6 @@ bx6r9q41bciv.ga
 bx6r9q41bciv.gq
 bx6r9q41bciv.ml
 bx6r9q41bciv.tk
-bx7rr.anonbox.net
 bx8.pl
 bx9puvmxfp5vdjzmk.cf
 bx9puvmxfp5vdjzmk.ga
@@ -13176,6 +13178,7 @@ c-14.cf
 c-14.ga
 c-14.gq
 c-14.ml
+c-668a.top
 c-c-p.de
 c-cadeaux.com
 c-dreams.com
@@ -13604,6 +13607,7 @@ capcut.asia
 capcut.buzz
 capcut.digital
 capcut.my.id
+capcut.pw
 capcut.sbs
 capcut.space
 capcut.team
@@ -16583,6 +16587,7 @@ cqutssntx9356oug.ga
 cqutssntx9356oug.gq
 cqutssntx9356oug.ml
 cqutssntx9356oug.tk
+cqwbn.com
 cqwrxozmcl.ga
 cr.cloudns.asia
 cr.emlhub.com
@@ -22163,6 +22168,7 @@ email4spam.org
 email4work.xyz
 email5.net
 email60.com
+email64.com
 email84.com
 emailabox.pro
 emailage.cf
@@ -24367,6 +24373,7 @@ fazendabrasil1.com
 fazer-site.net
 fazka.ovh
 fazmail.net
+fazty.biz
 fb.laste.ml
 fb.opheliia.com
 fb2a.site
@@ -26286,6 +26293,7 @@ friscaa.ml
 friscaa.tk
 friteuseelectrique.net
 fritolay.net
+frive.site
 frizbi.fr
 frizzart.ru
 frm.ovh
@@ -27699,7 +27707,6 @@ gh2xuwenobsz.tk
 ghamil.com
 ghan.com
 ghanalandbank.com
-ghania.site
 ghastlynursyahid.biz
 ghcptmvqa.pl
 ghcrublowjob20127.com
@@ -27757,7 +27764,6 @@ giaotiep.xyz
 giaovienvn.gq
 giaovienvn.tk
 giare.fun
-giayhieucu.com
 gibit.us
 giblpyqhb.pl
 gibme.com
@@ -28584,6 +28590,7 @@ gomes.lat
 gomessage.ml
 gomez-rosado.com
 gomigoofficial.com
+gomio.biz
 gomiso.com
 gomomy.sbs
 gonaute.com
@@ -32198,6 +32205,7 @@ hydrolinepro.ru
 hydroter.cf
 hydroxide-studio.com
 hyf.laste.ml
+hygle.net
 hyhisla.tk
 hyhotmail.ccwu.cc
 hyhsale.top
@@ -34743,6 +34751,7 @@ jaringan.design
 jarlo-london.com
 jarringsafri.biz
 jarsdigital.sbs
+jarswa.com
 jarszone.com
 jarszone.online
 jarumpoker1.com
@@ -35556,6 +35565,7 @@ joycfde.site
 joydeal.hk
 joyfullife.style
 joyhivepro.com
+joymail.cyou
 joynet.info
 joytakip.xyz
 joytoc.com
@@ -36336,6 +36346,7 @@ kavbc6fzisxzh.gq
 kavbc6fzisxzh.ml
 kavbc6fzisxzh.tk
 kavio.my.id
+kavio.org
 kavxx.xyz
 kawaii.vet
 kawaiishojo.com
@@ -40843,6 +40854,7 @@ lxupukiw4dr277kay.gq
 lxupukiw4dr277kay.ml
 lxupukiw4dr277kay.tk
 lxydawang.top
+lyabobpr.com
 lyalnorm.com
 lybyz.com
 lycis.com
@@ -47117,6 +47129,7 @@ neoconstruction.net
 neocorp2000.com
 neoeon.com
 neoghost.com
+neokidesu.click
 neomailbox.com
 neon.waw.pl
 neopetcheats.org
@@ -47911,6 +47924,7 @@ nisuz.anonbox.net
 nitricoxidesupplementshq.com
 nitricpowerreview.org
 nitroshine.xyz
+nitrotokens.gg
 nitynote.com
 nitza.ga
 niubiba.lol
@@ -53123,6 +53137,7 @@ prekab.net
 preklady-polstina.cz
 prekuldown47mmi.ml
 prellaner.online
+prembyrexiee.online
 premiapp.com
 premieragents.net
 premierpainandwellness.com
@@ -53916,7 +53931,6 @@ puppyproduct.com
 purajewel.com
 purati.ga
 purcell.email
-purearenas.com
 purecollagenreviews.net
 puregreencleaning.com.au
 puregreencoffeefacts.com
@@ -56507,6 +56521,7 @@ riomaglo.ga
 riotap.com
 riotph.ml
 ripiste.cf
+riposh.shop
 rippb.com
 rippedabs.info
 riptorway.live
@@ -57760,6 +57775,7 @@ sadas.com
 sadasdsa.cloud
 sadbor.club
 sadd.us
+saddope.lol
 sadfg.indevs.in
 sadfopp.gq
 sadfsdf.com
@@ -58275,6 +58291,7 @@ say.lakemneadows.com
 say.ploooop.com
 say0.com
 sayasiapa.xyz
+sayawaka-dea.info
 sayfie.com
 sayitsme.com
 saymeow.de
@@ -59079,7 +59096,6 @@ sepoisk.ru
 sepole.com
 septeberuare.ru
 septicvernon.com
-sepultura.info
 sepuranex.me
 seputarbet.live
 seputarti.com
@@ -60362,6 +60378,7 @@ small.lakemneadows.com
 small.makingdomes.com
 small.ploooop.com
 small.poisedtoshrike.com
+small680.online
 smallalpaca.com
 smallanawanginbeach.com
 smallbusinesshowto.com
@@ -64030,7 +64047,6 @@ terminaltheme.cf
 terminate.tech
 terminateee12.com
 termuxtech.tk
-termweave.life
 ternaklele.ga
 terpistick.com
 terra-incognita.co
@@ -64274,6 +64290,7 @@ thc.st
 thclips.com
 thclub.com
 thdesign.pl
+thdfgth.online
 thdfyrg.top
 thdv.ru
 the-blockchainnews.xyz
@@ -66414,6 +66431,7 @@ tu6oiu4mbcj.tk
 tualias.com
 tuamaeaquelaursa.com
 tuana.vip
+tuandinhh.tokyo
 tuanhungdev.xyz
 tuantoto.com
 tubanmentol.ml
@@ -67942,6 +67960,7 @@ usodellavoce.net
 usoplay.com
 uspeakw.com
 uspmail.com
+usps8.com
 ussje.com
 ussostunt.com
 ussv.club
@@ -69156,6 +69175,7 @@ viventel.com
 viversemdrama.com
 vivianhouse.co
 vividbase.xyz
+vividtipzone.com
 vivie.club
 vivista.co.uk
 vivo4d.online
@@ -69539,6 +69559,7 @@ vrgwkwab2kj5.gq
 vrgwkwab2kj5.ml
 vrgwkwab2kj5.tk
 vrify.org
+vrjxk.com
 vrloco.com
 vrmtr.com
 vrou.cf
@@ -70403,6 +70424,7 @@ weekendemail.com
 weekfly.com
 weekwater.us
 weekzs.icu
+weeline.fun
 weepm.com
 weer.de
 wef.gr
@@ -71420,6 +71442,7 @@ wrangler-sale.com
 wrayauto.com
 wremail.top
 wremail.xyz
+wrgee.com
 wri.xyz
 wrinklecareproduct.com
 writability.net
@@ -72514,6 +72537,7 @@ xsnipersquad.com
 xsnipersquad.site
 xsnipersquad.space
 xstyled.net
+xswl.xyz
 xsychelped.com
 xt-size.info
 xt.net.pl
