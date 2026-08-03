@@ -7,10 +7,10 @@
     #   - https://raw.githubusercontent.com/disposable/disposable-email-domains/master/domains.txt
 # Local: npm run update:disposable-list
 # In-process schedule: see DISPOSABLE_LIST_CRON_* in .env; GitHub: .github/workflows/update-disposable-domains.yml
-# Last merge: 2026-08-02 — unique domains: 75045
-# Per-source line counts (before merge; overlap removed in 75045):
+# Last merge: 2026-08-03 — unique domains: 75044
+# Per-source line counts (before merge; overlap removed in 75044):
     #   - disposable-email-domains/blocklist: 8201 (pre-dedup)
-    #   - disposable/disposable (domains.txt): 74685 (pre-dedup)
+    #   - disposable/disposable (domains.txt): 74684 (pre-dedup)
 # Runtime: set DISPOSABLE_LIST_PATH to merge an additional file at startup if needed.
 
 0-00.usa.cc
@@ -2133,6 +2133,7 @@
 47hotmail.com
 47t.de
 47tiger.site
+47v2r.anonbox.net
 47yahoo.com
 47zen.pl
 48031dbmobbil.emlhub.com
@@ -7471,7 +7472,6 @@ asaption.com
 asaroad.com
 asas1.co.tv
 asasaaaf77.site
-asav.site
 asb-mail.info
 asbakpinuh.club
 asbcglobal.net
@@ -10079,7 +10079,6 @@ berrymail.men
 berryslawn.com
 berryslimming.com
 bershka-terim.space
-bershujr.shop
 beruka.org
 berwie.com
 bes3m.anonbox.net
@@ -11920,7 +11919,6 @@ boss901.com
 bossless.net
 bossmail.de
 bossmanjack.lol
-bossmanjack.shop
 bossmanjack.xyz
 bosterpremium.com
 bostonhydraulic.com
@@ -12095,7 +12093,6 @@ bqe.pl
 bqhonda.com
 bqhost.top
 bqi7k.anonbox.net
-bqkqt.anonbox.net
 bqlgv.anonbox.net
 bqm2dyl.com
 bqmjotloa.pl
@@ -14953,7 +14950,6 @@ chiptuningworldbenelux.com
 chiragra.pl
 chirio.co
 chironglobaltechnologies.com
-chirugrow.online
 chise.com
 chisers.xyz
 chistopole.ru
@@ -16746,6 +16742,7 @@ croatia-nedv.ru
 crobinkson.hu
 crocoyes.fun
 crodity.com
+crogra.org
 cron1s.vn
 cronack.com
 cronicasdepicnic.com
@@ -18016,6 +18013,7 @@ dbook.pl
 dboso.com
 dboss3r.info
 dbot2zaggruz.ru
+dboxmail.com
 dbprinting.com
 dbrflk.com
 dbunker.com
@@ -40040,7 +40038,6 @@ loghning469.cf
 loghusnah2.cf
 logicampus.live
 logicfieldzen.com
-logichexbox.com
 logiclaser.com
 logicpathbid.com
 logicstreak.com
@@ -46779,7 +46776,6 @@ napalm51.usa.cc
 nape.net
 napj.com
 naplesmedspa.com
-napmails.com
 napoleonides.xyz
 naprawa-wroclaw.xaa.pl
 naprb.com
@@ -50393,6 +50389,7 @@ ottappmail.com
 ottawaprofilebacks.com
 otterroofing.net
 ottrme.com
+ottsathi.store
 ottvv.com
 otu1txngoitczl7fo.cf
 otu1txngoitczl7fo.ga
@@ -51724,6 +51721,7 @@ pet.emlhub.com
 petalmail.tk
 petalmail.xyz
 petebrigham.net
+peterceocto.us
 peterdethier.com
 petergunter.com
 peterhoffmanlaw.com
@@ -59092,7 +59090,6 @@ sepoisk.ru
 sepole.com
 septeberuare.ru
 septicvernon.com
-sepultura.info
 sepuranex.me
 seputarbet.live
 seputarti.com
@@ -64207,6 +64204,7 @@ tgiq9zwj6ttmq.gq
 tgiq9zwj6ttmq.ml
 tgiq9zwj6ttmq.tk
 tglservices.com
+tgmaiss.xyz
 tgntcexya.pl
 tgo.yomail.info
 tgpix.net
@@ -74670,6 +74668,7 @@ zncqtumbkq.tk
 znct.emlpro.com
 zndsmail.com
 zneep.com
+znext.bond
 zni1d2bs6fx4lp.cf
 zni1d2bs6fx4lp.ga
 zni1d2bs6fx4lp.gq
