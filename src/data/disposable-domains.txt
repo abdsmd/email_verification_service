@@ -7,10 +7,10 @@
     #   - https://raw.githubusercontent.com/disposable/disposable-email-domains/master/domains.txt
 # Local: npm run update:disposable-list
 # In-process schedule: see DISPOSABLE_LIST_CRON_* in .env; GitHub: .github/workflows/update-disposable-domains.yml
-# Last merge: 2026-08-08 — unique domains: 75048
-# Per-source line counts (before merge; overlap removed in 75048):
+# Last merge: 2026-08-09 — unique domains: 75050
+# Per-source line counts (before merge; overlap removed in 75050):
     #   - disposable-email-domains/blocklist: 8201 (pre-dedup)
-    #   - disposable/disposable (domains.txt): 74688 (pre-dedup)
+    #   - disposable/disposable (domains.txt): 74690 (pre-dedup)
 # Runtime: set DISPOSABLE_LIST_PATH to merge an additional file at startup if needed.
 
 0-00.usa.cc
@@ -10029,6 +10029,7 @@ benwola.pl
 benzes.site
 beo.kr
 beooo.anonbox.net
+beously.com
 bepdientugiare.net
 bephoa.com
 bepj.mailpwr.com
@@ -13011,6 +13012,7 @@ bwmail.us
 bwmyga.com
 bwn6x.anonbox.net
 bwndl.anonbox.net
+bwpo6.anonbox.net
 bwrqi.anonbox.net
 bwsf2.anonbox.net
 bwtdmail.com
@@ -19674,6 +19676,7 @@ dnsdeer.com
 dnsdujeskd.com
 dnses.ro
 dnsguard.net
+dnsink.com
 dnslog.tech
 dntsmsekjsf.com
 dnwh.yomail.info
@@ -24266,6 +24269,7 @@ fastloans.us
 fastloans1080.co.uk
 fastmail.edu.pl
 fastmail.name
+fastmail24.click
 fastmailer.cf
 fastmailforyou.net
 fastmailnode.com
@@ -27704,7 +27708,6 @@ gh2xuwenobsz.tk
 ghamil.com
 ghan.com
 ghanalandbank.com
-ghania.site
 ghastlynursyahid.biz
 ghcptmvqa.pl
 ghcrublowjob20127.com
@@ -32990,7 +32993,6 @@ ileqmail.com
 iletity.com
 ilh.laste.ml
 ilico.info
-ilike168.com
 iliken.com
 ilikespam.com
 iliketndnl.com
@@ -36055,7 +36057,6 @@ ka.emlpro.com
 ka1ovm.com
 kaaaxcreators.tk
 kaaner.com
-kaansimavcan.cfd
 kaaw39hiawtiv1.ga
 kaaw39hiawtiv1.gq
 kaaw39hiawtiv1.ml
@@ -41076,6 +41077,7 @@ made7.ru
 madebyfrances.com
 madeforthat.org
 madejstudio.com
+madeksa.online
 madelhocin.xyz
 madhorse.us
 madiba-shirt.com
@@ -45804,6 +45806,7 @@ muratec.eu.org
 muratreis.icu
 murattomruk.com
 mure.emlpro.com
+murkstar.com
 murlioter.ga
 murticans.com
 murvice.com
@@ -48682,7 +48685,6 @@ numllery.com
 numweb.ru
 nun.ca
 nunindin.my.id
-nunlami.tech
 nunudatau.art
 nunung.cf
 nunungcantik.ga
@@ -50380,7 +50382,6 @@ otonmail.ga
 otozuz.com
 otp247.me
 otpku.com
-otpmail.top
 otrabajo.com
 otratransportation.com
 ottappmail.com
@@ -52612,7 +52613,6 @@ polsekan.club
 polskikatalogfirm.pl
 poltawa.ru
 polvexar.space
-polvexar.store
 poly-swarm.com
 polyace.ru
 polycond.eu
@@ -58930,7 +58930,6 @@ sen.yomail.info
 senacloud.email
 senang.uu.me
 senangpoker.site
-senas.xyz
 send-email.org
 send-money.ru
 send22u.info
@@ -60375,6 +60374,7 @@ small.lakemneadows.com
 small.makingdomes.com
 small.ploooop.com
 small.poisedtoshrike.com
+small680.online
 smallalpaca.com
 smallanawanginbeach.com
 smallbusinesshowto.com
@@ -63068,7 +63068,6 @@ t8kco4lsmbeeb.gq
 t8kco4lsmbeeb.ml
 t8kco4lsmbeeb.tk
 ta-6.com
-ta-sg.top
 ta.dropmail.me
 ta.laste.ml
 ta29.app
@@ -64042,6 +64041,7 @@ terminaltheme.cf
 terminate.tech
 terminateee12.com
 termuxtech.tk
+termweave.life
 ternaklele.ga
 terpistick.com
 terra-incognita.co
@@ -65375,6 +65375,7 @@ tokkabanshop.com
 tokki3124.com
 tokmail.fun
 tokmail.net
+tokoakun.com
 tokobibit.co
 tokogpt24jam.online
 tokoinduk.com
@@ -66425,6 +66426,7 @@ tu6oiu4mbcj.tk
 tualias.com
 tuamaeaquelaursa.com
 tuana.vip
+tuandinhh.tokyo
 tuanhungdev.xyz
 tuantoto.com
 tubanmentol.ml
@@ -70788,6 +70790,7 @@ whopy.com
 whorci.site
 whose-is-this-phone-number.com
 whowlft.com
+whskrspc.shop
 whstores.com
 whu.edu.pl
 whwow.com
@@ -72839,7 +72842,6 @@ y3dvb0bw947k.gq
 y3dvb0bw947k.ml
 y3dvb0bw947k.tk
 y3elp.com
-y4vpy.anonbox.net
 y59.jp
 y5artmb3.pl
 y7bbbbbbbbbbt8.ga
