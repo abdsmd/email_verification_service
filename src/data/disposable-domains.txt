@@ -7,10 +7,10 @@
     #   - https://raw.githubusercontent.com/disposable/disposable-email-domains/master/domains.txt
 # Local: npm run update:disposable-list
 # In-process schedule: see DISPOSABLE_LIST_CRON_* in .env; GitHub: .github/workflows/update-disposable-domains.yml
-# Last merge: 2026-08-19 — unique domains: 75169
-# Per-source line counts (before merge; overlap removed in 75169):
-    #   - disposable-email-domains/blocklist: 8310 (pre-dedup)
-    #   - disposable/disposable (domains.txt): 74809 (pre-dedup)
+# Last merge: 2026-08-20 — unique domains: 75193
+# Per-source line counts (before merge; overlap removed in 75193):
+    #   - disposable-email-domains/blocklist: 8329 (pre-dedup)
+    #   - disposable/disposable (domains.txt): 74826 (pre-dedup)
 # Runtime: set DISPOSABLE_LIST_PATH to merge an additional file at startup if needed.
 
 0-00.usa.cc
@@ -1308,6 +1308,7 @@
 26175ochman.emlhub.com
 262gmail.com
 26422dbmobbil.emlhub.com
+264341.xyz
 265ne.com
 266gmail.com
 268gmail.com
@@ -4145,6 +4146,7 @@ aafddz.ltd
 aageorghioullc.com
 aagijim.site
 aahs.co.pl
+aakingcompany.shop
 aakk.de
 aakk.link
 aakkmail.com
@@ -7491,6 +7493,7 @@ asaama.shop
 asadfat333.shop
 asahi.cf
 asahi.ga
+asajv2ray.site
 asana.biz
 asapbox.com
 asapcctv.com
@@ -7863,6 +7866,8 @@ atinvestment.pl
 atisecuritysystems.us
 atj.yomail.info
 atka.info
+atkshop.shop
+atkshopp.space
 atlantafalconsproteamshop.com
 atlantaquote.com
 atlantawatercloset.com
@@ -12090,7 +12095,6 @@ bpmsound.com
 bpn2t.anonbox.net
 bpnd.laste.ml
 bpngr.anonbox.net
-bpo67.anonbox.net
 bpool.site
 bpornd.com
 bpotogo.com
@@ -13198,6 +13202,7 @@ bzocey.xyz
 bzq6n.anonbox.net
 bzr.com
 bzrff.anonbox.net
+bzrqg.anonbox.net
 bztf1kqptryfudz.cf
 bztf1kqptryfudz.ga
 bztf1kqptryfudz.gq
@@ -14091,6 +14096,7 @@ cchancesg.com
 cchatz.ga
 cciatori.com
 ccid.de
+ccimran.buzz
 cckuy.com
 cckuy.site
 cckuy.space
@@ -19483,6 +19489,7 @@ diy-seol.net
 diyarbakirengelliler.xyz
 diyixs.xyz
 diyombrehair.com
+diyongjin.net
 dizaer.ru
 dizainburo.ru
 dizigg.com
@@ -27016,6 +27023,7 @@ gamepi.ru
 gameqo.com
 gamerai.shop
 gamerai.space
+gamerai.website
 gamercosplay.pl
 gamerentalreview.co.uk
 gamersdady.com
@@ -33248,7 +33256,9 @@ improvidents.xyz
 improvmx.com
 imranbt.store
 imranccnn.buzz
+imrancm.buzz
 imranking.buzz
+imranspc.buzz
 imrekoglukoleksiyon.xyz
 imsave.com
 imsend.ru
@@ -34258,6 +34268,7 @@ itchapchap.com
 itclub-smanera.tech
 itcompu.com
 itdesi.com
+itduniya.online
 itech-versicherung.de
 itecsgroup.org
 itekc.com
@@ -35234,6 +35245,7 @@ jiooq.com
 jioso.com
 jir.freeml.net
 jir.su
+jisankhan1.site
 jiskhdgbgsytre43vh.ga
 jisngg-www.xyz
 jitsuni.net
@@ -36356,6 +36368,7 @@ kasihtahuaja.xyz
 kasik1250.shop
 kasmabirader.com
 kasmail.com
+kasmirfx.buzz
 kaspar.lol
 kaspecism.site
 kasper.uni.me
@@ -39306,6 +39319,7 @@ lh451.gq
 lh451.ml
 lh451.tk
 lhadk11.pro
+lhba5510.com
 lheb.com
 lhkjfg45bnvg.gq
 lhkk.yomail.info
@@ -40136,6 +40150,7 @@ logingar.gq
 logingar.ml
 loginioru1.com
 loginpage-documentneedtoupload.com
+loginptn.xyz
 loginz.net
 logismi227.ml
 logiteech.com
@@ -40231,7 +40246,6 @@ lolusa.ru
 lolwegotbumedlol.com
 lom.kr
 lomaschool.org
-lombaniaga.shop
 lomilweb.com
 lominault.com
 lompaochi.com
@@ -40548,7 +40562,6 @@ lowprizo.com
 lowttfinin.ga
 loy.kr
 loyalherceghalom.ml
-loyalhost.org
 loyalnfljerseys.com
 loyalwiranti.biz
 loyalworld.com
@@ -42063,6 +42076,7 @@ mailforgo.site
 mailformail.com
 mailforspam.com
 mailforthemeak.info
+mailfortiktok.us
 mailframework.com
 mailfranco.com
 mailfree.ga
@@ -44128,6 +44142,7 @@ miamovies.com
 miamovies.net
 mianfeibuluo.com
 miankk.com
+miaowuai.buzz
 miarr.com
 miauj.com
 mic3eggekteqil8.cf
@@ -47015,6 +47030,7 @@ nboxwebli.eu
 nbpwvtkjke.pl
 nbrst7e.top
 nbseomail.com
+nbskyhope.shop
 nbspace.us
 nbva.com
 nbvojcesai5vtzkontf.cf
@@ -49186,6 +49202,7 @@ obzor.wiki
 ocassettew.com
 occasics.site
 occasionalmandiri.co
+occept.com
 occu.edu.pl
 occumulately.site
 occural.site
@@ -59297,6 +59314,7 @@ seventol.online
 seventol.store
 seventol.world
 seventol.xyz
+severnday.us
 seviqt.ga
 sevopay.com
 sewafotocopy-xerox.com
@@ -67490,6 +67508,7 @@ ultra.fyi
 ultrada.ru
 ultradrugbuy.com
 ultrafitnessguide.com
+ultrafive.online
 ultrago.de
 ultrahazzam.online
 ultrainbox.dev
@@ -67500,6 +67519,7 @@ ultramigos.online
 ultramoviestreams.com
 ultrapro.buzz
 ultraschallanlagen.de
+ultrasix.online
 ultraste.ml
 ultravex.cfd
 ultraxmail.pw
@@ -72272,6 +72292,8 @@ xidealx.com
 xideen.site
 xidprinting.com
 xiinoo31.com
+xiiqtg.com
+xiiqtg.vip
 xijjfjoo.turystyka.pl
 xikemail.com
 xilinous.xyz
@@ -72472,6 +72494,7 @@ xn--o38h.abrdns.com
 xn--odszkodowania-usugi-lgd.waw.pl
 xn--oi-jia8q.vn
 xn--qei8618m9qa.ws
+xn--rhqv96g.tv
 xn--sd-pla.elk.pl
 xn--sdertrnsfjrrvrme-4nbd24ae.se
 xn--sngkheep-qcb2527era.com
@@ -73530,6 +73553,7 @@ yop.emersion.fr
 yop.fexp.io
 yop.itram.es
 yop.kyriog.fr
+yop.mabox.eu
 yop.mc-fly.be
 yop.milter.int.eu.org
 yop.profmusique.com
