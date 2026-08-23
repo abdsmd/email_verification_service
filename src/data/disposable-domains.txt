@@ -7,10 +7,10 @@
     #   - https://raw.githubusercontent.com/disposable/disposable-email-domains/master/domains.txt
 # Local: npm run update:disposable-list
 # In-process schedule: see DISPOSABLE_LIST_CRON_* in .env; GitHub: .github/workflows/update-disposable-domains.yml
-# Last merge: 2026-08-22 — unique domains: 75218
-# Per-source line counts (before merge; overlap removed in 75218):
+# Last merge: 2026-08-23 — unique domains: 75221
+# Per-source line counts (before merge; overlap removed in 75221):
     #   - disposable-email-domains/blocklist: 8335 (pre-dedup)
-    #   - disposable/disposable (domains.txt): 74858 (pre-dedup)
+    #   - disposable/disposable (domains.txt): 74861 (pre-dedup)
 # Runtime: set DISPOSABLE_LIST_PATH to merge an additional file at startup if needed.
 
 0-00.usa.cc
@@ -46990,6 +46990,7 @@ navermx.com
 navientlogin.net
 naviosun-ca.info
 navmanwirelessoem.com
+navura.in
 navyhodnye.ru
 navyrizkytavania.art
 nawa.lol
@@ -49519,6 +49520,7 @@ ohohdream.com
 oholeguyeducation.com
 ohrabbi.me
 ohrana-biysk.ru
+ohszt.anonbox.net
 ohtheprice.com
 ohxmail.com
 ohyesjysuis.fr
@@ -53096,7 +53098,6 @@ ppshua.icu
 ppst4.com
 pptrvv.com
 pptv.lol
-ppugc.anonbox.net
 ppx219.com
 ppx225.com
 ppx237.com
@@ -59817,6 +59818,7 @@ shopussy.com
 shopvia2fa.net
 shopvipduzk666.shop
 shopvipduzk6868.shop
+shopvpn.uk
 shopwee.com
 shopxda.com
 shopy.club
@@ -72227,6 +72229,7 @@ xeosa9gvyb5fv.gq
 xeosa9gvyb5fv.ml
 xeosa9gvyb5fv.tk
 xeoty.com
+xeovo.ru
 xepa.ru
 xermo.info
 xerontech.com
