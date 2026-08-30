@@ -7,10 +7,10 @@
     #   - https://raw.githubusercontent.com/disposable/disposable-email-domains/master/domains.txt
 # Local: npm run update:disposable-list
 # In-process schedule: see DISPOSABLE_LIST_CRON_* in .env; GitHub: .github/workflows/update-disposable-domains.yml
-# Last merge: 2026-08-29 — unique domains: 75275
-# Per-source line counts (before merge; overlap removed in 75275):
+# Last merge: 2026-08-30 — unique domains: 75274
+# Per-source line counts (before merge; overlap removed in 75274):
     #   - disposable-email-domains/blocklist: 8368 (pre-dedup)
-    #   - disposable/disposable (domains.txt): 74915 (pre-dedup)
+    #   - disposable/disposable (domains.txt): 74914 (pre-dedup)
 # Runtime: set DISPOSABLE_LIST_PATH to merge an additional file at startup if needed.
 
 0-00.usa.cc
@@ -6681,6 +6681,7 @@ ankarapdr.com
 ankercoal.com
 anketka.de
 ankiclub.space
+ankniwn.com
 ankoninc.pw
 ankplacing.com
 ankt.de
@@ -7426,6 +7427,7 @@ artikasaridevi.art
 artinterpretation.org
 artisanbooth.com
 artisballs.dns.army
+artisballs.onthewifi.com
 artistsignal.com
 artiviodesign.com
 artix.ga
@@ -12095,7 +12097,6 @@ bpj.emlpro.com
 bpl25.anonbox.net
 bplinlhunfagmasiv.com
 bpmsound.com
-bpn2t.anonbox.net
 bpnd.laste.ml
 bpngr.anonbox.net
 bpool.site
@@ -13040,6 +13041,7 @@ bvwtu.anonbox.net
 bvx3l.anonbox.net
 bvxay.anonbox.net
 bvya.mimimail.me
+bvz4p.anonbox.net
 bvzoonm.com
 bvzqt.anonbox.net
 bw.freeml.net
@@ -16797,7 +16799,6 @@ crobinkson.hu
 crocoyes.fun
 crodity.com
 crogra.org
-cron1s.vn
 cronicasdepicnic.com
 cronostv.site
 cronot.my.id
@@ -23535,7 +23536,6 @@ evopo.com
 evoro.eu
 evortal.eu
 evou.com
-evoxury.com
 evrnext.com
 evropost.top
 evropost.trade
@@ -28201,7 +28201,6 @@ gmaiil.top
 gmaiilll.cf
 gmaiilll.gq
 gmaik.com
-gmail-b.lol
 gmail-box.com
 gmail-c.cc
 gmail-fiji.gq
@@ -38188,7 +38187,6 @@ kuku.lu
 kukuite.ch
 kukuka.org
 kukushoppy.site
-kulapozca.cfd
 kulepszejprzyszlosci.pl
 kulichiki.com
 kulitlumpia.ml
@@ -46864,7 +46862,6 @@ namer17.freephotoretouch.com
 nameshirt.xyz
 namesloz.com
 namesloz.site
-namestal.com
 namevn.fun
 namewok.com
 namilu.com
@@ -50461,6 +50458,7 @@ osfujhtwrblkigbsqeo.gq
 osfujhtwrblkigbsqeo.ml
 osfujhtwrblkigbsqeo.tk
 oshietechan.link
+oshjr-24.xyz
 osidecorate.com
 osifixtech.com.mx
 oskadonpancenoye.com
@@ -60505,6 +60503,7 @@ sloppyworst.co
 slopsbox.com
 slot-onlinex.com
 slot889.net
+slotbeer.com
 slotes.ru
 slothmail.net
 slotidns.com
@@ -65040,7 +65039,6 @@ tijux.com
 tikabravani.art
 tikanony.com
 tikaputri.art
-tikarmeiriana.biz
 tikmail.org
 tikpal.site
 tiksofi.uk
@@ -73444,6 +73442,7 @@ yfwl.yomail.info
 yg.freeml.net
 ygbelira.me
 ygdyukttmz.ga
+ygebjd8-ktyd.top
 ygfwhcpaqf.pl
 ygh.laste.ml
 ygmail.pl
