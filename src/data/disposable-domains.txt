@@ -7,10 +7,10 @@
     #   - https://raw.githubusercontent.com/disposable/disposable-email-domains/master/domains.txt
 # Local: npm run update:disposable-list
 # In-process schedule: see DISPOSABLE_LIST_CRON_* in .env; GitHub: .github/workflows/update-disposable-domains.yml
-# Last merge: 2026-09-02 — unique domains: 75618
+# Last merge: 2026-09-03 — unique domains: 75618
 # Per-source line counts (before merge; overlap removed in 75618):
-    #   - disposable-email-domains/blocklist: 8714 (pre-dedup)
-    #   - disposable/disposable (domains.txt): 75257 (pre-dedup)
+    #   - disposable-email-domains/blocklist: 8717 (pre-dedup)
+    #   - disposable/disposable (domains.txt): 75255 (pre-dedup)
 # Runtime: set DISPOSABLE_LIST_PATH to merge an additional file at startup if needed.
 
 0-00.usa.cc
@@ -8946,6 +8946,7 @@ b2vja.anonbox.net
 b2xta.anonbox.net
 b34aa.anonbox.net
 b34fdweffir.net
+b34yc.anonbox.net
 b35gm.anonbox.net
 b3a2p.anonbox.net
 b3ade.anonbox.net
@@ -8998,7 +8999,6 @@ b5nr6.anonbox.net
 b5r5wsdr6.pl
 b5safaria.com
 b5umv.anonbox.net
-b5xlu.anonbox.net
 b5y54.anonbox.net
 b5yop.anonbox.net
 b5yvo.anonbox.net
@@ -12261,6 +12261,7 @@ braynight.club
 braynight.online
 braynight.xyz
 brayy.com
+brazbuzii.online
 brazilbites.com
 brazucasms.com
 brazuka.ga
@@ -16521,6 +16522,7 @@ correoparacarlos.ga
 correoparacarlos.ml
 correoparacarlos.tk
 correotodo.com
+corridor.bond
 corrientelatina.net
 corseesconnect1to1.com
 corsenata.xyz
@@ -33830,7 +33832,6 @@ insidegpus.com
 insidershq.info
 insidiousahmadi.biz
 insighbb.com
-insightsite.com
 insischildpank.xyz
 insomniade.org.ua
 insorg-mail.info
@@ -36495,7 +36496,6 @@ kanpress.site
 kansascitystreetmaps.com
 kantal.buzz
 kantclass.com
-kanva.site
 kanzanishop.com
 kaocashima.com
 kaoing.com
@@ -40349,7 +40349,6 @@ loghermawaty297.ml
 loghermawaty297.tk
 loghning469.cf
 loghusnah2.cf
-logicampus.live
 logicfieldzen.com
 logiclaser.com
 logicpathbid.com
@@ -52105,6 +52104,7 @@ petalmail.xyz
 petebrigham.net
 peterdethier.com
 petergunter.com
+peterhe-ai.bond
 peterhoffmanlaw.com
 peterschoice.info
 petertijj.com
@@ -58461,6 +58461,7 @@ samsinstantcashloans.co.uk
 samsquickloans.co.uk
 samsshorttermloans.co.uk
 samstelevsionbeds.co.uk
+samsung-gmail.com
 samsungacs.com
 samsungbiz.sbs
 samsunggalaxys9.cf
@@ -66652,7 +66653,6 @@ tritunggalmail.com
 triumphworldschools.com
 trivialnewyork.com
 trixtrux1.ru
-trizz.pro
 trmc.net
 trobertqs.com
 trobudosk.co.uk
