@@ -7,10 +7,10 @@
     #   - https://raw.githubusercontent.com/disposable/disposable-email-domains/master/domains.txt
 # Local: npm run update:disposable-list
 # In-process schedule: see DISPOSABLE_LIST_CRON_* in .env; GitHub: .github/workflows/update-disposable-domains.yml
-# Last merge: 2026-09-03 — unique domains: 75618
+# Last merge: 2026-09-04 — unique domains: 75618
 # Per-source line counts (before merge; overlap removed in 75618):
     #   - disposable-email-domains/blocklist: 8717 (pre-dedup)
-    #   - disposable/disposable (domains.txt): 75255 (pre-dedup)
+    #   - disposable/disposable (domains.txt): 75258 (pre-dedup)
 # Runtime: set DISPOSABLE_LIST_PATH to merge an additional file at startup if needed.
 
 0-00.usa.cc
@@ -3318,7 +3318,6 @@
 7rx24.com
 7seatercarsz.com
 7startruckdrivingschool.com
-7t6bp.anonbox.net
 7tags.com
 7texd.anonbox.net
 7thpeggroup.com
@@ -7917,6 +7916,7 @@ atmospheremaxhomes.us
 atnextmail.com
 atolyezen.com
 atombomb.online
+ator.email
 atoyot.cf
 atoyot.ga
 atoyot.gq
@@ -35016,7 +35016,6 @@ jar-opener.info
 jarilusua.com
 jaringan.design
 jarlo-london.com
-jarringsafri.biz
 jarsdigital.sbs
 jarswa.com
 jarszone.com
@@ -45797,6 +45796,7 @@ msbestlotto.com
 mscbestforever.com
 mscdex.com.au.pn
 msdc.co
+msdkc.anonbox.net
 msdla.com
 msdnereeemw.org
 msendback.com
