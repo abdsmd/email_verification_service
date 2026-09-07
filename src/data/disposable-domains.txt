@@ -7,10 +7,10 @@
     #   - https://raw.githubusercontent.com/disposable/disposable-email-domains/master/domains.txt
 # Local: npm run update:disposable-list
 # In-process schedule: see DISPOSABLE_LIST_CRON_* in .env; GitHub: .github/workflows/update-disposable-domains.yml
-# Last merge: 2026-09-06 — unique domains: 75616
-# Per-source line counts (before merge; overlap removed in 75616):
-    #   - disposable-email-domains/blocklist: 8725 (pre-dedup)
-    #   - disposable/disposable (domains.txt): 75256 (pre-dedup)
+# Last merge: 2026-09-07 — unique domains: 75625
+# Per-source line counts (before merge; overlap removed in 75625):
+    #   - disposable-email-domains/blocklist: 8739 (pre-dedup)
+    #   - disposable/disposable (domains.txt): 75264 (pre-dedup)
 # Runtime: set DISPOSABLE_LIST_PATH to merge an additional file at startup if needed.
 
 0-00.usa.cc
@@ -1191,7 +1191,6 @@
 22ffnrxk11oog.ga
 22ffnrxk11oog.gq
 22ffnrxk11oog.tk
-22ikb.anonbox.net
 22jharots.com
 22meds.com
 22office.com
@@ -2865,6 +2864,7 @@
 6690288.com
 6690588.com
 6695288.com
+66b1it.eu.org
 66hotmail.com
 66tower.com
 66uuff.com
@@ -10973,6 +10973,7 @@ bitoini.com
 bitok.co.uk
 bitonc.com
 bitpost.site
+bitrealm.in
 bitrf.anonbox.net
 bitrix-market.ru
 bitrixmail.xyz
@@ -12328,7 +12329,6 @@ bridgeslearningcenter.com
 bridgetonmainstreet.org
 briee.anonbox.net
 briefalpha.org
-briefbest.com
 briefcase4u.com
 briefcaseoffice.info
 brieffirst.com
@@ -13237,6 +13237,7 @@ bzidohaoc3k.gq
 bzidohaoc3k.ml
 bzidohaoc3k.tk
 bzip.site
+bzkkp.anonbox.net
 bzmt6ujofxe3.cf
 bzmt6ujofxe3.ga
 bzmt6ujofxe3.gq
@@ -23445,7 +23446,6 @@ eue51chyzfil0.ga
 eue51chyzfil0.gq
 eue51chyzfil0.ml
 eue51chyzfil0.tk
-euesolucoes.online
 eujweu3f.com
 eulabs.eu
 euleina.com
@@ -23498,6 +23498,7 @@ evacarstens.fr
 evafan.com
 evaforum.info
 evairo.fun
+evairo.web.id
 evamail.com
 evanferrao.ga
 evanfox.info
@@ -30343,6 +30344,7 @@ haruto.fun
 harvard-ac-uk.tk
 harvard.ac.uk
 harvard.gq
+harvenkiori.us
 harvesteco.com
 harvesttmaster.com
 harvesttraders.com
@@ -34928,6 +34930,8 @@ jamcatering.ru
 jameagle.com
 jamel.com
 james-design.com
+jamesat.biz.id
+jamesat.my.id
 jamesbild.com
 jamesbond.flu.cc
 jamesbond.igg.biz
@@ -36598,6 +36602,8 @@ katespade-factory.com
 katgetmail.space
 katharina-nebel.de
 kathrinelarsen.me
+kathrynis.my.id
+kathrynis.web.id
 kathrynowen.com
 kathycashto.com
 kathymackechney.com
@@ -39555,7 +39561,6 @@ lhzoom.com
 liadhene.com
 liamcyrus.com
 liamekaens.com
-liamjuniortoys.cfd
 liang-tts.shop
 liangganxiaopu.bond
 lianhe.in
@@ -42173,7 +42178,6 @@ mailclient.com
 mailclone2023.top
 mailclubonline.com
 mailclubs.info
-mailcok.com
 mailcom.cf
 mailcom.ga
 mailcom.gq
@@ -42594,6 +42598,7 @@ mailpay.co.uk
 mailphar.com
 mailphu.com
 mailpick.biz
+mailpingback.com
 mailpkc.com
 mailplus.pl
 mailpluss.com
@@ -47865,6 +47870,7 @@ nextgenadmin.com
 nextgenmail.cf
 nextmail.in
 nextmail.info
+nextpomi.dynv6.net
 nextstopvalhalla.com
 nextsuns.com
 nexttonorm.com
@@ -55345,7 +55351,6 @@ r-mail.ga
 r-mail.gq
 r-mail.ml
 r-tech.com.pl
-r.email
 r.polosburberry.com
 r.yasser.ru
 r0.igg.biz
@@ -57352,6 +57357,7 @@ rosebearmylove.ru
 rosebird.org
 rosechina.com
 roselarose.com
+rosella.my.id
 roselug.org
 roshaveno.com
 rosmillo.com
@@ -57750,6 +57756,7 @@ runrunrun.net
 ruomvpp.com
 ruozhi.cn
 rupayamail.com
+ruralreachnow.com
 ruru.be
 rus-black-blog.ru
 rus-massaggio.com
@@ -59530,6 +59537,7 @@ sequipment.ru
 serarf.site
 serbaada.me
 serbaprem.store
+serbaserbisoftware.site
 serbian-nedv.ru
 serenalaila.com
 serendora.net
@@ -70192,6 +70200,7 @@ vutdrenaf56aq9zj68.ml
 vutdrenaf56aq9zj68.tk
 vuthykh.ga
 vutrugay.org
+vuv.indevs.in
 vuv9hhstrxnjkr.cf
 vuv9hhstrxnjkr.ga
 vuv9hhstrxnjkr.gq
