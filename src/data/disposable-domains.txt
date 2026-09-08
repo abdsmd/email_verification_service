@@ -7,9 +7,9 @@
     #   - https://raw.githubusercontent.com/disposable/disposable-email-domains/master/domains.txt
 # Local: npm run update:disposable-list
 # In-process schedule: see DISPOSABLE_LIST_CRON_* in .env; GitHub: .github/workflows/update-disposable-domains.yml
-# Last merge: 2026-09-07 — unique domains: 75625
-# Per-source line counts (before merge; overlap removed in 75625):
-    #   - disposable-email-domains/blocklist: 8739 (pre-dedup)
+# Last merge: 2026-09-08 — unique domains: 75627
+# Per-source line counts (before merge; overlap removed in 75627):
+    #   - disposable-email-domains/blocklist: 8742 (pre-dedup)
     #   - disposable/disposable (domains.txt): 75264 (pre-dedup)
 # Runtime: set DISPOSABLE_LIST_PATH to merge an additional file at startup if needed.
 
@@ -20523,7 +20523,6 @@ drisd.com
 drishvod.ru
 dristypat.com
 drivecompanies.com
-drivelander.com
 drivelinegolf.com
 driversgood.ru
 driverstorage-bokaxude.tk
@@ -21172,6 +21171,7 @@ e.bettermail.website
 e.blogspam.ro
 e.captchaeu.info
 e.coloncleanse.club
+e.com
 e.crazymail.website
 e.discard-email.cf
 e.dogclothing.store
@@ -30344,7 +30344,7 @@ haruto.fun
 harvard-ac-uk.tk
 harvard.ac.uk
 harvard.gq
-harvenkiori.us
+harvenkiori.com
 harvesteco.com
 harvesttmaster.com
 harvesttraders.com
@@ -33438,7 +33438,6 @@ imprimtout.com
 imprisonedwithisis.com
 improvedtt.com
 improvidents.xyz
-improvmx.com
 imranbt.store
 imranccnn.buzz
 imrancm.buzz
@@ -36729,6 +36728,7 @@ kds55.anonbox.net
 kdublinstj.com
 kdxcvft.xyz
 kdzrgroup.com
+ke.com
 ke.emlpro.com
 ke1le.cyou
 keagenan.com
@@ -44012,7 +44012,6 @@ melatoninsideeffects.org
 melbourne.edu.pl
 melbox.store
 melcow.com
-meldedigital.com
 meldram.com
 meleni.xyz
 melhor.ws
@@ -46101,7 +46100,6 @@ mulseehal.ga
 multi-car-insurance.net
 multichances.com
 multicorse.com
-multifitai.com
 multiplanet.de
 multiplayerwiigames.com
 multiplexer.us
@@ -47844,6 +47842,7 @@ nexhost.nl
 nexio.sbs
 nexofinance.us
 nexorabio.pro.vn
+nexoriumet.xyz
 nexosphere.lifestyle
 nexral.com
 nexshinz.app
@@ -50532,6 +50531,7 @@ oqnwfoqwpeipoqwe.ga
 oqtypical.com
 oqwnfqwpoiepqw.tk
 or.blurelizer.com
+or.email
 or.emlpro.com
 or.emltmp.com
 or.orgz.in
@@ -53418,6 +53418,7 @@ pradaoutletus.us
 pradapursejp.com
 pradapursejp.org
 pragmatic.website
+prairieconnectco.com
 pramolcroonmant.xyz
 pranceville.com
 pranto.me
@@ -56393,6 +56394,7 @@ relaxyplace.ru
 relay-bossku3.com
 relay-bossku4.com
 relay.firefox.com
+relayne.top
 releaseyourmusic.com
 releasingle.xyz
 reliable-mail.com
@@ -57825,6 +57827,7 @@ rw24.de
 rw9.net
 rwanded.xyz
 rwbktdmbyly.auto.pl
+rweebz-mail-1.online
 rwerghjoyr.cloud
 rwf.mailpwr.com
 rwfn.emlhub.com
@@ -60535,6 +60538,7 @@ sjmcfaculty.org
 sjmp.emlpro.com
 sjokantenfiskogdelikatesse.me
 sjpvvp.org
+sjqj2.anonbox.net
 sjrajufhwlb.cf
 sjrajufhwlb.ga
 sjrajufhwlb.gq
@@ -66955,7 +66959,6 @@ tue02.bar
 tuesdayfi.com
 tuethong.shop
 tuf.spymail.one
-tufiqon.tech
 tug.minecraftrabbithole.com
 tugboater.com
 tugo.ga
@@ -67834,6 +67837,7 @@ ukrainaharnagay.shn-host.ru
 ukraynaliopal.network
 ukrtovar.ru
 uks5.com
+ukshop538yt.uk
 uksnapback.com
 uksnapbackcap.com
 uksnapbackcaps.com
@@ -70527,7 +70531,6 @@ warnetdalnet.com
 waroengdo.store
 waroengin.com
 waroengku.cc
-waroengku.cfd
 waroengku.digital
 waroengkuy.com
 waroengmail.app
@@ -71621,7 +71624,6 @@ wkzc.spymail.one
 wla9c4em.com
 wld.yomail.info
 wle.emltmp.com
-wlejq.anonbox.net
 wlessonijk.com
 wlist.ro
 wljia.com
@@ -74061,7 +74063,6 @@ youngbloodproductions.site
 youngbrofessionals.com
 youngcrew.ga
 younghemp.com
-younsih.store
 youporn.flu.cc
 youporn.igg.biz
 youporn.usa.cc
@@ -74355,6 +74356,7 @@ yurevia.cfd
 yuricdos.tech
 yurikeprastika.art
 yuristpro.xyz
+yurovovault.shop
 yuslamail.com
 yusmpgroup.ru
 yusolar.com
