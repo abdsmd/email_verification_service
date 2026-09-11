@@ -7,10 +7,10 @@
     #   - https://raw.githubusercontent.com/disposable/disposable-email-domains/master/domains.txt
 # Local: npm run update:disposable-list
 # In-process schedule: see DISPOSABLE_LIST_CRON_* in .env; GitHub: .github/workflows/update-disposable-domains.yml
-# Last merge: 2026-09-10 — unique domains: 75639
-# Per-source line counts (before merge; overlap removed in 75639):
-    #   - disposable-email-domains/blocklist: 8746 (pre-dedup)
-    #   - disposable/disposable (domains.txt): 75277 (pre-dedup)
+# Last merge: 2026-09-11 — unique domains: 75648
+# Per-source line counts (before merge; overlap removed in 75648):
+    #   - disposable-email-domains/blocklist: 8771 (pre-dedup)
+    #   - disposable/disposable (domains.txt): 75280 (pre-dedup)
 # Runtime: set DISPOSABLE_LIST_PATH to merge an additional file at startup if needed.
 
 0-00.usa.cc
@@ -5183,6 +5183,7 @@ afyonbilgisayar.xyz
 ag.us.to
 ag02dnk.slask.pl
 ag163.top
+ag5r.store
 ag77brc.ddnsfree.com
 ag95.cf
 ag95.ga
@@ -5732,6 +5733,7 @@ akira4d.info
 akirapowered.com
 akirbs.cloud
 akixpres.com
+akjaey.space
 akjewelery-kr.info
 akk.ro
 akkecuwa.ga
@@ -6605,7 +6607,6 @@ andyyxc45.biz
 aneaproducciones.com
 aneka-resep.art
 anemiom.kobierzyce.pl
-anemon11.shop
 anesorensen.me
 aneuch.info
 aneup.site
@@ -7918,6 +7919,8 @@ atm-mi.tk
 atmemail.top
 atmodule.com
 atmospheremaxhomes.us
+atnet.top
+atnetcloud.space
 atnextmail.com
 atolyezen.com
 atombomb.online
@@ -12156,6 +12159,7 @@ bpvi.tk
 bq.emlhub.com
 bq.yomail.info
 bq45o.anonbox.net
+bq6t2.anonbox.net
 bq7ry.anonbox.net
 bqaxcaxzc.com
 bqaz.xyz
@@ -21177,7 +21181,6 @@ e.bettermail.website
 e.blogspam.ro
 e.captchaeu.info
 e.coloncleanse.club
-e.com
 e.crazymail.website
 e.discard-email.cf
 e.dogclothing.store
@@ -22389,6 +22392,7 @@ emailgo.tk
 emailgot.com
 emailgotty.xyz
 emailgratis.info
+emailgratisan.fun
 emailgsio.us
 emailhearing.com
 emailhook.site
@@ -26009,7 +26013,6 @@ forumbens.store
 forumbens.website
 forumbens.xyz
 forumfreeai.com
-forummaxai.com
 forumoxy.com
 forward.cat
 forward4families.org
@@ -28454,7 +28457,6 @@ gmailnator.com
 gmailner.com
 gmailnew.com
 gmailni.com
-gmailo.net
 gmailold.com
 gmailom.co
 gmailos.com
@@ -38374,7 +38376,6 @@ kuk.laste.ml
 kukold.ru.com
 kukowski.eu
 kukowskikukowski.eu
-kuku.lol
 kuku.lu
 kukuite.ch
 kukuka.org
@@ -42443,6 +42444,7 @@ mailisia.com
 mailismagic.com
 mailita.tk
 mailivw.com
+mailiy.com
 mailj.tk
 mailjean.com
 mailjonny.org
@@ -45269,6 +45271,8 @@ mojodefender.com
 mojok34.xyz
 mojorage.life
 mojzur.com
+mokondo.today
+mokondoo.cyou
 mokook.com
 molabo.bond
 molasedoitr.ga
@@ -50442,6 +50446,7 @@ opennetgame.org
 openskiesgroup.com
 openskj.com
 opensourceed.app
+openstudy.edu.pl
 opentrash.com
 openwebmail.contractors
 openwrt.qzz.io
@@ -55359,6 +55364,7 @@ r-mail.ga
 r-mail.gq
 r-mail.ml
 r-tech.com.pl
+r.email
 r.polosburberry.com
 r.yasser.ru
 r0.igg.biz
@@ -57936,6 +57942,7 @@ ryumail.ooo
 ryuu.codes
 ryuucn.com
 ryuzak.site
+ryvelide.com
 ryyr.ru
 ryyr.store
 ryzdgwkhkmsdikmkc.cf
@@ -63200,6 +63207,7 @@ svoi-format.ru
 svpmail.com
 svqxv.anonbox.net
 svs-samara.ru
+svuntik.com
 svvdfeghdb.help
 svvv.ml
 svxnie.ga
@@ -64339,6 +64347,7 @@ tempemaill.com
 tempemailo.org
 tempemails.io
 tempestme.com
+tempgbox.net
 tempgmail.ga
 tempikpenyu.xyz
 tempinbox.co.uk
@@ -64477,6 +64486,7 @@ tempumail.com
 tempumail.cv
 tempwolf.xyz
 tempxmail.info
+tempy.email
 tempymail.com
 tempzo.info
 temr0520cr4kqcsxw.cf
@@ -66131,7 +66141,6 @@ topwebplacement.com
 topwm.org
 topyte.com
 topzpost.com
-tor.email
 tora1.info
 toracw.com
 torahti.com
@@ -67019,7 +67028,6 @@ tunthuta.com
 tuofs.com
 tuoitre.email
 tuongtactot.tk
-tuongxanh.net
 tupanda.com
 tuphmail.com
 tupmail.com
@@ -68175,7 +68183,6 @@ upc.infos.st
 upcmaill.com
 update1c.ru
 updates9z.com
-updatesafe.com
 updun.freeml.net
 upelmail.com
 upf7qtcvyeev.cf
@@ -72046,6 +72053,8 @@ wsswoodstock.xyz
 wsuart.com
 wsuse.top
 wsvnsbtgq.pl
+wsvpsft.xyz
+wsxnxce.online
 wsym.de
 wsypc.com
 wsyy.info
@@ -73057,7 +73066,6 @@ xriveroq.com
 xrmail.xyz
 xrmailbox.net
 xrmop.com
-xrnyr.anonbox.net
 xronmyer.info
 xrp.emltmp.com
 xrpmail.com
@@ -75568,6 +75576,7 @@ zxonkcw91bjdojkn.tk
 zxpasystems.com
 zxqzin.cn
 zxre.emlpro.com
+zxrey.club
 zxusnkn0ahscvuk0v.cf
 zxusnkn0ahscvuk0v.ga
 zxusnkn0ahscvuk0v.gq
