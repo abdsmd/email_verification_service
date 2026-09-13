@@ -7,10 +7,10 @@
     #   - https://raw.githubusercontent.com/disposable/disposable-email-domains/master/domains.txt
 # Local: npm run update:disposable-list
 # In-process schedule: see DISPOSABLE_LIST_CRON_* in .env; GitHub: .github/workflows/update-disposable-domains.yml
-# Last merge: 2026-09-12 — unique domains: 75641
-# Per-source line counts (before merge; overlap removed in 75641):
-    #   - disposable-email-domains/blocklist: 8771 (pre-dedup)
-    #   - disposable/disposable (domains.txt): 75280 (pre-dedup)
+# Last merge: 2026-09-13 — unique domains: 75643
+# Per-source line counts (before merge; overlap removed in 75643):
+    #   - disposable-email-domains/blocklist: 8813 (pre-dedup)
+    #   - disposable/disposable (domains.txt): 75275 (pre-dedup)
 # Runtime: set DISPOSABLE_LIST_PATH to merge an additional file at startup if needed.
 
 0-00.usa.cc
@@ -800,7 +800,6 @@
 199411.store
 1994gmail.com
 1995gmail.com
-1996a.lol
 1996gmail.com
 1997gmail.com
 1998gmail.com
@@ -2978,7 +2977,6 @@
 6eng-zma1lz.ga
 6eogvwbma.pl
 6f.pl
-6fkxw.anonbox.net
 6fw22.anonbox.net
 6gdfg.zone.id
 6hermesbirkin0.com
@@ -3184,6 +3182,7 @@
 777gmail.com
 777score-mv.com
 777slots-online.com
+778891.icu
 779gmail.com
 77hotmail.com
 77mail.xyz
@@ -7975,6 +7974,7 @@ atwankbe3wcnngp.ml
 atwankbe3wcnngp.tk
 atwellpublishing.com
 atx.emltmp.com
+atxc.space
 atxcrunner.com
 atyc.laste.ml
 au-1.top
@@ -18895,7 +18895,6 @@ deworconssoft.xyz
 dewts.net
 dexamail.com
 dextm.ro
-dextrago.com
 deyom.com
 deypo.com
 dezcentr56.ru
@@ -20369,7 +20368,6 @@ dpttso8dag0.ga
 dpttso8dag0.gq
 dpttso8dag0.ml
 dpttso8dag0.tk
-dpwev.com
 dpwlvktkq.pl
 dpxqczknda.pl
 dpyae.emltmp.com
@@ -21178,6 +21176,7 @@ e.bettermail.website
 e.blogspam.ro
 e.captchaeu.info
 e.coloncleanse.club
+e.com
 e.crazymail.website
 e.discard-email.cf
 e.dogclothing.store
@@ -25152,7 +25151,6 @@ filesn.site
 fileso.site
 filesp.site
 filespike.com
-filespure.com
 filesq.site
 filesr.site
 filest.site
@@ -30303,7 +30301,6 @@ hardwarestein.nl
 hardwaretech.info
 hardwoodflooringinla.com
 hardwork.icu
-hareketliler.network
 haren.uk
 haresdsy.yachts
 harfordpi.com
@@ -31294,6 +31291,7 @@ hmmbswlt5ts.tk
 hmnmw.com
 hmo.laste.ml
 hmpoeao.com
+hmrgk.anonbox.net
 hmrh.spymail.one
 hmsale.org
 hmx.at
@@ -34021,7 +34019,6 @@ intualis.biz.id
 intuthewoo.com.my
 intxr.com
 inunglove.cf
-inupup.com
 inuvu.com
 invadarecords.com
 invasidench.site
@@ -34482,6 +34479,7 @@ itilchange.com
 itiomail.com
 itis0k.com
 itis0k.org
+itit.tk
 itjustmail.tk
 itk.emlhub.com
 itks6xvn.gq
@@ -36641,6 +36639,7 @@ kavbc6fzisxzh.tk
 kavio.my.id
 kavio.org
 kavxx.xyz
+kaw-sar.top
 kawaii.vet
 kawaiishojo.com
 kawneha.site
@@ -44694,7 +44693,6 @@ miramail.my.id
 miramarmining.com
 miranda.instambox.com
 miranda1121.club
-mirarmax.com
 mirasa.site
 mirasync.tokyo
 mirbeauty.ru
@@ -49236,6 +49234,7 @@ nyfhk.com
 nyfinestbarbershop.com
 nyflcigarettes.net
 nyft.click
+nygren-realty.com
 nygrenrealty.com
 nyi.laste.ml
 nyk.dropmail.me
@@ -49860,6 +49859,7 @@ ok.sy
 ok8883.com
 okadk.pro
 okathens.com
+okauq.store
 okax.emltmp.com
 okaybet777.com
 okayion.com
@@ -55358,7 +55358,6 @@ r-mail.ga
 r-mail.gq
 r-mail.ml
 r-tech.com.pl
-r.email
 r.polosburberry.com
 r.yasser.ru
 r0.igg.biz
@@ -57135,6 +57134,7 @@ rnor.laste.ml
 rnorou.buzz
 rnt.spymail.one
 rnuj.com
+rnvvpn.store
 rnwknis.com
 rnx.emltmp.com
 rnza.com
@@ -57924,6 +57924,7 @@ ryldnwp4rgrcqzt.ga
 ryldnwp4rgrcqzt.gq
 ryldnwp4rgrcqzt.ml
 ryldnwp4rgrcqzt.tk
+rynetvpn.site
 ryoichi26.toptorrents.top
 ryoir.biz.id
 ryounge.com
@@ -63461,6 +63462,7 @@ sztyweta46.ga
 szucsati.net
 szukaj-pracy.info
 szvw.emltmp.com
+szxcfagah.online
 szxo.yomail.info
 szxshopping.com
 szybka-pozyczka.com
@@ -66147,6 +66149,7 @@ torgoviy-dom.com
 torgovyicenter.ru
 tori.ru
 toritorati.com
+torkakak.site
 torm.xyz
 tormail.net
 tormail.org
@@ -73197,7 +73200,6 @@ xvcezxodtqzbvvcfw4a.tk
 xvector.org
 xvg.freeml.net
 xviath.com
-xvism.site
 xvlinjury.com
 xvx.us
 xw.mailpwr.com
