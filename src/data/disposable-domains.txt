@@ -7,10 +7,10 @@
     #   - https://raw.githubusercontent.com/disposable/disposable-email-domains/master/domains.txt
 # Local: npm run update:disposable-list
 # In-process schedule: see DISPOSABLE_LIST_CRON_* in .env; GitHub: .github/workflows/update-disposable-domains.yml
-# Last merge: 2026-09-13 — unique domains: 75643
-# Per-source line counts (before merge; overlap removed in 75643):
-    #   - disposable-email-domains/blocklist: 8813 (pre-dedup)
-    #   - disposable/disposable (domains.txt): 75275 (pre-dedup)
+# Last merge: 2026-09-14 — unique domains: 75648
+# Per-source line counts (before merge; overlap removed in 75648):
+    #   - disposable-email-domains/blocklist: 8833 (pre-dedup)
+    #   - disposable/disposable (domains.txt): 75284 (pre-dedup)
 # Runtime: set DISPOSABLE_LIST_PATH to merge an additional file at startup if needed.
 
 0-00.usa.cc
@@ -2435,6 +2435,7 @@
 51jel.com
 51jiaju.net
 51kyb.com
+51mail.shop
 51store.ru
 51ttkx.com
 51vic.com
@@ -9053,7 +9054,6 @@ b7bpa.anonbox.net
 b7fk3.anonbox.net
 b7m5c.anonbox.net
 b7nsd.anonbox.net
-b7nse.anonbox.net
 b7rra.anonbox.net
 b7s.ru
 b7s42.anonbox.net
@@ -9667,7 +9667,6 @@ bb.tinyhost.dns.army
 bb1197.com
 bb2.ru
 bb28.dev
-bb99.lol
 bba24.de
 bbabyswing.com
 bbacademy.es
@@ -14630,6 +14629,7 @@ chasefreedomactivate.com
 chat-wa.click
 chat080.net
 chatbelgique.com
+chatclaude.top
 chatdays.com
 chatech.site
 chatfap.info
@@ -19155,6 +19155,7 @@ digibeast.my
 digibeast.store
 digibeat.pl
 digicures.com
+digidaw.qd.je
 digier365.pl
 digiglobalai.com
 digihairstyles.com
@@ -21862,7 +21863,6 @@ eggscryptoinvest.xyz
 eggso.click
 eggsuwz.ooguy.com
 eggur.com
-eggviews.xyz
 egibet101.com
 egipet-nedv.ru
 egirl.help
@@ -24163,6 +24163,7 @@ fake-mail.gq
 fake-mail.ml
 fake-mail.tk
 fake-raybans.org
+fake.com
 fakedemail.com
 fakedoctorsnote.net
 fakeemail.de
@@ -31989,6 +31990,7 @@ howw.site
 howx.site
 howz.site
 hoxds.com
+hoyq7.anonbox.net
 hozota.com
 hp.laohost.net
 hp.yomail.info
@@ -33245,6 +33247,7 @@ ildz.com
 ilencorporationsap.com
 ileqmail.com
 iletity.com
+ilfake.com
 ilh.laste.ml
 ilico.info
 iliken.com
@@ -33316,6 +33319,7 @@ image24.de
 imageartz.com
 imageevolutions.com
 imagehostfile.eu
+imagenbox.xyz
 imagepoet.net
 images-spectrumbrands.com
 images.makingdomes.com
@@ -36729,6 +36733,7 @@ kds55.anonbox.net
 kdublinstj.com
 kdxcvft.xyz
 kdzrgroup.com
+ke.com
 ke.emlpro.com
 ke1le.cyou
 keagenan.com
@@ -64061,6 +64066,7 @@ techbird.fun
 techblast.ch
 techbook.com
 techcenter.biz
+techcyber.shop
 techcz.com
 techdf.com
 techdudes.com
@@ -66149,7 +66155,6 @@ torgoviy-dom.com
 torgovyicenter.ru
 tori.ru
 toritorati.com
-torkakak.site
 torm.xyz
 tormail.net
 tormail.org
