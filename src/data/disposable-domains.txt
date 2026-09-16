@@ -7,9 +7,9 @@
     #   - https://raw.githubusercontent.com/disposable/disposable-email-domains/master/domains.txt
 # Local: npm run update:disposable-list
 # In-process schedule: see DISPOSABLE_LIST_CRON_* in .env; GitHub: .github/workflows/update-disposable-domains.yml
-# Last merge: 2026-09-15 — unique domains: 75653
-# Per-source line counts (before merge; overlap removed in 75653):
-    #   - disposable-email-domains/blocklist: 8857 (pre-dedup)
+# Last merge: 2026-09-16 — unique domains: 75655
+# Per-source line counts (before merge; overlap removed in 75655):
+    #   - disposable-email-domains/blocklist: 8870 (pre-dedup)
     #   - disposable/disposable (domains.txt): 75292 (pre-dedup)
 # Runtime: set DISPOSABLE_LIST_PATH to merge an additional file at startup if needed.
 
@@ -5447,6 +5447,7 @@ aikq.de
 aikunkun.com
 aikusy.com
 ailem.info
+ailfake.com
 ailicke.com
 ailiking.com
 ailme.pw
@@ -9002,7 +9003,6 @@ b55b56.tk
 b5c53.anonbox.net
 b5eb6.anonbox.net
 b5eyv.anonbox.net
-b5kir.anonbox.net
 b5msd.anonbox.net
 b5nr6.anonbox.net
 b5r5wsdr6.pl
@@ -13149,6 +13149,7 @@ bxfmtktkpxfkobzssqw.tk
 bxg.spymail.one
 bxhd.emltmp.com
 bxhil.anonbox.net
+bxiql.anonbox.net
 bxm2bg2zgtvw5e2eztl.cf
 bxm2bg2zgtvw5e2eztl.ga
 bxm2bg2zgtvw5e2eztl.gq
@@ -14918,6 +14919,7 @@ cheine.online
 chekist.info
 cheliped.info
 chellup.info
+chelo.lat
 chelsea.com.pl
 chelseaartsgroup.com
 chelton.dynamailbox.com
@@ -17240,7 +17242,6 @@ customsnapbackcap.com
 customss.com
 custonish.xyz
 cutbebytsabina.art
-cutcap.me
 cuteblanketdolls.com
 cuteboyo.com
 cutedoll.shop
@@ -20786,7 +20787,6 @@ dubu.tech
 dubukim.me
 duc.freeml.net
 ducati.pl
-ducclone.com
 ducenc.com
 duck2.club
 duckadventure.site
@@ -25867,7 +25867,6 @@ foodbooto.com
 foodcia.com
 foodezecatering.com
 foodieinfluence.online
-foodkachi.com
 foodpre.sbs
 foodrestores.com
 foodslosebellyfat.com
@@ -39482,6 +39481,7 @@ leylareylesesne.art
 leysatuhell.sendsmtp.com
 lez.se
 lf.emlpro.com
+lfake.com
 lfc.best
 lff.spymail.one
 lfft.emlpro.com
@@ -39824,7 +39824,6 @@ linseyalexander.com
 linshi-email.com
 linshiyou.com
 linshiyouxiang.net
-linshiyouxiang.xyz
 linshuhang.com
 linux-do.me
 linux-mail.xyz
@@ -43111,6 +43110,7 @@ mangovision.com
 mangroup.us
 mangtinnhanh.com
 manhavebig.shop
+manhmmonew.online
 manhwamomo.com
 manic-adas.ru
 manifestgenerator.com
@@ -55367,6 +55367,7 @@ r-mail.ga
 r-mail.gq
 r-mail.ml
 r-tech.com.pl
+r.email
 r.polosburberry.com
 r.yasser.ru
 r0.igg.biz
@@ -59364,6 +59365,7 @@ semarhouse.tk
 semei6.fun
 semenaxreviews.net
 semestatogel.com
+semester.bond
 semi-mile.com
 semidesigns.com
 semihbulgur.com
