@@ -7,10 +7,10 @@
     #   - https://raw.githubusercontent.com/disposable/disposable-email-domains/master/domains.txt
 # Local: npm run update:disposable-list
 # In-process schedule: see DISPOSABLE_LIST_CRON_* in .env; GitHub: .github/workflows/update-disposable-domains.yml
-# Last merge: 2026-09-27 — unique domains: 75960
-# Per-source line counts (before merge; overlap removed in 75960):
+# Last merge: 2026-09-28 — unique domains: 75961
+# Per-source line counts (before merge; overlap removed in 75961):
     #   - disposable-email-domains/blocklist: 9185 (pre-dedup)
-    #   - disposable/disposable (domains.txt): 75399 (pre-dedup)
+    #   - disposable/disposable (domains.txt): 75600 (pre-dedup)
 # Runtime: set DISPOSABLE_LIST_PATH to merge an additional file at startup if needed.
 
 0-00.usa.cc
@@ -1280,6 +1280,7 @@
 24vlk.xyz
 24volcano.net
 24x7daily.com
+25012026.page
 250hz.com
 252gmail.com
 253gmail.com
@@ -6800,6 +6801,7 @@ anotherway.me
 anpolitics.ru
 anquandx.com
 anruma.site
+anruty.me
 ansaldo.cf
 ansaldo.ga
 ansaldo.gq
@@ -7551,6 +7553,7 @@ asaption.com
 asaroad.com
 asas1.co.tv
 asasaaaf77.site
+asav.site
 asb-mail.info
 asbakpinuh.club
 asbcglobal.net
@@ -11663,6 +11666,7 @@ bodyplanes.com
 bodyscrubrecipes.com
 bodystyle24.de
 bodysuple.top
+boe2z.anonbox.net
 boemen.com
 boerakemail.com
 boerneisd.com
@@ -23205,7 +23209,6 @@ erk7oorgaxejvu.ga
 erk7oorgaxejvu.gq
 erk7oorgaxejvu.ml
 erk7oorgaxejvu.tk
-erkjhgbtert.online
 erlsitn.com
 ermael.com
 ermail.cf
@@ -34483,7 +34486,6 @@ islandbreeze-holidays.com
 islandi-nedv.ru
 islandshomecareagency.com
 islelakecharles.com
-islj6.anonbox.net
 islomfox.ru
 isluntvia.com
 ismailgul.net
@@ -38825,6 +38827,7 @@ labfortyone.tk
 labiblia.digital
 lablasting.com
 labo.ch
+labobike.com
 labogili.ga
 laboraryer.com
 laboratortehnicadentara.ro
@@ -43818,6 +43821,7 @@ mboled.ml
 mbox.re
 mbpf.dropmail.me
 mbrc.dropmail.me
+mbsc.tech
 mbsho.com
 mbsl.com
 mbt-shoeshq.com
@@ -44536,7 +44540,6 @@ mial.cf
 mial.com.creou.dev
 mial.tk
 mialbox.info
-miamidoc.pl
 miamimetro.com
 miamiquote.com
 miamovies.com
@@ -51140,7 +51143,6 @@ overnted.com
 overseasdentist.com
 overtechs.com
 overwatch.party
-overwhelminghafizhul.io
 overwholesale.com
 ovh9mgj0uif.xorg.pl
 ovi.usa.cc
@@ -63152,7 +63154,6 @@ suntroncorp.com
 suntuy.com
 sunyds.com
 sunyggless.com
-sunzmail.online
 suoox.com
 supappl.me
 suparoo.site
@@ -68103,7 +68104,6 @@ ukpowernetworks.co
 ukr-nedv.ru
 ukr-po-v.co.cc
 ukrainaharnagay.shn-host.ru
-ukraynaliopal.network
 ukrtovar.ru
 uks5.com
 ukshop538yt.uk
@@ -69794,6 +69794,7 @@ viperace.com
 vipfon.ru
 vipg.com
 vipgod.ru
+viphihi123.tokyo
 viphomeljjljk658.info
 viphone.eu.org
 vipitv.com
