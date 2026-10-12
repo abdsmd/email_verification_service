@@ -7,9 +7,9 @@
     #   - https://raw.githubusercontent.com/disposable/disposable-email-domains/master/domains.txt
 # Local: npm run update:disposable-list
 # In-process schedule: see DISPOSABLE_LIST_CRON_* in .env; GitHub: .github/workflows/update-disposable-domains.yml
-# Last merge: 2026-10-11 — unique domains: 97294
-# Per-source line counts (before merge; overlap removed in 97294):
-    #   - disposable-email-domains/blocklist: 9222 (pre-dedup)
+# Last merge: 2026-10-12 — unique domains: 97299
+# Per-source line counts (before merge; overlap removed in 97299):
+    #   - disposable-email-domains/blocklist: 9880 (pre-dedup)
     #   - disposable/disposable (domains.txt): 97285 (pre-dedup)
 # Runtime: set DISPOSABLE_LIST_PATH to merge an additional file at startup if needed.
 
@@ -26200,6 +26200,7 @@ dubaihandymanpro.com
 dubaihillsmaintenance.com
 dubaihomeassist.com
 dubaihomecareservices.com
+dubaihomemasters.com
 dubaihomerepairco.com
 dubaihomerepairexperts.com
 dubaihomerescue.com
@@ -41041,6 +41042,7 @@ hte.emltmp.com
 htery.com
 hteysy5yys66.cf
 htgamin.com
+htgb.help
 hthlm.com
 hthp.com
 htmail.co.uk
@@ -44427,6 +44429,7 @@ ivoricor.com
 ivorynorthandoak.com
 ivosimilieraucute.com
 ivph.yomail.info
+ivpnxoo.cfd
 ivsao.com
 ivshf.luk2.com
 ivtmg.anonbox.net
@@ -71174,6 +71177,7 @@ rafael.1amail.top
 rafailych.site
 rafalrudnik.pl
 raffles.gg
+rafiv2ray.xyz
 rafmail.cf
 rafmix.site
 rafrem3456ails.com
@@ -76721,6 +76725,7 @@ sharpairconcare.xyz
 sharpaircool.xyz
 sharpfreon.xyz
 sharpmail.com
+sharpmaint.xyz
 sharptranslations.com
 sharyndoll.com
 shasaki.com
