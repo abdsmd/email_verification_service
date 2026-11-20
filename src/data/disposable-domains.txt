@@ -7,7 +7,7 @@
     #   - https://raw.githubusercontent.com/disposable/disposable-email-domains/master/domains.txt
 # Local: npm run update:disposable-list
 # In-process schedule: see DISPOSABLE_LIST_CRON_* in .env; GitHub: .github/workflows/update-disposable-domains.yml
-# Last merge: 2026-11-19 — unique domains: 108833
+# Last merge: 2026-11-20 — unique domains: 108833
 # Per-source line counts (before merge; overlap removed in 108833):
     #   - disposable-email-domains/blocklist: 10400 (pre-dedup)
     #   - disposable/disposable (domains.txt): 108824 (pre-dedup)
